@@ -1,0 +1,18 @@
+{
+    "token": {
+        "Form Sample" : "Пример формы",		
+        "This form will be translated using language plugin." : "Эта форма будет переведена используя плагин.",
+        "Login" : "Логин",
+        "Enter your login" : "Введите свой логин",
+        "Password" : "Пароль",
+        "Enter your password" : "Введите свой пароль",
+        "Email Address" : "Почтовый адресс",
+        "Enter your email" : "Введите почтовый адрес",
+        "You will get notified on this email." : "Вы получите уведомление на этот почтовый ящик.",
+        "First Name" : "Имя",
+        "Enter your first name" : "Введите ваше имя",
+        "Second Name" : "Фамилия",
+        "Enter your second name" : "Введите вашу фамилию",
+        "About" : "Обо мне"        
+    }
+}
