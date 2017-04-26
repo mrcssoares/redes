@@ -1,9 +1,37 @@
-<div class="container">
-    <div class="row row-condensed">
-        <div class="col-lg-9 col-md-6">
-            <div class="wrapper">
-                <div class="page-subtitle">
-                    <h2>Solicitar</h2>
+<div class="wrapper wrapper-white">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="wrapper wrapper-white">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="page-subtitle page-subtitle-centralized">
+                            <h3>Escolha sua música!</h3>
+                            <p>Você pode cantar sua música preferida.</p>
+                        </div>
+
+                        <form id="dev-faq-form">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="dev-faq-keyword" placeholder="Search...">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" id="dev-faq-search"><i class="fa fa-search"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="dev-faq-search-result"></p>
+                        </form>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-left">
+                            <button class="btn btn-default btn-icon" id="dev-faq-open"><i class="fa fa-angle-down"></i> Detalhes </button>
+                        </div>
+                        <div class="pull-right">
+                            <button class="btn btn-default" id="dev-faq-remove-highlights">Solicitar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
