@@ -1,28 +1,25 @@
 /**
  * Created by marcos on 23/03/17.
  */
-angular.module('song', ['ngRoute']).config(function ($routeProvider, $locationProvider) {
+angular.module('song', ['ngRoute']).config(function ($routeProvider) {
 
     $routeProvider
         .when('/home', {
-            templateUrl: 'pages/home.html',
+            templateUrl: 'app/pages/home.html',
             controller: 'homeController'
         })
         .when('/solicitar', {
-            templateUrl: 'pages/solicitar.html',
+            templateUrl: 'app/pages/solicitar.html',
             controller: 'solicitarController'
         })
         .when('/sugerir', {
-            templateUrl: 'pages/sugerir.html',
+            templateUrl: 'app/pages/sugerir.html',
             controller: 'sugerirController'
         })
-        .otherwise({ redirectTo: '/home'}
-    );
+        .when('/login', {
+            templateUrl: 'app/pages/login.html',
+            controller: 'loginController'
+        })
+        .otherwise({redirectTo: '/home'});
 
-    }).controller('homeController', function ($scope) {
-
-    }).controller('solicitarController', function ($scope) {
-
-    }).controller('sugerirController', function ($scope) {
-
-    });
+});

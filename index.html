@@ -7,31 +7,28 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
         <meta http-equiv="X-UA-Compatible" content="IE=edge" >
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
-        
-        <link rel="icon" href="favicon.ico" type="image/x-icon" >
         <!-- ./meta section -->
         <!-- css styles -->
-        <link rel="stylesheet" type="text/css" href="assets/css/blue-white.css" id="dev-css">
+        <link rel="stylesheet" type="text/css" href="app/assets/css/blue-white.css" id="dev-css">
         <!-- ./css styles -->
         <!--[if lte IE 9]>
-        <link rel="stylesheet" type="text/css" href="assets/css/dev-other/dev-ie-fix.css">
+        <link rel="stylesheet" type="text/css" href="app/assets/css/dev-other/dev-ie-fix.css">
         <![endif]-->
         <!-- javascripts -->
-        <script type="text/javascript" src="assets/js/plugins/modernizr/modernizr.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/modernizr/modernizr.js"></script>
         <!-- ./javascripts -->
         <style>
             .dev-page{visibility: hidden;}            
         </style>
     </head>
-    <body ng-app="song"  >
+    <body ng-app="song" ng-controller="mainController" >
         <!-- set Pré carregamento -->
-        <div class="dev-page-loading preloader"></div>
+        <div ng-class="{'dev-page-loading preloader': !islogin}"></div>
         <!-- ./set loading layer -->
-
         <!-- page wrapper -->
-        <div class="dev-page">
+        <div ng-class="{'dev-page': !islogin}">
             <!-- logo azul -->
-            <div class="dev-page-header">
+            <div ng-if="!islogin" class="dev-page-header">
                 <div class="dph-logo">
                     <a href="index.html">SongUkê</a>
                     <a class="dev-page-sidebar-collapse">
@@ -50,9 +47,9 @@
             <!-- ./logo azul -->
             
             <!-- page container -->
-            <div class="dev-page-container">
+            <div ng-class="{'dev-page-container': !islogin}">
                 <!-- Menu  -->
-                <div class="dev-page-sidebar">
+                <div ng-if="!islogin" class="dev-page-sidebar">
                     <ul class="dev-page-navigation">
                         <li class="title">Opções</li>
                         <li>
@@ -69,7 +66,7 @@
                 <!-- ./Menu -->
                 
                 <!-- conteúdo -->
-                <div class="dev-page-content" ng-view>
+                <div ng-class="{'dev-page-content': islogin}" ng-view>
                     <!--AQUI VAI O CONTEUDO-->
                     <div ng-view></div>
 
@@ -80,23 +77,23 @@
         <!-- ./page wrapper -->
 
         <!-- javascript -->
-        <script type="text/javascript" src="assets/js/plugins/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/bootstrap/bootstrap.min.js"></script>
         
-        <script type="text/javascript" src="assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/moment/moment.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/mcustomscrollbar/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/moment/moment.js"></script>
         
-        <script type="text/javascript" src="assets/js/plugins/knob/jquery.knob.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/knob/jquery.knob.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
         
-        <script type="text/javascript" src="assets/js/plugins/bootstrap-select/bootstrap-select.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/bootstrap-select/bootstrap-select.js"></script>
         
-        <script type="text/javascript" src="assets/js/plugins/nvd3/d3.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/nvd3/nv.d3.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/nvd3/lib/stream_layers.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/nvd3/d3.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/nvd3/nv.d3.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/nvd3/lib/stream_layers.js"></script>
         
-        <script type="text/javascript" src="assets/js/plugins/waypoint/waypoints.min.js"></script>
-        <script type="text/javascript" src="assets/js/plugins/counter/jquery.counterup.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/waypoint/waypoints.min.js"></script>
+        <script type="text/javascript" src="app/assets/js/plugins/counter/jquery.counterup.min.js"></script>
 
         <!--Angular da vida-->
         <script src="lib/angular/angular.js" ></script>
@@ -105,13 +102,18 @@
         <script src="lib/angular-route/angular-route.min.js" ></script>
 
         <script src="app.js" ></script>
+        <script src="app/controllers/main.controller.js"></script>
+        <script src="app/controllers/home.controller.js"></script>
+        <script src="app/controllers/login.controller.js"></script>
+        <script src="app/controllers/solicitar.controller.js"></script>
+        <script src="app/controllers/sugerir.controller.js"></script>
 
         <!--<script type="text/javascript" src="js/dev-settings.js"></script>-->
-        <script type="text/javascript" src="assets/js/dev-loaders.js"></script>
-        <script type="text/javascript" src="assets/js/dev-layout-default.js"></script>
-        <script type="text/javascript" src="assets/js/demo.js"></script>
-        <script type="text/javascript" src="assets/js/dev-app.js"></script>
-        <script type="text/javascript" src="assets/js/demo-dashboard.js"></script>
+        <script type="text/javascript" src="app/assets/js/dev-loaders.js"></script>
+        <script type="text/javascript" src="app/assets/js/dev-layout-default.js"></script>
+        <script type="text/javascript" src="app/assets/js/demo.js"></script>
+        <script type="text/javascript" src="app/assets/js/dev-app.js"></script>
+        <script type="text/javascript" src="app/assets/js/demo-dashboard.js"></script>
         <!-- ./javascript -->
     </body>
 </html>

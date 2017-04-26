@@ -1,6 +1,5 @@
 module.exports = function listUser(req, res, next) {
 	// body...
-
     var util = require('util');
     var mysql = require('mysql');
 
@@ -10,7 +9,6 @@ module.exports = function listUser(req, res, next) {
         password : 'root',
         database : 'redes'
     });
-
     connection.connect();
 
     connection.query('SELECT * from `redes`.`user`', function(err, rows, fields) {
