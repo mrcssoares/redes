@@ -5,4 +5,9 @@ angular.module("song").controller('loginController', function ($scope) {
     localStorage.setItem('login', 'true');
     console.log(localStorage.getItem('login'));
 
+    $scope.login = function () {
+        localStorage.setItem('login', 'false');
+
+    }
+
 });
