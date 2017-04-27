@@ -25,12 +25,12 @@
     </head>
     <body ng-app="song" ng-controller="mainController">
         <!-- set Pré carregamento -->
-        <div ng-class="{'dev-page-loading preloader': !islogin}"></div>
+        <div ng-class="{'dev-page-loading preloader': islogin}"></div>
         <!-- ./set loading layer -->
         <!-- page wrapper -->
-        <div ng-class="{'dev-page': !islogin}">
+        <div ng-class="{'dev-page': islogin}">
             <!-- logo azul -->
-            <div ng-if="!islogin" class="dev-page-header">
+            <div ng-if="islogin" class="dev-page-header">
                 <div class="dph-logo">
                     <a href="index.html">SongUkê</a>
                     <a class="dev-page-sidebar-collapse">
@@ -50,9 +50,9 @@
             <!-- ./logo azul -->
 
             <!-- page container -->
-            <div ng-class="{'dev-page-container': !islogin}">
+            <div ng-class="{'dev-page-container': islogin}">
                 <!-- Menu  -->
-                <div ng-if="!islogin" class="dev-page-sidebar">
+                <div ng-show="islogin" class="dev-page-sidebar">
                     <ul class="dev-page-navigation">
                         <li class="title">Opções</li>
                         <li>

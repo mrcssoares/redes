@@ -3,7 +3,7 @@
  */
 angular.module("song").controller('loginController', function ($scope, $state, $timeout) {
 
-
+    $scope.islogin = true;
     // Load the SDK asynchronously
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
