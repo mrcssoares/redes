@@ -6,7 +6,6 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
     $urlRouterProvider.when('/solicitar', '/solicitar/index');
     $urlRouterProvider.when('/login', '/login/index');
 
-
     //LOGIN
     $stateProvider.state('login', {
         url: '/login',

@@ -1,12 +1,12 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('loginController', function ($scope) {
-    localStorage.setItem('login', 'true');
-    console.log(localStorage.getItem('login'));
+angular.module("song").controller('loginController', function ($scope, $state) {
 
     $scope.login = function () {
-        localStorage.setItem('login', 'false');
+        $state.go('home.index', {}, {
+            location: 'replace'
+        });
 
     }
 

@@ -21,7 +21,7 @@
             .dev-page{visibility: hidden;}
         </style>
     </head>
-    <body ng-app="song" ng-controller="mainController" >
+    <body ng-app="song" ng-controller="mainController">
         <!-- set Pré carregamento -->
         <div ng-class="{'dev-page-loading preloader': !islogin}"></div>
         <!-- ./set loading layer -->
@@ -41,9 +41,7 @@
                 </div>
                 <!-- parte superior branca  -->
                 <ul class="dph-buttons pull-right">
-                  <a href="#login">
-                    <button class="btn btn-facebook" style="margin-right: 10px; margin-left: 10px; margin-top: 10px;"> Sair </button>
-                  </a>
+                    <button class="btn btn-facebook" ng-click="sair()" style="margin-right: 10px; margin-left: 10px; margin-top: 10px;"> Sair </button>
                 </ul>
                 <!-- ./parte superior branca  -->
             </div>

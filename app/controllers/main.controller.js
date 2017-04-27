@@ -1,10 +1,12 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('mainController', function ($scope) {
-    if(localStorage.getItem('login') == 'true'){
-        $scope.islogin = false;
-    }
+angular.module("song").controller('mainController', function ($scope, $state) {
 
-    console.log(localStorage.getItem('login'));
+    $scope.sair = function () {
+        $scope.islogin = false;
+        $state.go('login.index', {}, {
+            location: 'replace'
+        });
+    }
 });
