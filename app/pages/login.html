@@ -2,30 +2,42 @@
 <div class="dev-page dev-page-login dev-page-login-v2">
 
     <div class="dev-page-login-block">
+        <div class="col-lg-9 col-md-6">
+            <div class="wrapper">
+                <div class="page-subtitle">
+                    <h2><br><br></h2>
+                </div>
+            </div>
+        </div>
         <a class="dev-page-login-block__logo"></a>
         <div class="dev-page-login-block__form">
-            <div class="title"><strong>Welcome</strong>, please login</div>
+            <div class="title"><strong>Bem vindo entre, com sua rede social.</strong></div>
             <form >
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Login">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input type="password" class="form-control" placeholder="Password">
-                    </div>
+                <div class="form-group no-border margin-top-20">
+                    <button class="btn btn-facebook btn-block" scope="email, public_profile" ng-click="init()">
+                        <span class="fa fa-facebook"></span> Entrar com facebook
+                    </button>
                 </div>
                 <div class="form-group no-border margin-top-20">
-                    <button class="btn btn-success btn-block" ng-click="login()">Login</button>
+                    <button class="btn btn-danger btn-block" ng-click="startApp()">
+                        <span class="icon"></span>
+                        <div style="color: #fff;" ><span class="fa fa-google-plus"></span> Entrar com gmail  </div>
+                    </button>
+                    <button id="customBtn" class="customGPlusSignIn btn btn-google" style=" visibility: hidden">
+                    </button>
                 </div>
                 <p><a href="#">Forgot Password?</a></p>
             </form>
         </div>
+        <div class="col-lg-9 col-md-6">
+            <div class="wrapper">
+                <div class="page-subtitle">
+                    <h2><br><br><br><br></h2>
+                </div>
+            </div>
+        </div>
         <div class="dev-page-login-block__footer">
-            © 2017 <strong>Aqvatarius</strong>. All rights reserved.
+            © 2017 <strong>songUkê services Ldta</strong>. todos os direitos reservados.
         </div>
     </div>
 
