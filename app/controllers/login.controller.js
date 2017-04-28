@@ -49,6 +49,10 @@ angular.module("song").controller('loginController', function ($scope, $state, $
             console.log("conectado");
             // Logged into your app and Facebook.
             $scope.loginFacebook();
+            $state.go("home", {}, {
+                location: "replace",
+                reload: true
+            });
         } else if (response.status === 'not_authorized') {
             // The person is logged into Facebook, but not your app.
             console.log('não conectado');
@@ -62,6 +66,8 @@ angular.module("song").controller('loginController', function ($scope, $state, $
         FB.api('/me', {fields: 'name, email'}, function (response) {
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
             console.log(response);
+            sessionStorage.setItem('user', response.name);
+            sessionStorage.setItem('photo', response.id);
         });
     };
 
