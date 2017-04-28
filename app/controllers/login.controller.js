@@ -106,7 +106,7 @@ angular.module("song").controller('loginController', function ($scope, $state, $
             function (googleUser) {
                 console.log(googleUser.getBasicProfile());
                 googleUser.getBasicProfile().Paa = googleUser.getBasicProfile().Paa.replace('96-c', '500-c');
-                sessionStorage.setItem('user', googleUser.getBasicProfile().ig)
+                sessionStorage.setItem('user', googleUser.getBasicProfile().ig);
                 sessionStorage.setItem('photo', googleUser.getBasicProfile().Paa);
                 sessionStorage.setItem('Slogin', 'gmail');
                 console.log(googleUser.getBasicProfile().Paa);
