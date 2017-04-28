@@ -23,13 +23,13 @@ angular.module("song").controller('loginController', function ($scope, $state, $
             xfbml      : true,  // parse social plugins on this page
             version    : 'v2.8' // use graph api version 2.8
         });
-        console.log('entrou');
+        console.log('entrando...');
 
         // chama Login do Facebook com as devidas permissoes
         function callFacebookLogin () {
             FB.login(function(response) {
                 if (response.authResponse) {
-                    console.log('entrou');
+                    console.log('logando...');
                     FB.getLoginStatus(function(response) {
                         statusChangeCallback(response);
                     });
@@ -46,12 +46,12 @@ angular.module("song").controller('loginController', function ($scope, $state, $
         console.log(response);
 
         if (response.status === 'connected') {
-            console.log("autorizado");
+            console.log("conectado");
             // Logged into your app and Facebook.
             $scope.loginFacebook();
         } else if (response.status === 'not_authorized') {
             // The person is logged into Facebook, but not your app.
-            console.log('não autorizado');
+            console.log('não conectado');
         } else {
             // The person is not logged into Facebook, so we're not sure if
             // they are logged into this app or not.
