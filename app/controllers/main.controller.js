@@ -4,9 +4,10 @@
 angular.module("song").controller('mainController', function ($scope, $state) {
 	$scope.user= sessionStorage.getItem('user');
     $scope.photo= sessionStorage.getItem('photo');
+    $scope.sLogin= sessionStorage.getItem('sLogin');
+    console.log($scope.photo);
 
     $scope.islogin = true;
-    console.log($scope.islogin);
 
     $scope.sair = function () {
         $scope.islogin = false;

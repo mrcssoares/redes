@@ -67,7 +67,8 @@ angular.module("song").controller('loginController', function ($scope, $state, $
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
             console.log(response);
             sessionStorage.setItem('user', response.name);
-            sessionStorage.setItem('photo', response.id);
+            sessionStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
+            sessionStorage.setItem('Slogin', 'facebook');
         });
     };
 
@@ -105,9 +106,15 @@ angular.module("song").controller('loginController', function ($scope, $state, $
             function (googleUser) {
                 console.log(googleUser.getBasicProfile());
                 googleUser.getBasicProfile().Paa = googleUser.getBasicProfile().Paa.replace('96-c', '500-c');
+                sessionStorage.setItem('user', googleUser.getBasicProfile().ig)
+                sessionStorage.setItem('photo', googleUser.getBasicProfile().Paa);
+                sessionStorage.setItem('Slogin', 'gmail');
                 console.log(googleUser.getBasicProfile().Paa);
-                //com estes dados vai pra rota
-
+                //estes dados vão pra rota
+                    $state.go("home", {}, {
+                    location: "replace",
+                    reload: true
+                });
             }
         );
     }
