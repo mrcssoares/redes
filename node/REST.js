@@ -12,6 +12,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         res.json({"Message" : "Bem vindo a api songUkê !"});
     });
 
+
     //=================================== START CRUD USERS =======================================//
 
     router.get("/users",function(req,res){
@@ -68,7 +69,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     //=================================== END CRUD USERS =======================================//
 
-    // um comentario qualquer
+
 
     //=================================== START CRUD SINGER ===================================//
 
@@ -80,6 +81,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             if(err) {
                 res.json({"Error" : true, "Message" : "Error executing MySQL query"});
             } else {
+                console.log('get /singers 200 OK');
                 res.json({"Error" : false, "Message" : "Success", "singers" : rows});
             }
         });
@@ -93,6 +95,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             if(err) {
                 res.json({"Error" : err, "Message" : "Error executing MySQL query"});
             } else {
+                console.log('post /singers 200 OK');
                 res.json({"Error" : false, "Message" : "User Added !", "rows" :rows });
             }
         });
@@ -120,22 +123,23 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     });
 
     router.post("/musics",function(req,res){
-        var query = "INSERT INTO ??(??,??,??,??) VALUES (?,?,?,?)";
-        var table = ["music","name","dutarion","id_category", "id_singer",req.body.name,req.body.duration, req.body.id_category, req.body.id_singer];
+        var query = "INSERT INTO ?? (name, duration, id_category, id_singer, status) VALUES ('"+ req.body.name +"', '"+req.body.duration+"', '"+req.body.id_category+"', '"+req.body.id_singer +"', '"+req.body.status+"')";
+        var table = ["music"];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
             if(err) {
+                console.log('get /musics 200 OK');
                 res.json({"Error" : err, "Message" : "Error executing MySQL query"});
             } else {
+                console.log('post /musics 200 OK');
                 res.json({"Error" : false, "Message" : "Success", "musics" : rows});
             }
         });
     });
 
     //=================================== END CRUD MUSICAS =====================================//
-    //
-    // var query = "INSERT INTO ??(??,??,??,??) VALUES (?,?,?,?)";
-    // var table = ["user","name","email","photo", "type",req.body.name,req.body.email,req.body.photo, req.body.type];
+
+
 
     //=================================== START CRUD SOLICITAÇÕES ==============================//
 
@@ -154,7 +158,9 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     router.post("/solicitations",function(req,res){
         var query = "INSERT INTO ??(??,??,??,??,??) VALUES (?,?,?,?,?)";
+        //var query = "INSERT INTO ?? (likes, status, id_music, id_user, created_at) VALUES ('0', '0', '1', '2', 'teste')";
         var table = ["solicitation", "likes", "status", "id_music", "id_user", "created_at", req.body.likes, req.body.status, req.body.id_music, req.body.id_user, req.body.created_at];
+        //var table = ["solicitation"];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
             if(err) {
@@ -166,10 +172,6 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     });
 
     //=================================== END CRUD SOLICITAÇÕES ==============================//
-
-
-
-
 
 };
 
