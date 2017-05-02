@@ -41,7 +41,7 @@ REST.prototype.configureExpress = function(connection) {
 
 REST.prototype.startServer = function() {
       app.listen(3000,function(){
-          console.log("Servidor operando na porta 3000.");
+          console.log("API Rodando na porta 3000.");
       });
 }
 
