@@ -71,6 +71,27 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
 
 
+    //=================================== START CRUD CATEGORY ===================================//
+
+    router.get("/category",function(req,res){
+        var query = "SELECT * FROM ??";
+        var table = ["category"];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                console.log('get /category 400 ERROR');
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                console.log('get /gategory 200 OK');
+                res.json({"Error" : false, "Message" : "Success", "singers" : rows});
+            }
+        });
+    });
+
+    //=================================== START CRUD CATEGORY ===================================//
+
+
+
     //=================================== START CRUD SINGER ===================================//
 
     router.get("/singers",function(req,res){
