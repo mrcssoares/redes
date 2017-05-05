@@ -7,6 +7,8 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 	$scope.duracao= '';
 	$scope.categoria= '';
 	$scope.artista= '';
+    $scope.artistas= [];
+    $scope.categorias= [];
 	console.log('musics');  
 
     $scope.adicionar = function (music) {
@@ -32,5 +34,48 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
         });
     }
+
+    $scope.listarArtista = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/singers",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.artistas = response.singers;
+        });
+    }
+
+    $scope.listarCategorias = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/category",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.categorias = response.category;
+        });
+    }
+
+    $scope.listarArtista();
+    $scope.listarCategorias();
 
 });

@@ -10,16 +10,15 @@
     <label style="width: 70px;">Duração</label>
     <input type="number" name="" step="1000" ng-model="music.duracao">
     <br><br>
-    <label style="width: 70px;">Categoria</label>
-    <select id="op" ng-model="music.categoria">
-        <option value="1">Pop</option>
-        <option value="2">Rock</option>
-        <option value="3">Sertanejo</option>
-        <option value="4">Religioso</option>
+    <label style="width: 70px;">Artista</label>
+    <select ng-model="music.artista">
+        <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
     </select>
     <br><br>
-    <label style="width: 70px;">Artista</label>
-    <input type="text" name="" width="100" ng-model="music.artista">
+    <label style="width: 70px;">Categoria</label>
+    <select ng-model="music.categoria">
+        <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
+    </select>
     <br><br>
     <label style="width: 70px;"></label>
     <button style="width: 200px;" ng-click="adicionar(music)">Adicionar Música</button>
