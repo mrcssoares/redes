@@ -16,8 +16,8 @@ REST.prototype.connectMysql = function() {
         connectionLimit : 100,
         host     : 'localhost',
         user     : 'root',
-        password : '#boot#',
-        database : 'songuke',
+        password : 'root',
+        database : 'redes',
         debug    :  false
     });
     pool.getConnection(function(err,connection){
@@ -33,6 +33,11 @@ REST.prototype.configureExpress = function(connection) {
       var self = this;
       app.use(bodyParser.urlencoded({ extended: true }));
       app.use(bodyParser.json());
+      app.use(function(req, res, next) {
+          res.header("Access-Control-Allow-Origin", "*");
+          res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+          next();
+      });
       var router = express.Router();
       app.use('/api', router);
       var rest_router = new rest(router,connection,md5);

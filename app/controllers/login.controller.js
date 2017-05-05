@@ -3,7 +3,7 @@
  */
 angular.module("song").controller('loginController', function ($scope, $state, $timeout) {
 
-    $scope.islogin = true;
+    $scope.islogin = false;
     // Load the SDK asynchronously
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -87,7 +87,7 @@ angular.module("song").controller('loginController', function ($scope, $state, $
         gapi.load('auth2', function(){
             // Retrieve the singleton for the GoogleAuth library and set up the client.
             auth2 = gapi.auth2.init({
-                client_id: '493131933192-s5rib8078regv2mtffe3g221k8fmh56h.apps.googleusercontent.com',//'548544741388-oqo7ha3uk7hqjd9o2ur2q62e3n62dmda.apps.googleusercontent.com',
+                client_id: '493131933192-6npdtc6o4mombnuud780adneli0gn2rq.apps.googleusercontent.com',//'548544741388-oqo7ha3uk7hqjd9o2ur2q62e3n62dmda.apps.googleusercontent.com',
                 cookiepolicy: 'single_host_origin'
 
             });

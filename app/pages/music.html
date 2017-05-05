@@ -3,15 +3,15 @@
     <p>Controle das músicas.</p>
 </div>
 
-<div>
+<form>
     <label style="width: 70px;">Nome</label>
-    <input type="text" name="" width="100" ng-model="nome">
+    <input type="text" name="" width="100" ng-model="music.nome">
     <br><br>
     <label style="width: 70px;">Duração</label>
-    <input type="number" name="" step="1000" ng-model="duracao">
+    <input type="number" name="" step="1000" ng-model="music.duracao">
     <br><br>
     <label style="width: 70px;">Categoria</label>
-    <select id="op" ng-model="categoria">
+    <select id="op" ng-model="music.categoria">
         <option value="1">Pop</option>
         <option value="2">Rock</option>
         <option value="3">Sertanejo</option>
@@ -19,11 +19,11 @@
     </select>
     <br><br>
     <label style="width: 70px;">Artista</label>
-    <input type="text" name="" width="100" ng-model="artista">
+    <input type="text" name="" width="100" ng-model="music.artista">
     <br><br>
     <label style="width: 70px;"></label>
-    <button style="width: 200px;" ng-click="adicionar()">Adicionar Música</button>
-</div>
+    <button style="width: 200px;" ng-click="adicionar(music)">Adicionar Música</button>
+</form>
 <br><br>
 <div>
     <label style="width: 70px;">Artista</label>

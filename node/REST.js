@@ -128,7 +128,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
             if(err) {
-                console.log('get /musics 200 OK');
+                console.log('post /musics 400 ERROR');
                 res.json({"Error" : err, "Message" : "Error executing MySQL query"});
             } else {
                 console.log('post /musics 200 OK');

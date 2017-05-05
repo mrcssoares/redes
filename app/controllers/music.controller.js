@@ -9,23 +9,25 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 	$scope.artista= '';
 	console.log('musics');  
 
-    $scope.adicionar = function () {  
+    $scope.adicionar = function (music) {
+        console.log(music);
     	console.log('função adicionar');  
         $http({
             url: "http://localhost:3000/api/musics",
             method: 'post',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/x-www-form-urlencoded'
             },
             data: {
-                //'id': '',
-                'name': $scope.nome,
-                'duration': $scope.duracao,
-                'id_catagory': $scope.categoria,
-                'id_singer': $scope.artista,
+                'name': 'marcos',
+                'duration': '1000',
+                'id_catagory': '1',
+                'id_singer': '1',
+                'status': '0'
             }
         }).success(function (data) {
             console.log('sucess');
+            console.log(data);
         }).error(function (error) {
             $scope.message = "Aconteceu um problema: " + error;
         });
