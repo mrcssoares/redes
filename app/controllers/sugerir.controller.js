@@ -5,7 +5,7 @@ angular.module("song").controller('sugerirController', function ($scope) {
     $scope.islogin = true;
 
     //exemplo
-    $scope.carregarClientesPorData = function (date_start, date_end) {
+    /*$scope.carregarClientesPorData = function (date_start, date_end) {
         var NovaDate_start = date_start.value.getDate() + "/" + (date_start.value.getMonth() + 1) + "/" + date_start.value.getFullYear()
         var NovaDate_end = date_end.value.getDate() + "/" + (date_end.value.getMonth() + 1) + "/" + date_end.value.getFullYear()
     
@@ -32,6 +32,6 @@ angular.module("song").controller('sugerirController', function ($scope) {
         }).error(function (error) {
             $scope.message = "Aconteceu um problema: " + error;
         });
-    };
+    };*/
     
 });

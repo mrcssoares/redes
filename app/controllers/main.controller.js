@@ -5,7 +5,7 @@ angular.module("song").controller('mainController', function ($scope, $state) {
 	$scope.user= sessionStorage.getItem('user');
     $scope.photo= sessionStorage.getItem('photo');
     $scope.sLogin= sessionStorage.getItem('sLogin');
-    console.log($scope.photo);
+    console.log('photo '+$scope.photo);
 
     $scope.islogin = true;
 

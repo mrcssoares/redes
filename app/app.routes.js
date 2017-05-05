@@ -5,6 +5,7 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
     $urlRouterProvider.when('/sugerir', '/sugerir/index');
     $urlRouterProvider.when('/solicitar', '/solicitar/index');
     $urlRouterProvider.when('/login', '/login/index');
+    $urlRouterProvider.when('/music', '/music/index');
 
     //LOGIN
     $stateProvider.state('login', {
@@ -41,6 +42,15 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
         url:'/index',
         templateUrl: 'app/pages/sugerir.html',
         controller: 'sugerirController'
+    }).
+    // ADMIN MUSIC
+    state('music', {
+        url: '/music',
+        template: '<ui-view></ui-view>'
+    }).state('music.index', {
+        url:'/index',
+        templateUrl: 'app/pages/music.html',
+        controller: 'musicController'
     });
 
 });

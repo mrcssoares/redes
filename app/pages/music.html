@@ -1,0 +1,32 @@
+<div class="page-subtitle">
+    <h3>Gestão de Músicas</h3>
+    <p>Controle das músicas.</p>
+</div>
+
+<div>
+    <label style="width: 70px;">Nome</label>
+    <input type="text" name="" width="100" ng-model="nome">
+    <br><br>
+    <label style="width: 70px;">Duração</label>
+    <input type="number" name="" step="1000" ng-model="duracao">
+    <br><br>
+    <label style="width: 70px;">Categoria</label>
+    <select id="op" ng-model="categoria">
+        <option value="1">Pop</option>
+        <option value="2">Rock</option>
+        <option value="3">Sertanejo</option>
+        <option value="4">Religioso</option>
+    </select>
+    <br><br>
+    <label style="width: 70px;">Artista</label>
+    <input type="text" name="" width="100" ng-model="artista">
+    <br><br>
+    <label style="width: 70px;"></label>
+    <button style="width: 200px;" ng-click="adicionar()">Adicionar Música</button>
+</div>
+<br><br>
+<div>
+    <label style="width: 70px;">Artista</label>
+    <input type="text" name="" width="100">
+    <button style="width: 200px;">Adicionar Artista</button>
+</div>
