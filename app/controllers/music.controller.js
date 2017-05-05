@@ -11,26 +11,26 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 
     $scope.adicionar = function (music) {
         console.log(music);
-    	console.log('função adicionar');  
-        $http({
-            url: "http://localhost:3000/api/musics",
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/musics",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
             },
-            data: {
-                'name': 'marcos',
-                'duration': '1000',
-                'id_catagory': '1',
-                'id_singer': '1',
-                'status': '0'
+            "data": {
+                "name": music.nome,
+                "duration": music.duracao,
+                "id_category": music.categoria,
+                "id_singer": music.artista,
+                "status": "0"
             }
-        }).success(function (data) {
-            console.log('sucess');
-            console.log(data);
-        }).error(function (error) {
-            $scope.message = "Aconteceu um problema: " + error;
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
         });
-    };
+    }
 
 });
