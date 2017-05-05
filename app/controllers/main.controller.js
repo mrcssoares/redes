@@ -11,7 +11,7 @@ angular.module("song").controller('mainController', function ($scope, $state) {
 
     $scope.sair = function () {
         $scope.islogin = false;
-        sessionStorage.removeItem('user')
+        sessionStorage.removeItem('user');
         $state.go('login.index', {}, {
             location: 'replace'
         });

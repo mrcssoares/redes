@@ -54,7 +54,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         });
     });
 
-    router.delete("/users/:ic",function(req,res){
+    router.delete("/users/:id",function(req,res){
         var query = "DELETE from ?? WHERE ??=?";
         var table = ["user","id",req.params.id];
         query = mysql.format(query,table);
