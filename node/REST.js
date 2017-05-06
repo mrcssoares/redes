@@ -82,7 +82,23 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 console.log('get /category 400 ERROR');
                 res.json({"Error" : true, "Message" : "Error executing MySQL query"});
             } else {
-                console.log('get /gategory 200 OK');
+                console.log('get /category 200 OK');
+                res.json({"Error" : false, "Message" : "Success", "category" : rows});
+            }
+        });
+    });
+
+    router.post("/category",function(req,res){
+        var query = "INSERT INTO ??(??) VALUES (?)";
+        var table = ["category", "name", req.body.name];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                console.log('post /category 400 ERROR');
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                console.log('post /category 200 OK');
+>>>>>>> 3a6960267f864c6c7bbadb09db5c4873da3c03ac
                 res.json({"Error" : false, "Message" : "Success", "category" : rows});
             }
         });
@@ -131,7 +147,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     //=================================== START CRUD MUSICAS ===================================//
 
     router.get("/musics",function(req,res){
-        var query = "SELECT * FROM ??";
+        var query = "SELECT music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category";
         var table = ["music"];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
