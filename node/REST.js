@@ -98,7 +98,6 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 res.json({"Error" : true, "Message" : "Error executing MySQL query"});
             } else {
                 console.log('post /category 200 OK');
->>>>>>> 3a6960267f864c6c7bbadb09db5c4873da3c03ac
                 res.json({"Error" : false, "Message" : "Success", "category" : rows});
             }
         });
