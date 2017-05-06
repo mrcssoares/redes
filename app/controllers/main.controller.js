@@ -18,7 +18,7 @@ angular.module("song").controller('mainController', function ($scope, $rootScope
             }, 2000);
         }
     }
-    waitLoc();
+    //waitLoc();
 
     $scope.sair = function () {
         $rootScope.login = false;
