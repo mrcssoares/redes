@@ -6,6 +6,8 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
     $urlRouterProvider.when('/solicitar', '/solicitar/index');
     $urlRouterProvider.when('/login', '/login/index');
     $urlRouterProvider.when('/music', '/music/index');
+    $urlRouterProvider.when('/gerenciarSolicitacoes', '/gerenciarSolicitacoes/index');
+    $urlRouterProvider.when('/gerenciarSugestoes', '/gerenciarSugestoes/index');
 
     //LOGIN
     $stateProvider.state('login', {
@@ -51,6 +53,24 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
         url:'/index',
         templateUrl: 'app/pages/music.html',
         controller: 'musicController'
+    }).
+    // ADMIN SOLICITACAO
+    state('gerenciarSolicitacoes', {
+        url: '/gerenciarSolicitacoes',
+        template: '<ui-view></ui-view>'
+    }).state('gerenciarSolicitacoes.index', {
+        url:'/index',
+        templateUrl: 'app/pages/gerenciarSolicitacoes.html',
+        controller: 'gerenciarSolicitacoesController'
+    }).
+    // ADMIN SUGESTOES
+    state('gerenciarSugestoes', {
+        url: '/gerenciarSugestoes',
+        template: '<ui-view></ui-view>'
+    }).state('gerenciarSugestoes.index', {
+        url:'/index',
+        templateUrl: 'app/pages/gerenciarSugestoes.html',
+        controller: 'gerenciarSugestoesController'
     });
 
 });
