@@ -23,7 +23,7 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
             console.log(response);
             $scope.musics= response.musics;
         });
-    }
+    };
 
 	$scope.listarMusicas();    
 

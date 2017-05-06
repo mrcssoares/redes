@@ -103,7 +103,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         });
     });
 
-    //=================================== START CRUD CATEGORY ===================================//
+    //=================================== END CRUD CATEGORY ===================================//
 
 
 
@@ -139,7 +139,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
 
 
-    //=================================== START CRUD SINGER ===================================//
+    //=================================== END CRUD SINGER ===================================//
 
 
 
@@ -156,6 +156,34 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             } else {
                 console.log('get /musics 200 OK');
                 res.json({"Error" : false, "Message" : "Success", "musics" : rows});
+            }
+        });
+    });
+    //update em status de musica
+    router.put("/musics/status/:id",function(req,res){
+        var query = "UPDATE ?? SET status = 1 WHERE ?? = ?";
+        var table = ["music", "id", req.params.id];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                console.log('put /musics 400 ERROR');
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                console.log('put /musics 200 OK');
+                res.json({"Error" : false, "Message" : "Success", "musics" : rows});
+            }
+        });
+    });
+    //deletar musica
+    router.delete("/music/:id",function(req,res){
+        var query = "DELETE from ?? WHERE ??=?";
+        var table = ["music","id",req.params.id];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                res.json({"Error" : false, "Message" : "Deleted the music "+req.params.id});
             }
         });
     });

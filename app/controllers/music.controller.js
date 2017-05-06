@@ -142,13 +142,10 @@ angular.module("song").controller('musicController', function ($scope, $http, co
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": config.baseUrl+"/api/musics",
-            "method": "POST",
+            "url": config.baseUrl+"/api/musics/"+music.id,
+            "method": "delete",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-                
             }
         };
 
