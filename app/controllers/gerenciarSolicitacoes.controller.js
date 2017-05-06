@@ -1,7 +1,7 @@
 /**
  * Created by duivilly on 06/05/17.
  */
-angular.module("song").controller('gerenciarSolicitacoesController', function ($scope){
+angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, config){
     
     $scope.solicitacoes= [];
 
@@ -9,7 +9,7 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/solicitations",
+            "url": config.baseUrl+"/api/solicitations",
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"

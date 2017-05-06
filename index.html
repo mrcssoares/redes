@@ -25,12 +25,12 @@
     </head>
     <body ng-app="song" ng-controller="mainController">
         <!-- set Pré carregamento -->
-        <div ng-class="{'dev-page-loading preloader': islogin}"></div>
+        <div class= "dev-page-loading preloader"></div>
         <!-- ./set loading layer -->
         <!-- page wrapper -->
-        <div ng-class="{'dev-page': islogin}">
+        <div class="dev-page">
             <!-- logo azul -->
-            <div ng-if="islogin" class="dev-page-header">
+            <div ng-if="login" class="dev-page-header">
                 <div class="dph-logo">
                     <a href="index.html">SongUkê</a>
                     <a class="dev-page-sidebar-collapse">
@@ -52,9 +52,9 @@
             <!-- ./logo azul -->
 
             <!-- page container -->
-            <div ng-class="{'dev-page-container': islogin}">
+            <div class="dev-page-container">
                 <!-- Menu  -->
-                <div ng-show="islogin" class="dev-page-sidebar">
+                <div ng-show="login" class="dev-page-sidebar">
                     <ul class="dev-page-navigation">
                         <li class="title">Opções</li>
                         <li>
@@ -80,7 +80,7 @@
                 <!-- ./Menu -->
 
                 <!-- conteúdo -->
-                <div ng-class="{'dev-page-content': islogin}" ng-view>
+                <div ng-class="{'dev-page-content': $root.login}" ng-view>
                     <!--AQUI VAI O CONTEUDO-->
                     <ui-view></ui-view>
 
@@ -122,6 +122,7 @@
         <!--<script src="app/app.js" ></script>-->
         <script src="app/app.module.js" ></script>
         <script src="app/app.routes.js" ></script>
+        <script src="app/config.js"></script>
 
         <script src="app/controllers/main.controller.js"></script>
         <script src="app/controllers/home.controller.js"></script>

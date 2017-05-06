@@ -14,10 +14,11 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 
     $scope.adicionar = function (music) {
         console.log(music);
+
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/musics",
+            "url": config.baseUrl+"/api/musics",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -34,13 +35,13 @@ angular.module("song").controller('musicController', function ($scope, $http) {
         $.ajax(settings).done(function (response) {
             console.log(response);
         });
-    }
+    };
 
     $scope.listarArtista = function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/singers",
+            "url": config.baseUrl+"/api/singers",
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -54,13 +55,13 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
             $scope.artistas = response.singers;
         });
-    }
+    };
 
     $scope.listarCategorias = function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/category",
+            "url": config.baseUrl+"/api/category",
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -74,13 +75,13 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
             $scope.categorias = response.category;
         });
-    }
+    };
 
     $scope.adicionarArtista = function(artista) {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/singers",
+            "url": config.baseUrl+"/api/singers",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -94,13 +95,13 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
             $scope.listarArtista();
         });
-    }
+    };
 
     $scope.adicionarCategoria = function(categoria) {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/category",
+            "url": config.baseUrl+"/api/category",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -114,13 +115,13 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
             $scope.listarCategorias();
         });
-    }
+    };
 
     $scope.listarMusicas = function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/musics",
+            "url": config.baseUrl+"/api/musics",
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -134,13 +135,13 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
             $scope.musics= response.musics;
         });
-    }
+    };
 
     $scope.apagarMusica = function(music) {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/musics",
+            "url": config.baseUrl+"/api/musics",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -154,7 +155,7 @@ angular.module("song").controller('musicController', function ($scope, $http) {
             console.log(response);
             $scope.musics= response.musics;
         });
-    }
+    };
 
     $scope.listarArtista();
     $scope.listarCategorias();

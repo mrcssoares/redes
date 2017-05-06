@@ -1,9 +1,9 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('loginController', function ($scope, $state, $timeout) {
+angular.module("song").controller('loginController', function ($scope, $rootScope, $state, $timeout) {
 
-    $scope.islogin = false;
+    $rootScope.login = false;
     // Load the SDK asynchronously
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -65,10 +65,11 @@ angular.module("song").controller('loginController', function ($scope, $state, $
     $scope.loginFacebook = function () {
         FB.api('/me', {fields: 'name, email'}, function (response) {
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
-            console.log(response);
             sessionStorage.setItem('user', response.name);
             sessionStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
             sessionStorage.setItem('Slogin', 'facebook');
+            $rootScope.login = true;
+
         });
     };
 
@@ -110,8 +111,9 @@ angular.module("song").controller('loginController', function ($scope, $state, $
                 sessionStorage.setItem('photo', googleUser.getBasicProfile().Paa);
                 sessionStorage.setItem('Slogin', 'gmail');
                 console.log(googleUser.getBasicProfile().Paa);
+                $rootScope.login = true;
                 //estes dados vão pra rota
-                    $state.go("home", {}, {
+                $state.go("home", {}, {
                     location: "replace",
                     reload: true
                 });
