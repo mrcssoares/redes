@@ -75,6 +75,25 @@ angular.module("song").controller('musicController', function ($scope, $http) {
         });
     }
 
+    $scope.adicionarArtista = function(artista) {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/singers",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                'name': artista.nome
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+    }
+
     $scope.listarArtista();
     $scope.listarCategorias();
 

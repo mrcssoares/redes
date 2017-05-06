@@ -83,7 +83,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 res.json({"Error" : true, "Message" : "Error executing MySQL query"});
             } else {
                 console.log('get /gategory 200 OK');
-                res.json({"Error" : false, "Message" : "Success", "singers" : rows});
+                res.json({"Error" : false, "Message" : "Success", "category" : rows});
             }
         });
     });
@@ -117,7 +117,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 res.json({"Error" : err, "Message" : "Error executing MySQL query"});
             } else {
                 console.log('post /singers 200 OK');
-                res.json({"Error" : false, "Message" : "User Added !", "rows" :rows });
+                res.json({"Error" : false, "Message" : "User Added !", "singers" :rows });
             }
         });
     });

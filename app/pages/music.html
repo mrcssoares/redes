@@ -8,7 +8,7 @@
     <input type="text" name="" width="100" ng-model="music.nome">
     <br><br>
     <label style="width: 70px;">Duração</label>
-    <input type="number" name="" step="1000" ng-model="music.duracao">
+    <input type="number" name="" step="1" ng-model="music.duracao">
     <br><br>
     <label style="width: 70px;">Artista</label>
     <select ng-model="music.artista">
@@ -21,11 +21,11 @@
     </select>
     <br><br>
     <label style="width: 70px;"></label>
-    <button style="width: 200px;" ng-click="adicionar(music)">Adicionar Música</button>
+    <button style="width: 200px;" ng-click="adicionarMusica(music)">Adicionar Música</button>
 </form>
 <br><br>
 <div>
-    <label style="width: 70px;">Artista</label>
-    <input type="text" name="" width="100">
-    <button style="width: 200px;">Adicionar Artista</button>
+    <label>Nome Artista</label>
+    <input type="text" name="" width="100" ng-model="artista.nome">
+    <button style="width: 200px;" ng-click="adicionarArtista(artista)">Adicionar Artista</button>
 </div>
