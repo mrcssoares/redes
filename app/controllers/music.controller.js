@@ -1,7 +1,7 @@
 /**
  * Created by duivilly on 04/05/17.
  */
-angular.module("song").controller('musicController', function ($scope, $http) {
+angular.module("song").controller('musicController', function ($scope, $http, config) {
 
 	$scope.nome= '';
 	$scope.duracao= '';
@@ -12,7 +12,7 @@ angular.module("song").controller('musicController', function ($scope, $http) {
     $scope.musics= [];
 	console.log('musics');  
 
-    $scope.adicionar = function (music) {
+    $scope.adicionarMusica = function (music) {
         console.log(music);
 
         var settings = {
@@ -34,6 +34,7 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 
         $.ajax(settings).done(function (response) {
             console.log(response);
+            $scope.listarMusicas();
         });
     };
 
@@ -153,7 +154,7 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $scope.musics= response.musics;
+            $scope.listarMusicas();
         });
     };
 
