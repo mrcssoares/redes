@@ -91,6 +91,27 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 
         $.ajax(settings).done(function (response) {
             console.log(response);
+            $scope.listarArtista();
+        });
+    }
+
+    $scope.adicionarCategoria = function(categoria) {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/category",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                'name': categoria.nome
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.listarCategorias();
         });
     }
 
