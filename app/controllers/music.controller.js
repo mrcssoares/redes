@@ -9,6 +9,7 @@ angular.module("song").controller('musicController', function ($scope, $http) {
 	$scope.artista= '';
     $scope.artistas= [];
     $scope.categorias= [];
+    $scope.musics= [];
 	console.log('musics');  
 
     $scope.adicionar = function (music) {
@@ -115,7 +116,48 @@ angular.module("song").controller('musicController', function ($scope, $http) {
         });
     }
 
+    $scope.listarMusicas = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/musics",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.musics= response.musics;
+        });
+    }
+
+    $scope.apagarMusica = function(music) {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/musics",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.musics= response.musics;
+        });
+    }
+
     $scope.listarArtista();
     $scope.listarCategorias();
+    $scope.listarMusicas();
 
 });
