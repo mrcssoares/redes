@@ -12,29 +12,24 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label">Nome Música</label>
                     <div class="col-md-5">
-                        <input type="text" class="form-control" placeholder="nome...">
+                        <input ng-model="music.nome" type="text" class="form-control" placeholder="nome...">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Nome Artista</label>
-                    <div class="col-md-5">
-                        <input type="text" class="form-control" value="teste" placeholder="cantor...">
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="categoria" data-toggle="dropdown">Categoria
-                        <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="categoria">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Rock</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pop</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Sertanejo</a></li>
-                            <li role="presentation" class="divider"></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Outro</a></li>
-                        </ul>
-                    </div>
+                    <label style="width: 70px;">Artista</label>
+                    <select ng-model="music.artista">
+                        <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
+                    </select>
+                    <br><br>
+                    <label style="width: 70px;">Categoria</label>
+                    <select ng-model="music.categoria">
+                        <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
+                    </select>
+
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-8">
-                        <button type="submit" class="btn btn-default">Enviar</button>
+                        <button class="btn btn-default" ng-click="sugerir(music)">Enviar</button>
                     </div>
                 </div>
             </form>

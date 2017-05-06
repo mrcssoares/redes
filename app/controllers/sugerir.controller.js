@@ -1,37 +1,74 @@
 /**
- * Created by marcos on 25/04/17.
- */
-angular.module("song").controller('sugerirController', function ($scope) {
-    $scope.islogin = true;
+    * Created by marcos on 25/04/17.
+    */
+angular.module("song").controller('sugerirController', function ($scope,config) {
 
-    //exemplo
-    /*$scope.carregarClientesPorData = function (date_start, date_end) {
-        var NovaDate_start = date_start.value.getDate() + "/" + (date_start.value.getMonth() + 1) + "/" + date_start.value.getFullYear()
-        var NovaDate_end = date_end.value.getDate() + "/" + (date_end.value.getMonth() + 1) + "/" + date_end.value.getFullYear()
-    
-        $http({
-            url: config.baseUrl + "/dash/users",
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': config.token
+    $scope.sugerir = function (music) {
+        console.log(music);
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/musics",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
             },
-            data: {
-                'date_start': NovaDate_start,
-                'date_end': NovaDate_end,
+            "data": {
+                "name": music.nome,
+                "duration": '0',
+                "id_category": music.categoria,
+                "id_singer": music.artista,
+                "status": "0"
             }
-        }).success(function (data) {
-            $scope.clientes = data;
+        };
 
-            $scope.data_start = {
-                value: new Date(date_start.value.getFullYear(), date_start.value.getMonth(), date_start.value.getDate()),
-            };
-            $scope.data_end = {
-                value: new Date(date_end.value.getFullYear(), date_end.value.getMonth(), date_end.value.getDate()),
-            };
-        }).error(function (error) {
-            $scope.message = "Aconteceu um problema: " + error;
+        $.ajax(settings).done(function (response) {
+            console.log(response);
         });
-    };*/
-    
+    };
+
+    $scope.listarCategorias = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/category",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.categorias = response.category;
+        });
+    };
+
+    $scope.listarArtista = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/singers",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.artistas = response.singers;
+        });
+    };
+
+    $scope.listarCategorias();
+    $scope.listarArtista();
+
 });
