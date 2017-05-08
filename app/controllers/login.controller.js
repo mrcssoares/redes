@@ -3,7 +3,6 @@
  */
 angular.module("song").controller('loginController', function ($scope, $rootScope, $state, $timeout) {
 
-    $rootScope.login = false;
     // Load the SDK asynchronously
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -49,10 +48,7 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             console.log("conectado");
             // Logged into your app and Facebook.
             $scope.loginFacebook();
-            $state.go("home", {}, {
-                location: "replace",
-                reload: true
-            });
+
         } else if (response.status === 'not_authorized') {
             // The person is logged into Facebook, but not your app.
             console.log('não conectado');
@@ -65,10 +61,14 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
     $scope.loginFacebook = function () {
         FB.api('/me', {fields: 'name, email'}, function (response) {
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
-            sessionStorage.setItem('user', response.name);
-            sessionStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
-            sessionStorage.setItem('Slogin', 'facebook');
+            localStorage.setItem('user', response.name);
+            localStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
+            localStorage.setItem('Slogin', 'facebook');
             $rootScope.login = true;
+            $state.go("home.index", {}, {
+                location: "replace",
+                reload: true
+            });
 
         });
     };
@@ -107,11 +107,10 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             function (googleUser) {
                 console.log(googleUser.getBasicProfile());
                 googleUser.getBasicProfile().Paa = googleUser.getBasicProfile().Paa.replace('96-c', '500-c');
-                sessionStorage.setItem('user', googleUser.getBasicProfile().ig);
-                sessionStorage.setItem('photo', googleUser.getBasicProfile().Paa);
-                sessionStorage.setItem('Slogin', 'gmail');
+                localStorage.setItem('user', googleUser.getBasicProfile().ig);
+                localStorage.setItem('photo', googleUser.getBasicProfile().Paa);
+                localStorage.setItem('Slogin', 'gmail');
                 console.log(googleUser.getBasicProfile().Paa);
-                $rootScope.login = true;
                 //estes dados vão pra rota
                 $state.go("home", {}, {
                     location: "replace",
