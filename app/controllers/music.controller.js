@@ -34,7 +34,7 @@ angular.module("song").controller('musicController', function ($scope, $http, co
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $scope.listarMusicas();
+            $scope.$apply($scope.listarMusicas());
         });
     };
 

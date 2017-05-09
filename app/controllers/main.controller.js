@@ -30,7 +30,6 @@ angular.module("song").controller('mainController', function ($scope, $rootScope
     $scope.sair = function () {
         $scope.login = false;
         localStorage.clear();
-        localStorage.clear();
         $state.go('login.index', {}, {
             location: 'replace'
         });

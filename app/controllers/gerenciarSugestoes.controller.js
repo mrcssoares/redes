@@ -21,7 +21,7 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $scope.musics= response.musics;
+            $scope.musics = response.musics;
         });
     };
 

@@ -1,7 +1,7 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('solicitarController', function ($scope,config) {
+angular.module("song").controller('solicitarController', function ($scope,config, $timeout) {
 
     $scope.listarMusicas = function() {
         var settings = {
@@ -19,7 +19,9 @@ angular.module("song").controller('solicitarController', function ($scope,config
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $scope.musics= response.musics;
+            $timeout(function () {
+                $scope.$apply($scope.musics = response.musics);
+            },1000)
         });
     };
     $scope.listarMusicas();
