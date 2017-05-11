@@ -1,63 +1,66 @@
-<div class="page-subtitle">
-    <h3>Gestão de Músicas</h3>
-    <p>Controle das músicas.</p>
+<div class="panel panel-default">
+    <div class="panel-heading">Gestão de Músicas</div>
+    <br>
+    <form>
+        <label class="col-md-2 control-label">Nome</label>
+        <input type="text" name="" width="100" ng-model="music.nome">
+        <br><br>
+        <label class="col-md-2 control-label">Duração</label>
+        <input type="number" name="" step="1" ng-model="music.duracao">
+        <br><br>
+        <label class="col-md-2 control-label">Artista</label>
+        <select ng-model="music.artista">
+            <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
+        </select>
+        <br><br>
+        <label class="col-md-2 control-label">Categoria</label>
+        <select ng-model="music.categoria">
+            <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
+        </select>
+        <br><br>
+        <label class="col-md-2 control-label"></label>
+        <div class="form-group">
+            <div class="col-md-offset-2">
+                <button class="btn btn-default" ng-click="adicionarMusica(music)">Adicionar Música</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Nome Artista</label>
+            <input type="text" name="" width="100" ng-model="artista.nome">
+            <button class="btn btn-default" ng-click="adicionarArtista(artista)">Adicionar Artista</button>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Nome Categoria</label>
+            <input type="text" name="" width="100" ng-model="categoria.nome">
+            <button class="btn btn-default" ng-click="adicionarCategoria(categoria)">Adicionar Categoria</button>
+        </div>    
+    </form>
+    
+    <label class="col-md-2 control-label">Buscar Músicas</label><br>
+    <table class="table">
+        <thead>
+            <tr>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
+            </tr>
+            <!-- 
+            <tr>
+                <th ng-click="ordenarPor('nome')"> Nome </th>
+                <th ng-click="ordenarPor('contato')"> Contato </th>
+                <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
+            </tr>
+            -->
+        </thead>
+        <tbody>
+            <tr ng-repeat="music in musics| filter:buscarMusic">
+                <td>{{music.music_name}}</td>
+                <td>{{music.singer_name}}</td>
+                <td>{{music.category_name}}</td>
+                <td style="text-align: center;">
+                    <i ng-click="apagarMusica(music)" style="cursor: pointer;" class="fa fa-trash-o"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
-
-<form>
-    <label style="width: 70px;">Nome</label>
-    <input type="text" name="" width="100" ng-model="music.nome">
-    <br><br>
-    <label style="width: 70px;">Duração</label>
-    <input type="number" name="" step="1" ng-model="music.duracao">
-    <br><br>
-    <label style="width: 70px;">Artista</label>
-    <select ng-model="music.artista">
-        <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
-    </select>
-    <br><br>
-    <label style="width: 70px;">Categoria</label>
-    <select ng-model="music.categoria">
-        <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
-    </select>
-    <br><br>
-    <label style="width: 70px;"></label>
-    <button style="width: 200px;" ng-click="adicionarMusica(music)">Adicionar Música</button>
-</form>
-<br><br>
-<div>
-    <label style="width: 100px;">Nome Artista</label>
-    <input type="text" name="" width="100" ng-model="artista.nome">
-    <button style="width: 200px;" ng-click="adicionarArtista(artista)">Adicionar Artista</button>
-    <br><br>
-    <label style="width: 100px;">Nome Categoria</label>
-    <input type="text" name="" width="100" ng-model="categoria.nome">
-    <button style="width: 200px;" ng-click="adicionarCategoria(categoria)">Adicionar Categoria</button>
-</div>
-<br><br>
-<label>Buscar Músicas</label>
-<table class="table">
-    <thead>
-        <tr>
-            <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
-            <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
-            <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
-        </tr>
-        <!-- 
-        <tr>
-            <th ng-click="ordenarPor('nome')"> Nome </th>
-            <th ng-click="ordenarPor('contato')"> Contato </th>
-            <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
-        </tr>
-        -->
-    </thead>
-    <tbody>
-        <tr ng-repeat="music in musics| filter:buscarMusic">
-            <td>{{music.music_name}}</td>
-            <td>{{music.singer_name}}</td>
-            <td>{{music.category_name}}</td>
-            <td style="text-align: center;">
-                <i ng-click="apagarMusica(music)" style="cursor: pointer;" class="fa fa-trash-o"></i>
-            </td>
-        </tr>
-    </tbody>
-</table>
