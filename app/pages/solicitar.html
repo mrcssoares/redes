@@ -1,26 +1,29 @@
-<table class="table">
-    <thead>
-    <tr>
-        <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
-        <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
-        <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
-    </tr>
-    <!--
-    <tr>
-        <th ng-click="ordenarPor('nome')"> Nome </th>
-        <th ng-click="ordenarPor('contato')"> Contato </th>
-        <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
-    </tr>
-    -->
-    </thead>
-    <tbody>
-    <tr ng-repeat="music in musics| filter:buscarMusic">
-        <td>{{music.music_name}}</td>
-        <td>{{music.singer_name}}</td>
-        <td>{{music.category_name}}</td>
-        <td style="text-align: center;">
-            <i ng-click="apagarMusica(music)" style="cursor: pointer;" class="fa fa-trash-o"></i>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<div class="panel panel-default">
+    <div class="panel-heading">Solicite sua Música!</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
+        </tr>
+        <!--
+        <tr>
+            <th ng-click="ordenarPor('nome')"> Nome </th>
+            <th ng-click="ordenarPor('contato')"> Contato </th>
+            <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
+        </tr>
+        -->
+        </thead>
+        <tbody>
+        <tr ng-repeat="music in musics| filter:buscarMusic">
+            <td>{{music.music_name}}</td>
+            <td>{{music.singer_name}}</td>
+            <td>{{music.category_name}}</td>
+            <td style="text-align: center;">
+                <i ng-click="apagarMusica(music)" style="cursor: pointer;" class="fa fa-check"></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
