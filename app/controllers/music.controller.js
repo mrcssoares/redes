@@ -28,7 +28,7 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                 "duration": music.duracao,
                 "id_category": music.categoria,
                 "id_singer": music.artista,
-                "status": "0"
+                "status": "1"
             }
         };
 

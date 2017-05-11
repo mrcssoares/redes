@@ -144,9 +144,24 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
 
     //=================================== START CRUD MUSICAS ===================================//
-
+    //musics accepts
     router.get("/musics",function(req,res){
-        var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category";
+        var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category WHERE music.status = 1";
+        var table = ["music"];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                console.log('get /musics 400 ERROR');
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                console.log('get /musics 200 OK');
+                res.json({"Error" : false, "Message" : "Success", "musics" : rows});
+            }
+        });
+    });
+    //musics sugestions
+    router.get("/musics/sugestions",function(req,res){
+        var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category WHERE music.status = 0";
         var table = ["music"];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){

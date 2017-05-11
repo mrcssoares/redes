@@ -1,7 +1,7 @@
 /**
  * Created by duivilly on 06/05/17.
  */
-angular.module("song").controller('gerenciarSugestoesController', function ($scope, config){
+angular.module("song").controller('gerenciarSugestoesController', function ($scope, $timeout, config){
     
 	$scope.musics= [];
 
@@ -9,7 +9,7 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": config.baseUrl+"/api/musics",
+            "url": config.baseUrl+"/api/musics/sugestions",
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
@@ -21,7 +21,31 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $scope.musics = response.musics;
+            $scope.musics= response.musics;
+            $timeout(function(){
+                $scope.$apply($scope.musics = response.musics)
+            })
+        });
+    };
+
+    $scope.aceitarMusica = function(music) {
+        console.log('Id da música(put): '+music.music_id);
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/musics/status/"+music.music_id,
+            "method": "PUT",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                  
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.listarMusicas();
         });
     };
 
