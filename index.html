@@ -34,7 +34,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-
+                  <label> {{user}} </label>
+                  <img ng-src="{{photo}}" width="40" height="40" style="border-radius: 4px;">
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -78,6 +79,11 @@
                             Login
                         </a>
                     </li>
+                    <!-- <li>
+                        <a ui-sref="login.index" href="#">
+                            <button class="btn btn-facebook" ng-click="sair()" style="margin-right: 10px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"> Sair </button>
+                        </a>
+                    </li> -->
                 </ul>
 
             </div><!-- /.navbar-collapse -->
