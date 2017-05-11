@@ -36,8 +36,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <label> {{user}} </label>
-                  <img ng-src="{{photo}}" width="40" height="40" style="border-radius: 4px;">
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -77,8 +76,8 @@
                         </a>
                     </li>
                     <li>
-                        <a ui-sref="login.index" href="#">
-                            Login
+                        <a ui-sref="login.index">
+                            <label> {{user}} </label><img ng-src="{{photo}}" width="40" height="40" style="border-radius: 4px;">
                         </a>
                     </li>
                     <!-- <li>
@@ -94,7 +93,9 @@
 
 
     <!-- style="background-image: url('app/assets/images/default.jpg') -->
-    <div class="main" style="background-image: url('app/assets/images/default.jpg')">
+    <!-- #696969
+    #66CDAA -->
+    <div class="main" style="background-color: #008080">
 
         <!--    Change the image source '/images/default.jpg' with your favourite image.     -->
 
