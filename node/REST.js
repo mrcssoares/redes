@@ -146,7 +146,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     //=================================== START CRUD MUSICAS ===================================//
 
     router.get("/musics",function(req,res){
-        var query = "SELECT music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category";
+        var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category";
         var table = ["music"];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
@@ -175,15 +175,17 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         });
     });
     //deletar musica
-    router.delete("/music/:id",function(req,res){
+    router.post("/musics/delete",function(req,res){
         var query = "DELETE from ?? WHERE ??=?";
-        var table = ["music","id",req.params.id];
+        var table = ["music","id",req.body.id];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
             if(err) {
+                console.log('delete /musics 400 ERROR');
                 res.json({"Error" : true, "Message" : "Error executing MySQL query"});
             } else {
-                res.json({"Error" : false, "Message" : "Deleted the music "+req.params.id});
+                console.log('delete /musics 200 OK');
+                res.json({"Error" : false, "Message" : "Deleted the music "+req.body.id});
             }
         });
     });

@@ -1,7 +1,7 @@
 /**
  * Created by duivilly on 04/05/17.
  */
-angular.module("song").controller('musicController', function ($scope, $http, config) {
+angular.module("song").controller('musicController', function ($scope, $timeout, $http, config) {
 
 	$scope.nome= '';
 	$scope.duracao= '';
@@ -32,9 +32,17 @@ angular.module("song").controller('musicController', function ($scope, $http, co
             }
         };
 
-        $.ajax(settings).done(function (response) {
+        $.ajax(settings).success(function (music, response) {
             console.log(response);
             $scope.$apply($scope.listarMusicas());
+            var nome= document.getElementById('nome');
+            nome.value= "";
+            var duracao= document.getElementById('duracao');
+            duracao.value= "";
+            var artista= document.getElementById('artista');
+            artista.value= "";
+            var categoria= document.getElementById('categoria');
+            categoria.value= "";
         });
     };
 
@@ -95,6 +103,8 @@ angular.module("song").controller('musicController', function ($scope, $http, co
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.listarArtista();
+            var inputArtista= document.getElementById('inputArtista');
+            inputArtista.value= "";
         });
     };
 
@@ -115,6 +125,8 @@ angular.module("song").controller('musicController', function ($scope, $http, co
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.listarCategorias();
+            var inputCategoria= document.getElementById('inputCategoria');
+            inputCategoria.value= "";
         });
     };
 
@@ -135,17 +147,24 @@ angular.module("song").controller('musicController', function ($scope, $http, co
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.musics= response.musics;
+            $timeout(function(){
+                $scope.$apply($scope.musics = response.musics)
+            })
         });
     };
 
     $scope.apagarMusica = function(music) {
+        console.log('Id da música(delete): '+music.music_id);
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": config.baseUrl+"/api/musics/"+music.id,
-            "method": "delete",
+            "url": config.baseUrl+"/api/musics/delete",
+            "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                id: music.music_id  
             }
         };
 
