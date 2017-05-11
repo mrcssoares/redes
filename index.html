@@ -7,7 +7,7 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Sssoon Page </title>
+    <title>SongUkê</title>
 
     <link href="app/assets/css/bootstrap.css" rel="stylesheet" />
     <link href="app/assets/css/coming-sssoon.css" rel="stylesheet" />
@@ -38,21 +38,44 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a ui-sref="login.index" href="#">
-                            <i class="fa fa-facebook-square"></i>
-                            Share
+                        <a ui-sref="home.index" >
+                            <i  class="fa fa-music"></i>
+                            Acompanhar
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="solicitar.index">
+                            <i class="fa fa-microphone"></i>
+                            Solicitar
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="sugerir.index">
+                            <i class="fa fa-lightbulb-o"></i>
+                            Sugerir
                         </a>
                     </li>
                     <li>
                         <a ui-sref="music.index" >
-                            <i  class="fa fa-twitter"></i>
-                            Tweet
+                            <i  class="fa fa-music"></i>
+                            Gerenciar Músicas
                         </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <i class="fa fa-envelope-o"></i>
-                            Email
+                        <a ui-sref="gerenciarSolicitacoes.index" >
+                            <i  class="fa fa-microphone"></i>
+                            Gerenciar Solicitações
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="gerenciarSugestoes.index" >
+                            <i  class="fa fa-lightbulb-o"></i>
+                            Gerenciar Sugestões
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="login.index" href="#">
+                            Login
                         </a>
                     </li>
                 </ul>
@@ -62,7 +85,7 @@
     </nav>
 
 
-
+    <!-- style="background-image: url('app/assets/images/default.jpg') -->
     <div class="main" style="background-image: url('app/assets/images/default.jpg')">
 
         <!--    Change the image source '/images/default.jpg' with your favourite image.     -->
