@@ -31,16 +31,11 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
     $scope.aceitarMusica = function(music) {
         console.log('Id da música(put): '+music.music_id);
         var settings = {
-            "async": true,
-            "crossDomain": true,
             "url": config.baseUrl+"/api/musics/status/"+music.music_id,
-            "method": "PUT",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-                  
-            }
+            "type": "PUT",
+            "contentType": "multipart/form-data",
+            "crossDomain": true,
+            "processData": false,
         };
 
         $.ajax(settings).done(function (response) {

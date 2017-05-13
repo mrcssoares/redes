@@ -1,23 +1,20 @@
 <div class="panel panel-default">
     <!-- page content container -->
+    <div class="panel-heading">Sugerir uma Música</div><br>
     <div class="container">
         <!-- Horizontal Form -->
         <div class="wrapper wrapper-white">
-            <div class="page-subtitle">
-                <h3>Sugira uma música!</h3>
-                <p>Você pode cantar sua música preferida.</p>
-            </div>
             <form class="form-horizontal">
                 <div class="form-group">
                     <label class="col-md-2 control-label">Nome Música</label>
                     <div class="col-md-5">
-                        <input ng-model="music.nome" type="text" class="form-control" placeholder="nome...">
+                        <input ng-model="music.nome" id="nome" type="text" class="form-control" placeholder="nome...">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label">Artista</label>
                     <div class="col-md-5">
-                        <select ng-model="music.artista">
+                        <select ng-model="music.artista" id="artista">
                             <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
                         </select>
                     </div>
@@ -25,7 +22,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label">Categoria</label>
                     <div class="col-md-5">
-                        <select ng-model="music.categoria">
+                        <select ng-model="music.categoria" id="categoria">
                             <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
                         </select>
                     </div>

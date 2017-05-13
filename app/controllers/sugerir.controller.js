@@ -1,7 +1,7 @@
 /**
     * Created by dara on 25/04/17.
     */
-angular.module("song").controller('sugerirController', function ($scope,config) {
+angular.module("song").controller('sugerirController', function ($scope, $timeout, config) {
 
     $scope.sugerir = function (music) {
         console.log(music);
@@ -25,6 +25,12 @@ angular.module("song").controller('sugerirController', function ($scope,config) 
 
         $.ajax(settings).done(function (response) {
             console.log(response);
+            var nome= document.getElementById('nome');
+            nome.value= "";
+            var artista= document.getElementById('artista');
+            artista.value= "";
+            var categoria= document.getElementById('categoria');
+            categoria.value= "";
         });
     };
 
@@ -45,6 +51,9 @@ angular.module("song").controller('sugerirController', function ($scope,config) 
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.categorias = response.category;
+            $timeout(function(){
+                $scope.$apply($scope.categorias = response.category)
+            })
         });
     };
 
@@ -65,6 +74,9 @@ angular.module("song").controller('sugerirController', function ($scope,config) 
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.artistas = response.singers;
+            $timeout(function(){
+                $scope.$apply($scope.artistas = response.singers)
+            })
         });
     };
 

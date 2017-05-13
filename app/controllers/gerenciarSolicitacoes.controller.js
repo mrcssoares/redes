@@ -1,7 +1,7 @@
 /**
  * Created by duivilly on 06/05/17.
  */
-angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, config){
+angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, $timeout, config){
     
     $scope.solicitacoes= [];
 
@@ -22,6 +22,9 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.solicitacoes= response.solicitations;
+            $timeout(function(){
+                $scope.$apply($scope.solicitacoes= response.solicitations)
+            })
         });
     }
 

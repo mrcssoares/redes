@@ -1,7 +1,7 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('loginController', function ($scope, $rootScope, $state, $timeout) {
+angular.module("song").controller('loginController', function ($scope, $rootScope, $state, $timeout, config) {
 
     // Load the SDK asynchronously
     (function(d, s, id) {
@@ -41,7 +41,6 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
     };
 
     function statusChangeCallback (response) {
-        console.log('statusChangeCallback');
         console.log(response);
 
         if (response.status === 'connected') {
@@ -61,6 +60,9 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
     $scope.loginFacebook = function () {
         FB.api('/me', {fields: 'name, email'}, function (response) {
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
+            console.log('Facebook:');
+            console.log(response);
+            localStorage.setItem('id', response.id);
             localStorage.setItem('user', response.name);
             localStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
             localStorage.setItem('Slogin', 'facebook');
@@ -69,10 +71,11 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
                 location: "replace",
                 reload: true
             });
-
+            //save user
+            $scope.listarUsuarios();
         });
     };
-
+ 
     $scope.checkLoginState = function () {
         FB.getLoginStatus(function(response) {
             statusChangeCallback(response);
@@ -119,5 +122,58 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             }
         );
     }
+
+    //================================= Salvar Dados Client =========================================//
+
+    $scope.adicionarUsuario = function(users) {
+        var user;
+        for(user in users){
+            console.log(users[user]);
+        }
+        /*
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/users",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                'name': $scope.nome,
+                'email': $scope.email,
+                'photo': $scope.photo,
+                'type': "1"
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+        */
+    };
+
+    $scope.listarUsuarios = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/users",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $timeout(function(){
+                $scope.$apply($scope.users= response.users)
+            })
+            $scope.adicionarUsuario(response);
+        });
+    };
 
 });

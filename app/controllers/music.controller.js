@@ -63,6 +63,9 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.artistas = response.singers;
+            $timeout(function(){
+                $scope.$apply($scope.artistas = response.singers)
+            })
         });
     };
 
@@ -83,6 +86,9 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.categorias = response.category;
+            $timeout(function(){
+                $scope.$apply($scope.categorias = response.category)
+            })
         });
     };
 
