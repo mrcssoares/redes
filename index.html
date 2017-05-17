@@ -11,6 +11,7 @@
 
     <link href="app/assets/css/bootstrap.css" rel="stylesheet" />
     <link href="app/assets/css/coming-sssoon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/angular_material/angular-material.min.css">
 
     <!--     Fonts     -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
@@ -24,7 +25,7 @@
     <nav class="navbar navbar-transparent navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div ng-if="login == 1 || login == 2" class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -34,77 +35,24 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: #5e5e5e; opacity: 0.7;">
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a ui-sref="home.index" >
-                            <i  class="fa fa-music"></i>
-                            Acompanhar
-                        </a>
-                    </li>
-                    <li>
-                        <a ui-sref="solicitar.index">
-                            <i class="fa fa-microphone"></i>
-                            Solicitar
-                        </a>
-                    </li>
-                    <li>
-                        <a ui-sref="sugerir.index">
-                            <i class="fa fa-lightbulb-o"></i>
-                            Sugerir
-                        </a>
-                    </li>
-                    <li>
-                        <a ui-sref="music.index" >
-                            <i  class="fa fa-music"></i>
-                            Gerenciar Músicas
-                        </a>
-                    </li>
-                    <li>
-                        <a ui-sref="gerenciarSolicitacoes.index" >
-                            <i  class="fa fa-microphone"></i>
-                            Gerenciar Solicitações
-                        </a>
-                    </li>
-                    <li>
-                        <a ui-sref="gerenciarSugestoes.index" >
-                            <i  class="fa fa-lightbulb-o"></i>
-                            Gerenciar Sugestões
-                        </a>
-                    </li>
-                    <li>
-                        <a ng-click="sair()">
-                            <i  class="fa fa-reply"></i>
-                            Sair
-                        </a>
-                    </li>
-                    <!-- <li>
-                        <a ui-sref="login.index" href="#">
-                            <button class="btn btn-facebook" ng-click="sair()" style="margin-right: 10px; margin-left: 10px; margin-top: 10px; margin-bottom: 10px;"> Sair </button>
-                        </a>
-                    </li> -->
-                </ul>
+                <div ng-if="login == 1" ng-include="'app/pages/menu/cliente.html'"></div>
+                <div ng-if="login == 2" ng-include="'app/pages/menu/admin.html'"></div>
 
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav>
 
 
-    <!-- style="background-image: url('app/assets/images/default.jpg') -->
+    <!--  -->
     <!-- #696969
     #66CDAA -->
-    <div class="main" style="background-color: #008080">
-
-        <!--    Change the image source '/images/default.jpg' with your favourite image.     -->
-
-        <!--   You can change the black color for the filter with those colors: blue, green, red, orange       -->
+    <div class="main" style="background-image: url('app/assets/images/Live-Music.jpg')">
 
         <div class="container">
             <h1 class="logo cursive">
-                SongUkê
+
             </h1>
             <ui-view></ui-view>
             <!--  H1 can have 2 designs: "logo" and "logo cursive"           -->
@@ -121,7 +69,17 @@
         <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-        <!--<script src="app/app.js" ></script>-->
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="lib/angular_material/angular-animate.min.js"></script>
+        <script src="lib/angular_material/angular-aria.min.js"></script>
+        <script src="lib/angular_material/angular-messages.min.js"></script>
+    
+        <!-- Angular Material Library -->
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+        <script src="lib/angular_material/angular-material.min.js"></script>
+
+
+    <!--<script src="app/app.js" ></script>-->
         <script src="app/app.module.js" ></script>
         <script src="app/app.routes.js" ></script>
         <script src="app/config.js"></script>
@@ -135,6 +93,12 @@
         <script src="app/controllers/gerenciarSolicitacoes.controller.js"></script>
         <script src="app/controllers/gerenciarSugestoes.controller.js"></script>
 
+        <script type="text/javascript">
+        /**
+         * You must include the dependency on 'ngMaterial'
+         */
+        angular.module('BlankApp', ['ngMaterial']);
+        </script>
         <!-- ./javascript -->
     </body>
 </html>

@@ -62,17 +62,13 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
             console.log('Facebook:');
             console.log(response);
-            localStorage.setItem('id', response.id);
             localStorage.setItem('user', response.name);
             localStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
             localStorage.setItem('Slogin', 'facebook');
-            $rootScope.login = true;
-            $state.go("home.index", {}, {
-                location: "replace",
-                reload: true
-            });
-            //save user
-            $scope.listarUsuarios();
+            $scope.loginCliente();
+
+
+
         });
     };
  
@@ -115,13 +111,16 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
                 localStorage.setItem('Slogin', 'gmail');
                 console.log(googleUser.getBasicProfile().Paa);
                 //estes dados vão pra rota
-                $state.go("home", {}, {
-                    location: "replace",
-                    reload: true
-                });
+                $scope.loginCliente();
+
             }
         );
     }
+
+    $scope.loginCliente = function () {
+        localStorage.setItem('type', '1');
+        $scope.$emit('someEvent', 'login');
+    };
 
     //================================= Salvar Dados Client =========================================//
 
@@ -171,7 +170,7 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             console.log(response);
             $timeout(function(){
                 $scope.$apply($scope.users= response.users)
-            })
+            });
             $scope.adicionarUsuario(response);
         });
     };

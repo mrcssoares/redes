@@ -1,53 +1,35 @@
 <div class="container">
-<div class="row">
-<!-- code start -->
-<div class="twPc-div">
-    <a class="twPc-bg twPc-block"></a>
-	<div>
-		<div class="twPc-button">
-            <!-- Twitter Button | you can get from: https://about.twitter.com/tr/resources/buttons#follow -->
-            <a href="https://twitter.com/mertskaplan" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true">Follow @mertskaplan</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            <!-- Twitter Button -->   
-		</div>
+	<div align="center" flex-xs flex-gt-xs="96" layout="column" >
+		<md-card id="scrollPromos">
+			<md-card-header>
+				<md-card-avatar>
+					<img class="md-user-avatar" ng-src="app/assets/images/touch-music-karaoke.jpg" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
+				</md-card-avatar>
+				<md-card-header-text>
+					<span class="md-title">Nome Topper</span>
+					<span class="md-subhead">Subtitulo topper</span>
+				</md-card-header-text>
+			</md-card-header>
+			<!--<img ng-src="assets/ima/favorite.svg" class="md-card-image">-->
+			<spam style="padding-left: 15px; padding-top:5px;f1ont-size: 14px;color: rgba(0,0,0,0.54);">  tinha uma data legal </spam>
 
-		<a title="{{user}}" href="https://twitter.com/mertskaplan" class="twPc-avatarLink">
-			<img alt="Mert Salih Kaplan" src="{{photo}}" class="twPc-avatarImg">
-		</a>
+			<md-card-icon-actions>
+				<md-button class="md-icon-button" aria-label="Favorite">
+					<md-icon md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
 
-		<div class="twPc-divUser">
-			<div class="twPc-divName">
-				<a href="https://twitter.com/mertskaplan">{{user}}</a>
+				</md-button>
+				<spam>45</spam>
+				<md-button class="md-icon-button" aria-label="Share">
+					<md-icon md-svg-icon="app/assets/images/share-arrow.svg"></md-icon>
+				</md-button>
+			</md-card-icon-actions>
+			<div>
+				<md-card-content>
+					<div align="justify">
+						Tipo um "Fulano está cantando
+					</div>
+				</md-card-content>
 			</div>
-			<span>
-				<a href="https://twitter.com/mertskaplan">@<span>mertskaplan</span></a>
-			</span>
-		</div>
-
-		<div class="twPc-divStats">
-			<ul class="twPc-Arrange">
-				<li class="twPc-ArrangeSizeFit">
-					<a href="https://twitter.com/mertskaplan" title="9.840 Tweet">
-						<span class="twPc-StatLabel twPc-block">Tweets</span>
-						<span class="twPc-StatValue">9.840</span>
-					</a>
-				</li>
-				<li class="twPc-ArrangeSizeFit">
-					<a href="https://twitter.com/mertskaplan/following" title="885 Following">
-						<span class="twPc-StatLabel twPc-block">Following</span>
-						<span class="twPc-StatValue">885</span>
-					</a>
-				</li>
-				<li class="twPc-ArrangeSizeFit">
-					<a href="https://twitter.com/mertskaplan/followers" title="1.810 Followers">
-						<span class="twPc-StatLabel twPc-block">Followers</span>
-						<span class="twPc-StatValue">1.810</span>
-					</a>
-				</li>
-			</ul>
-		</div>
+		</md-card>
 	</div>
-</div>
-<!-- code end -->
-</div>
 </div>
