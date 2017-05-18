@@ -1,8 +1,9 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('solicitarController', function ($scope, config, $timeout) {
+angular.module("song").controller('solicitarController', function ($scope, config, objectUser, $timeout) {
     $scope.idUser = localStorage.getItem('id');
+    console.log(objectUser);
 
     $scope.listarMusicas = function() {
         var settings = {
@@ -64,10 +65,11 @@ angular.module("song").controller('solicitarController', function ($scope, confi
                 "likes": "0",
                 "status": "0",
                 "id_music": music.music_id,
-                "id_user": 3,
-                "created_at": dataAtual,
+                "id_user": objectUser.id,
+                "created_at": dataAtual
             }
         };
+        console.log(settings);
 
         $.ajax(settings).done(function (response) {
             console.log(response);

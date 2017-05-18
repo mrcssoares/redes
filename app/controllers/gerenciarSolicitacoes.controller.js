@@ -1,8 +1,8 @@
 /**
  * Created by duivilly on 06/05/17.
  */
-angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, $timeout, config){
-    
+angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, $timeout, config, objectUser){
+    console.log(objectUser);
     $scope.solicitacoes= [];
 
 	$scope.listarSolicitacoes = function() {

@@ -62,13 +62,73 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
             console.log('Facebook:');
             console.log(response);
-            localStorage.setItem('user', response.name);
-            localStorage.setItem('photo', "https://graph.facebook.com/"+response.id+"/picture");
-            localStorage.setItem('Slogin', 'facebook');
-            $scope.loginCliente();
+            var photo = "https://graph.facebook.com/"+response.id+"/picture";
+            $scope.loginCliente(response.name, response.email, photo);
 
+        });
+    };
 
+    $scope.loginCliente = function (nome, email, photo) {
+        localStorage.setItem('type', '1');
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/users/empty",
+            "method": "POST",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            },
+            "data": {
+                "email": email
+            }
+        };
 
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            //se usuário ainda não foi cadastrado
+            if(response.users.length == 0){
+                    var settings = {
+                        "async": true,
+                        "crossDomain": true,
+                        "url": config.baseUrl+"/api/users",
+                        "method": "POST",
+                        "headers": {
+                            "content-type": "application/x-www-form-urlencoded"
+                        },
+                        "data": {
+                            'name': nome,
+                            'email':email,
+                            'photo': photo,
+                            'type': "1"
+                        }
+                    };
+                    //cadastra ele
+                    $.ajax(settings).done(function (response) {
+                        console.log(response);
+                        var settings = {
+                            "async": true,
+                            "crossDomain": true,
+                            "url": config.baseUrl+"/api/users/empty",
+                            "method": "POST",
+                            "headers": {
+                                "content-type": "application/x-www-form-urlencoded"
+                            },
+                            "data": {
+                                "email": email
+                            }
+                        };
+                        //busca ele de novo
+                        $.ajax(settings).done(function (response) {
+                            console.log(response);
+                            localStorage.setItem('object-user', JSON.stringify(response.users[0]));
+                            $scope.$emit('someEvent', 'login');
+
+                        })
+                    });
+            }else{
+                localStorage.setItem('object-user', JSON.stringify(response.users[0]));
+                $scope.$emit('someEvent', 'login');
+            }
         });
     };
  
@@ -104,75 +164,21 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
     function attachSignin(element) {
         auth2.attachClickHandler(element, {},
             function (googleUser) {
-                console.log(googleUser.getBasicProfile());
+                //console.log(googleUser.getBasicProfile());
                 googleUser.getBasicProfile().Paa = googleUser.getBasicProfile().Paa.replace('96-c', '500-c');
-                localStorage.setItem('user', googleUser.getBasicProfile().ig);
-                localStorage.setItem('photo', googleUser.getBasicProfile().Paa);
-                localStorage.setItem('Slogin', 'gmail');
-                console.log(googleUser.getBasicProfile().Paa);
+
+                console.log(googleUser.getBasicProfile());
                 //estes dados vão pra rota
-                $scope.loginCliente();
+                $scope.loginCliente(googleUser.getBasicProfile().ig,googleUser.getBasicProfile().U3 ,googleUser.getBasicProfile().Paa);
 
             }
         );
     }
 
-    $scope.loginCliente = function () {
-        localStorage.setItem('type', '1');
-        $scope.$emit('someEvent', 'login');
-    };
+
 
     //================================= Salvar Dados Client =========================================//
 
-    $scope.adicionarUsuario = function(users) {
-        var user;
-        for(user in users){
-            console.log(users[user]);
-        }
-        /*
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": config.baseUrl+"/api/users",
-            "method": "POST",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-                'name': $scope.nome,
-                'email': $scope.email,
-                'photo': $scope.photo,
-                'type': "1"
-            }
-        };
 
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        });
-        */
-    };
-
-    $scope.listarUsuarios = function() {
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": config.baseUrl+"/api/users",
-            "method": "GET",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-
-            }
-        };
-
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            $timeout(function(){
-                $scope.$apply($scope.users= response.users)
-            });
-            $scope.adicionarUsuario(response);
-        });
-    };
 
 });

@@ -28,6 +28,32 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         });
     });
 
+    router.post("/users/empty",function(req,res){
+        var query = "SELECT * FROM ?? WHERE ?? LIKE ?";
+        var table = ["user", "email", req.body.email];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                res.json({"Error" : false, "Message" : "Success", "users" : rows});
+            }
+        });
+    });
+
+    router.post("/users",function(req,res){
+        var query = "INSERT INTO ??(??,??,??,??) VALUES (?,?,?,?)";
+        var table = ["user","name","email","photo", "type",req.body.name,req.body.email,req.body.photo, req.body.type];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                res.json({"Error" : err, "Message" : "Error executing MySQL query"});
+            } else {
+                res.json({"Error" : false, "Message" : "User Added !", "rows" :rows });
+            }
+        });
+    });
+
     router.post("/users",function(req,res){
         var query = "INSERT INTO ??(??,??,??,??) VALUES (?,?,?,?)";
         var table = ["user","name","email","photo", "type",req.body.name,req.body.email,req.body.photo, req.body.type];
@@ -66,6 +92,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             }
         });
     });
+
 
     //=================================== END CRUD USERS =======================================//
 

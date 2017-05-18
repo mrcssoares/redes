@@ -10,7 +10,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
     $scope.artistas= [];
     $scope.categorias= [];
     $scope.musics= [];
-	console.log('musics');  
+	console.log('musics');
+    console.log(objectUser);
 
     $scope.adicionarMusica = function (music) {
         console.log(music);

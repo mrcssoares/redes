@@ -1,13 +1,11 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('mainController', function ($scope, $rootScope, $state, $timeout) {
+angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout) {
 
-    $scope.user = localStorage.getItem('user');
-    $scope.photo = localStorage.getItem('photo');
-    $scope.sLogin = localStorage.getItem('Slogin');
-    $scope.login = localStorage.getItem('type');
-
+    $scope.objectUser = objectUser;
+    if(objectUser) $scope.login = $scope.objectUser.type;
+    else $scope.login = 0;
     console.log('login '+$scope.login);
 
     //escuta eventos vindos de outros controllers
@@ -17,14 +15,13 @@ angular.module("song").controller('mainController', function ($scope, $rootScope
             $state.go('home');
             $timeout(function () {
                 location.reload();
-            },1000);
+            },500);
         }
 
     });
 
 
     $scope.sair = function () {
-        $scope.login = false;
         localStorage.clear();
         $state.go('login.index', {}, {
             location: 'replace'
