@@ -31,11 +31,15 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
     $scope.aceitarMusica = function(music) {
         console.log('Id da música(put): '+music.music_id);
         var settings = {
-            "url": config.baseUrl+"/api/musics/status/"+music.music_id,
-            "type": "PUT",
-            "contentType": "multipart/form-data",
+            "async": true,
             "crossDomain": true,
-            "processData": false,
+            "url": "http://localhost:3000/api/musics/status/" + music.music_id,
+            "method": "PUT",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded",
+                "cache-control": "no-cache",
+                "postman-token": "9df39487-089c-321f-f1c1-249cebe961df"
+            }
         };
 
         $.ajax(settings).done(function (response) {

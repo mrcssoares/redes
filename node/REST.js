@@ -10,6 +10,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     router.get("/",function(req,res){
         res.json({"Message" : "Bem vindo a api songUkê !"});
+
     });
 
 
@@ -254,7 +255,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     //=================================== START CRUD SOLICITAÇÕES ==============================//
 
     router.get("/solicitations",function(req,res){
-        var query = "SELECT music.name as name_music, user.name as name_user, solicitation.likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
+        var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.photo as photo_user,  solicitation.likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
         var table = ["solicitation"];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){
@@ -280,7 +281,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 res.json({"Error" : err, "Message" : "Error executing MySQL query"});
             } else {
                 console.log('post /solicitations 200 OK');
-                res.json({"Error" : false, "Message" : "Success", "solotitations" : rows});
+                res.json({"Error" : false, "Message" : "Success", "solicitations" : rows});
             }
         });
     });

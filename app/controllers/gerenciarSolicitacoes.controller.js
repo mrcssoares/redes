@@ -26,7 +26,7 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
                 $scope.$apply($scope.solicitacoes= response.solicitations)
             })
         });
-    }
+    };
 
     $scope.listarSolicitacoes();
 

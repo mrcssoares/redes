@@ -1,35 +1,33 @@
-<div class="container">
+<div ng-repeat="solicitacao in solicitacoes | filter: status" class="container">
 	<div align="center" flex-xs flex-gt-xs="96" layout="column" >
-		<md-card id="scrollPromos">
+		<md-card id="scrollPromos" align="center" >
 			<md-card-header>
 				<md-card-avatar>
-					<img class="md-user-avatar" ng-src="app/assets/images/touch-music-karaoke.jpg" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
+					<img class="md-user-avatar" ng-src="{{solicitacao.photo_user}}" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
 				</md-card-avatar>
 				<md-card-header-text>
-					<span class="md-title">Nome Topper</span>
-					<span class="md-subhead">Subtitulo topper</span>
+					<span class="md-title">{{solicitacao.name_user}}</span>
+					<span class="md-subhead">Cantor</span>
 				</md-card-header-text>
 			</md-card-header>
 			<!--<img ng-src="assets/ima/favorite.svg" class="md-card-image">-->
-			<spam style="padding-left: 15px; padding-top:5px;f1ont-size: 14px;color: rgba(0,0,0,0.54);">  tinha uma data legal </spam>
-
+			<div>
+				<md-card-content>
+					<div align="center">
+						Se preparando para cantar {{solicitacao.name_music}}
+					</div>
+				</md-card-content>
+			</div>
 			<md-card-icon-actions>
 				<md-button class="md-icon-button" aria-label="Favorite">
-					<md-icon md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
-
+					<md-icon md-svg-icon="app/assets/images/favorite.svg"></md-icon>
 				</md-button>
-				<spam>45</spam>
+				<spam>{{solicitacao.likes}}</spam>
 				<md-button class="md-icon-button" aria-label="Share">
 					<md-icon md-svg-icon="app/assets/images/share-arrow.svg"></md-icon>
 				</md-button>
 			</md-card-icon-actions>
-			<div>
-				<md-card-content>
-					<div align="justify">
-						Tipo um "Fulano está cantando
-					</div>
-				</md-card-content>
-			</div>
+
 		</md-card>
 	</div>
 </div>

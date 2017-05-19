@@ -15,7 +15,7 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             $state.go('home');
             $timeout(function () {
                 location.reload();
-            },500);
+            },100);
         }
 
     });
@@ -26,5 +26,9 @@ angular.module("song").controller('mainController', function ($scope, objectUser
         $state.go('login.index', {}, {
             location: 'replace'
         });
+        $timeout(function () {
+            location.reload();
+        },100);
+
     }
 });
