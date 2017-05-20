@@ -1,4 +1,5 @@
 var express = require("express");
+var cors = require('cors')
 var mysql   = require("mysql");
 var bodyParser  = require("body-parser");
 var md5 = require('MD5');
@@ -31,7 +32,8 @@ REST.prototype.connectMysql = function() {
 
 REST.prototype.configureExpress = function(connection) {
       var self = this;
-      app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(cors());
+    app.use(bodyParser.urlencoded({ extended: true }));
       app.use(bodyParser.json());
       app.use(function(req, res, next) {
           res.header("Access-Control-Allow-Origin", "*");

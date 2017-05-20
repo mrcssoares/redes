@@ -5,6 +5,505 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/redes.iml" afterPath="$PROJECT_DIR$/.idea/redes.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/Server.js" afterPath="$PROJECT_DIR$/node/Server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/MD5/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/.travis.yml" afterPath="$PROJECT_DIR$/node/node_modules/MD5/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/MD5/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/README.md" afterPath="$PROJECT_DIR$/node/node_modules/MD5/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/md5.js" afterPath="$PROJECT_DIR$/node/node_modules/MD5/md5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/LICENSE.mkd" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/LICENSE.mkd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/README.js" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/README.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/charenc.js" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/charenc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/package.json" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/charenc/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/LICENSE.mkd" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/LICENSE.mkd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/README.mkd" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/README.mkd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/crypt.js" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/crypt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/package.json" afterPath="$PROJECT_DIR$/node/node_modules/MD5/node_modules/crypt/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/package.json" afterPath="$PROJECT_DIR$/node/node_modules/MD5/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/MD5/test.js" afterPath="$PROJECT_DIR$/node/node_modules/MD5/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/lib/read.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/lib/read.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/json.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/json.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/raw.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/raw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/text.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/urlencoded.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/lib/types/urlencoded.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/History.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/Makefile" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/component.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/bytes/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/content-type/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/.jshintrc" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/History.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/Makefile" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/bower.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/browser.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/component.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/debug.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/debug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/node_modules/ms/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/debug/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/History.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/lib/compat/buffer-concat.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/lib/compat/buffer-concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/lib/compat/callsite-tostring.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/lib/compat/callsite-tostring.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/lib/compat/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/lib/compat/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/depd/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/.travis.yml" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/Changelog.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/Changelog.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-data.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/internal.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/internal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-codec.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-codec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data-generated.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data-generated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/big5-added.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/big5-added.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/cp936.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/cp936.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/cp949.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/cp949.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/cp950.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/cp950.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/eucjp.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/eucjp.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/gb18030-ranges.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/gbk-added.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/gbk-added.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/shiftjis.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/tables/shiftjis.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/utf16.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/utf16.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/utf7.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/encodings/utf7.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/lib/extend-node.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/lib/extend-node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/lib/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/lib/streams.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/lib/streams.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/iconv-lite/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/on-finished/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.jshintignore" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.jshintignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.jshintrc" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.travis.yml" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/Makefile" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/qs/test/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/raw-body/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/media-typer/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/index.js" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/node_modules/type-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/body-parser/package.json" afterPath="$PROJECT_DIR$/node/node_modules/body-parser/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/History.md" afterPath="$PROJECT_DIR$/node/node_modules/express/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/express/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/application.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/express.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/express.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/middleware/init.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/middleware/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/middleware/query.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/middleware/query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/request.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/request.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/response.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/response.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/router/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/router/layer.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/router/layer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/router/route.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/router/route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/utils.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/lib/view.js" afterPath="$PROJECT_DIR$/node/node_modules/express/lib/view.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/db.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/charset.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/charset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/encoding.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/encoding.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/language.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/language.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/mediaType.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/mediaType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/node_modules/negotiator/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/accepts/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-disposition/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/content-type/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/History.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie-signature/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/cookie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/.jshintrc" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/History.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/Makefile" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/bower.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/browser.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/component.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/debug.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/debug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/node_modules/ms/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/debug/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/History.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/lib/compat/buffer-concat.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/lib/compat/buffer-concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/lib/compat/callsite-tostring.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/lib/compat/callsite-tostring.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/lib/compat/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/lib/compat/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/depd/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/Makefile" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/component.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/escape-html/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc1.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16_ccitt.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16_ccitt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16_modbus.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16_modbus.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc24.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc24.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc32.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc32.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc8.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc8.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc8_1wire.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/crc8_1wire.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/create.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/create.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/hex.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/hex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/node_modules/crc/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/etag/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/finalhandler/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/fresh/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/merge-descriptors/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/methods/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/node_modules/ee-first/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/on-finished/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/parseurl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/History.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/component.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/test.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/path-to-regexp/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/forwarded/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/Cakefile" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/Cakefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/ipaddr.min.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/ipaddr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/lib/ipaddr.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/lib/ipaddr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/src/ipaddr.coffee" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/src/ipaddr.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/test/ipaddr.test.coffee" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/test/ipaddr.test.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/proxy-addr/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.jshintignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.jshintignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.jshintrc" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.travis.yml" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/Makefile" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/qs/test/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/range-parser/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/.bin/mime" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/.bin/mime" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/.bin/mime.cmd" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/.bin/mime.cmd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/destroy/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/destroy/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/destroy/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/destroy/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/destroy/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/destroy/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/build/build.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/build/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/build/test.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/build/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/cli.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/cli.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/mime.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/mime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/types.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/mime/types.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/node_modules/ms/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/send/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/serve-static/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/media-typer/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/type-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/.travis.yml" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/utils-merge/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/History.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/README.md" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/index.js" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/node_modules/vary/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/express/package.json" afterPath="$PROJECT_DIR$/node/node_modules/express/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/mysql/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/Changes.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/Changes.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/License" afterPath="$PROJECT_DIR$/node/node_modules/mysql/License" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/appveyor.yml" afterPath="$PROJECT_DIR$/node/node_modules/mysql/appveyor.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/index.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/Connection.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/Connection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/ConnectionConfig.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/ConnectionConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/Pool.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/Pool.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/PoolCluster.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/PoolCluster.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/PoolConfig.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/PoolConfig.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/PoolConnection.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/PoolConnection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/Auth.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/Auth.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/PacketHeader.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/PacketHeader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/PacketWriter.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/PacketWriter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/Parser.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/Parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/Protocol.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/Protocol.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/ResultSet.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/ResultSet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/SqlString.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/SqlString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/charsets.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/charsets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/client.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/errors.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/errors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/field_flags.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/field_flags.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/server_status.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/server_status.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/ssl_profiles.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/ssl_profiles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/types.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/constants/types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ClientAuthenticationPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComChangeUserPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComPingPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComQueryPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComQuitPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ComStatisticsPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/EmptyPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/EofPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/EofPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ErrorPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/Field.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/Field.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/FieldPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/FieldPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/HandshakeInitializationPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/LocalDataFilePacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/OkPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/OkPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/OldPasswordPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/ResultSetHeaderPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/RowDataPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/SSLRequestPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/SSLRequestPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/StatisticsPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/UseOldPasswordPacket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/index.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/packets/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/ChangeUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Handshake.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Handshake.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Ping.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Ping.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Query.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Quit.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Quit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Sequence.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Sequence.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Statistics.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/Statistics.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/index.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/lib/protocol/sequences/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/.travis.yml" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/LICENCE" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/LICENCE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/README.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/bignumber.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/bignumber.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/bignumber.min.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/bignumber.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/doc/API.html" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/doc/API.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/bignumber.js/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/README.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/duplex.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/float.patch" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/float.patch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_passthrough.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_readable.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_readable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_transform.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_writable.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/lib/_stream_writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/README.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/float.patch" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/float.patch" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/lib/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/util.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/core-util-is/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/README.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/inherits.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/inherits.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/inherits_browser.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/inherits_browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/test.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/inherits/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/README.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/build/build.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/build/build.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/component.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/index.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/isarray/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/LICENSE" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/README.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/index.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/node_modules/string_decoder/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/passthrough.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/readable.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/readable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/transform.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/writable.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/readable-stream/writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/.npmignore" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/License" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/License" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/Readme.md" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/index.js" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/node_modules/require-all/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node/node_modules/mysql/package.json" afterPath="$PROJECT_DIR$/node/node_modules/mysql/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,13 +517,122 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="810">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/login.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2250">
+              <caret line="150" column="50" lean-forward="false" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/pages/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="123" lean-forward="false" selection-start-line="6" selection-start-column="123" selection-end-line="6" selection-end-column="123" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#1;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gerenciarSugestoes.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/gerenciarSugestoes.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/pages/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="REST.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node/REST.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node/Server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/pages/menu/admin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cliente.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/pages/menu/cliente.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="music.controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/music.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="package_json" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -40,7 +648,15 @@
       <find>visitors</find>
       <find>main.</find>
       <find>dev-page-login-block__logo</find>
+      <find>&quot;http://localhost:3000</find>
+      <find>ng-if</find>
+      <find>sessionStorage</find>
+      <find>background-im</find>
     </findStrings>
+    <replaceStrings>
+      <replace>config.baseUrl+&quot;</replace>
+      <replace>localStorage</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
     </dirStrings>
@@ -51,17 +667,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/blue-white.css" />
-        <option value="$PROJECT_DIR$/app/acompanhar.html" />
-        <option value="$PROJECT_DIR$/app/pages/maintop.html" />
-        <option value="$PROJECT_DIR$/app/pages/acompanhar.html" />
-        <option value="$PROJECT_DIR$/app/controllers/acompanhar.controller.js" />
-        <option value="$PROJECT_DIR$/lib/angular-route/angular-route.js" />
-        <option value="$PROJECT_DIR$/lib/angular-route/angular-route.min.js" />
-        <option value="$PROJECT_DIR$/pages/solicitar.html" />
-        <option value="$PROJECT_DIR$/pages/sugerir.html" />
-        <option value="$PROJECT_DIR$/pages/home.html" />
-        <option value="$PROJECT_DIR$/node/rest/index.js" />
         <option value="$PROJECT_DIR$/node/rest/controller/music/index.js" />
         <option value="$PROJECT_DIR$/node-restify-mysql-sequelize/models/index.js" />
         <option value="$PROJECT_DIR$/node-restify-mysql-sequelize/routes/todo.js" />
@@ -83,21 +688,36 @@
         <option value="$PROJECT_DIR$/controllers/login.controller.js" />
         <option value="$PROJECT_DIR$/app/pages/main.html" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/app/pages/sugerir.html" />
         <option value="$PROJECT_DIR$/app/app.js" />
-        <option value="$PROJECT_DIR$/app/app.module.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/app.routes.js" />
-        <option value="$PROJECT_DIR$/app/controllers/home.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/solicitar.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/sugerir.controller.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/node/rest/controller/user/create.js" />
-        <option value="$PROJECT_DIR$/app/controllers/login.controller.js" />
-        <option value="$PROJECT_DIR$/app/pages/login.html" />
-        <option value="$PROJECT_DIR$/node/Server.js" />
-        <option value="$PROJECT_DIR$/node/REST.js" />
+        <option value="$PROJECT_DIR$/app/pages/music.html" />
+        <option value="$PROJECT_DIR$/app/pages/gerenciarSugestoes.html" />
+        <option value="$PROJECT_DIR$/app/config.js" />
+        <option value="$PROJECT_DIR$/template-menu/GoogleNexusWebsiteMenu/index.html" />
+        <option value="$PROJECT_DIR$/templateDesigner/index.html" />
+        <option value="$PROJECT_DIR$/app/app.module.js" />
+        <option value="$PROJECT_DIR$/app/pages/sugerir.html" />
+        <option value="$PROJECT_DIR$/app/pages/menu/login.css" />
+        <option value="$PROJECT_DIR$/app/pages/menu/login.html" />
+        <option value="$PROJECT_DIR$/app/assets/images/vectorpaint.svg" />
+        <option value="$PROJECT_DIR$/app/value/object-user.js" />
+        <option value="$PROJECT_DIR$/app/controllers/solicitar.controller.js" />
+        <option value="$PROJECT_DIR$/app/pages/menu/admin.html" />
         <option value="$PROJECT_DIR$/app/controllers/main.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/gerenciarSolicitacoes.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/home.controller.js" />
+        <option value="$PROJECT_DIR$/app/pages/home.html" />
+        <option value="$PROJECT_DIR$/app/controllers/music.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/login.controller.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app/pages/menu/cliente.html" />
+        <option value="$PROJECT_DIR$/app/pages/login.html" />
+        <option value="$PROJECT_DIR$/app/controllers/gerenciarSugestoes.controller.js" />
+        <option value="$PROJECT_DIR$/node/REST.js" />
+        <option value="$PROJECT_DIR$/node/Server.js" />
       </list>
     </option>
   </component>
@@ -112,8 +732,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="1024" />
-    <option name="height" value="573" />
+    <option name="y" value="24" />
+    <option name="width" value="1366" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -131,57 +752,94 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="songuke" />
+              <option name="myItemId" value="redes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="songuke" />
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="redes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../teewa-web-console" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../teewa-m" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/value" />
+      <recent name="$PROJECT_DIR$/templateDesigner/assets" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/pages" />
-      <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/assets/images" />
       <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/templateDesigner/assets/images" />
       <recent name="$PROJECT_DIR$/node/rest/controller/user" />
-      <recent name="$PROJECT_DIR$/node/rest/controller/music" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
@@ -270,7 +928,23 @@
       <workItem from="1493680011821" duration="5474000" />
       <workItem from="1493728368738" duration="645000" />
       <workItem from="1493902049072" duration="1301000" />
-      <workItem from="1494374187505" duration="29000" />
+      <workItem from="1493927893623" duration="588000" />
+      <workItem from="1493944900660" duration="651000" />
+      <workItem from="1494019167330" duration="8625000" />
+      <workItem from="1494087139146" duration="5648000" />
+      <workItem from="1494244975097" duration="7153000" />
+      <workItem from="1494333789223" duration="1323000" />
+      <workItem from="1494340600823" duration="3354000" />
+      <workItem from="1494368109181" duration="5906000" />
+      <workItem from="1494421255060" duration="641000" />
+      <workItem from="1494436500173" duration="2016000" />
+      <workItem from="1494509808033" duration="157000" />
+      <workItem from="1494548940680" duration="1324000" />
+      <workItem from="1494784015593" duration="1731000" />
+      <workItem from="1494984067854" duration="4676000" />
+      <workItem from="1495051847419" duration="1703000" />
+      <workItem from="1495132277256" duration="10487000" />
+      <workItem from="1495315714273" duration="536000" />
     </task>
     <task id="LOCAL-00001" summary="Estruturando o projeto">
       <created>1490280929036</created>
@@ -342,11 +1016,102 @@
       <option name="project" value="LOCAL" />
       <updated>1493694031365</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Ajustes">
+      <created>1494021406331</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1494021406331</updated>
+    </task>
+    <task id="LOCAL-00012" summary="agora é ajax">
+      <created>1494023478547</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1494023478547</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adicionando get category">
+      <created>1494027453008</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1494027453008</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Adicionando post categorys">
+      <created>1494028471942</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1494028471942</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adicionando config com parametros do servidor">
+      <created>1494092192578</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1494092192578</updated>
+    </task>
+    <task id="LOCAL-00016" summary="nudes">
+      <created>1494093139484</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1494093139484</updated>
+    </task>
+    <task id="LOCAL-00017" summary="uns ajustes aqui que eu já esqueci">
+      <created>1494096158884</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1494096158884</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Uns ajustes no login, agonra vain">
+      <created>1494251210695</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1494251210695</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Ajusteeeees">
+      <created>1494509933595</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1494509933595</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Ajustes insanos no layout e no login;">
+      <created>1494989443932</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1494989443932</updated>
+    </task>
+    <task id="LOCAL-00021" summary="teste">
+      <created>1495132326407</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1495132326407</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Noite Insana 2">
+      <created>1495149641608</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1495149641608</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Noite insana 2 (parte 2)">
+      <created>1495157320773</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1495157320773</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95912000" />
+    <option name="totallyTimeSpent" value="152402000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,46 +1123,49 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1024" height="573" extended-state="0" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15851273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23181818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.501548" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="100" y="152" width="1166" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="100" y="152" width="1166" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2439394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2689394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
@@ -439,168 +1207,291 @@
     <MESSAGE value="Ajustes na view" />
     <MESSAGE value="Adicionando rotas do no servidor(Para execurar user nodejs Server.js no terminal)" />
     <MESSAGE value="API - Adicionado post de musicas;" />
-    <option name="LAST_COMMIT_MESSAGE" value="API - Adicionado post de musicas;" />
+    <MESSAGE value="Ajustes" />
+    <MESSAGE value="agora é ajax" />
+    <MESSAGE value="Adicionando get category" />
+    <MESSAGE value="Adicionando post categorys" />
+    <MESSAGE value="Adicionando config com parametros do servidor" />
+    <MESSAGE value="nudes" />
+    <MESSAGE value="uns ajustes aqui que eu já esqueci" />
+    <MESSAGE value="Uns ajustes no login, agonra vain" />
+    <MESSAGE value="Ajusteeeees" />
+    <MESSAGE value="Ajustes insanos no layout e no login;" />
+    <MESSAGE value="teste" />
+    <MESSAGE value="Noite Insana 2" />
+    <MESSAGE value="Noite insana 2 (parte 2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Noite insana 2 (parte 2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node-restify-mysql-sequelize/public/js/app.js" />
-    <entry file="file://$PROJECT_DIR$/node-restify-mysql-sequelize/app.js" />
-    <entry file="file://$PROJECT_DIR$/node-restify-mysql-sequelize/routes/todo.js" />
-    <entry file="file://$PROJECT_DIR$/node-restify-mysql-sequelize/models/index.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/lists/create.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/user/update.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/sql/index.js.ts" />
-    <entry file="file://$PROJECT_DIR$/node/rest/node_modules/util-deprecate/node.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/node_modules/util-deprecate/browser.js" />
-    <entry file="file://$PROJECT_DIR$/node/node/http.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/user/delete.js" />
-    <entry file="file://$PROJECT_DIR$/controllers/login.controller.js" />
-    <entry file="file://$PROJECT_DIR$/template/pages-login.html" />
-    <entry file="file://$PROJECT_DIR$/lib/angular-ui-router/src/view.js">
+    <entry file="file://$PROJECT_DIR$/templateDesigner/components.html" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/thumb_video.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/thumb_image.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/thumb_application.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/rick.jpg" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/restaurant.jpg" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/new_logo.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/favicon.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/apple-icon.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/blurred-black-cover.jpeg" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/flags/AD.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/video_bg.jpg" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/assets/css/coming-sssoon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="771" column="17" lean-forward="false" selection-start-line="771" selection-start-column="4" selection-end-line="771" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templateDesigner/images/thumb_restaurant.png" />
+    <entry file="file://$PROJECT_DIR$/templateDesigner/assets/images/default.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templateDesigner/assets/css/coming-sssoon-demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="118" column="34" lean-forward="true" selection-start-line="118" selection-start-column="34" selection-end-line="118" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/pages/main.html" />
-    <entry file="file://$PROJECT_DIR$/app/assets/css/blue-white.css" />
-    <entry file="file://$PROJECT_DIR$/app/assets/img/dev-logo.fw.png" />
-    <entry file="file://$PROJECT_DIR$/app/assets/img/logo-invoice.png" />
-    <entry file="file://$PROJECT_DIR$/app/assets/img/logo.png" />
-    <entry file="file://$PROJECT_DIR$/app/assets/img/logo@2x.png" />
+    <entry file="file://$PROJECT_DIR$/app/assets/js/jquery-1.10.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templateDesigner/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="64" column="32" lean-forward="true" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/angular-ui-router/src/viewDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/angular_material/angular-aria.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/menu/login.css" />
     <entry file="file://$PROJECT_DIR$/app/pages/sugerir.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="22" column="42" lean-forward="true" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/angular/angular.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.js" />
-    <entry file="file://$PROJECT_DIR$/app/pages/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="18" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="10" selection-end-column="18" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/default.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="72" column="46" lean-forward="false" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/home.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/solicitar.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sugerir.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/user/index.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/user/list.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/user/create.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/music/delete.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/music/update.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/music/index.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/music/list.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/index.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/music/create.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/index.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/server.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/controller/db/connection.js" />
-    <entry file="file://$PROJECT_DIR$/node/rest/route.js" />
-    <entry file="file://$PROJECT_DIR$/node/database.sql" />
-    <entry file="file://$PROJECT_DIR$/app/pages/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node/node_modules/express/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node/REST.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/menu/login.html" />
     <entry file="file://$PROJECT_DIR$/app/app.module.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-          <folding />
+          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/app.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="30">
+          <caret line="2" column="49" lean-forward="false" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/share-arrow.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/favorite.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/vectorpaint.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/touch-music-karaoke.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json" />
+    <entry file="file://$PROJECT_DIR$/app/value/object-user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="3" column="63" lean-forward="true" selection-start-line="3" selection-start-column="63" selection-end-line="3" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/music.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/value/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/solicitar.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="75" column="11" lean-forward="true" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/gerenciarSolicitacoes.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="6" lean-forward="false" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/main.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        <state relative-caret-position="255">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/home.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/gerenciarSugestoes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/music.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/login.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="111" column="56" lean-forward="true" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+        <state relative-caret-position="2250">
+          <caret line="150" column="50" lean-forward="false" selection-start-line="150" selection-start-column="50" selection-end-line="150" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/menu/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="8" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/menu/cliente.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/pages/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="123" lean-forward="false" selection-start-line="6" selection-start-column="123" selection-end-line="6" selection-end-column="123" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#1;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/gerenciarSugestoes.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node/REST.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node/Server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding />
         </state>
       </provider>
