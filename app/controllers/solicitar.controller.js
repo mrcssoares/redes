@@ -1,10 +1,8 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('solicitarController', function ($scope, config, objectUser, $timeout) {
-    $scope.idUser = localStorage.getItem('id');
+angular.module("song").controller('solicitarController', function ($scope, $state, config, objectUser, $timeout) {
     console.log(objectUser);
-
     $scope.listarMusicas = function() {
         var settings = {
             "async": true,
@@ -27,6 +25,11 @@ angular.module("song").controller('solicitarController', function ($scope, confi
             })
         });
     };
+
+    $scope.select = function (music) {
+      $scope.id_music = music.music_id;
+    };
+        
 
     $scope.solicitar = function(music) {
         //Data Atual
@@ -52,7 +55,7 @@ angular.module("song").controller('solicitarController', function ($scope, confi
 
         var dataAtual= dia+"/"+meses[mes]+"/"+ano;
         console.log(dataAtual);
-        console.log(music.music_id);
+        console.log($scope.id_music);
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -64,7 +67,7 @@ angular.module("song").controller('solicitarController', function ($scope, confi
             "data": { 
                 "likes": "0",
                 "status": "0",
-                "id_music": music.music_id,
+                "id_music":  $scope.id_music,
                 "id_user": objectUser.id,
                 "created_at": dataAtual
             }
@@ -73,6 +76,8 @@ angular.module("song").controller('solicitarController', function ($scope, confi
 
         $.ajax(settings).done(function (response) {
             console.log(response);
+            $scope.$emit('someEvent', 'solicitacao');
+
         });
     };
 

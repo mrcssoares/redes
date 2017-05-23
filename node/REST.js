@@ -13,7 +13,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     });
 
-
+    //npm install -g nodemon
     //=================================== START CRUD USERS =======================================//
 
     router.get("/users",function(req,res){
@@ -265,6 +265,22 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             } else {
                 console.log('get /solicitations 200 OK');
                 res.json({"Error" : false, "Message" : "Success", "solicitations" : rows});
+            }
+        });
+    });
+
+    //update em status de solicitacao
+    router.put("/solicitations/status/:id",function(req,res){
+        var query = "UPDATE ?? SET status = 1 WHERE ?? = ?";
+        var table = ["solicitation", "id", req.params.id];
+        query = mysql.format(query,table);
+        connection.query(query,function(err,rows){
+            if(err) {
+                console.log('put /solicitations 400 ERROR');
+                res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+            } else {
+                console.log('put /solicitations 200 OK');
+                res.json({"Error" : false, "Message" : "Success", "musics" : rows});
             }
         });
     });

@@ -3,6 +3,13 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Música</th>
+                <th>Usuário</th>
+                <th>Likes</th>
+                <th>Data</th>
+                <th>Status</th>
+            </tr>
+            <tr>
                 <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_music" placeholder="Música..."></th>
                 <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_user" placeholder="Usuário..."></th>
                 <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.likes" placeholder="Likes..."></th>
@@ -18,7 +25,7 @@
                 <td>{{solicitacao.created_at}}</td>
                 <td>{{solicitacao.status}}</td>
                 <td style="text-align: center;">
-                    <i ng-click="apagarMusica(music)" style="cursor: pointer;" class="fa fa-check"></i>
+                    <i ng-click="aceitarSolicitacao(solicitacao)" style="cursor: pointer;" class="fa fa-check"></i>
                 </td>
             </tr>
         </tbody>

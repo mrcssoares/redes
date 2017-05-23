@@ -21,7 +21,7 @@
             <td>{{music.singer_name}}</td>
             <td>{{music.category_name}}</td>
             <td style="text-align: center;">
-                <i ng-click="solicitar(music)" style="cursor: pointer;" class="fa fa-check" data-toggle="modal" data-target="#myModalAdicionar"></i>
+                <i style="cursor: pointer;" class="fa fa-check" ng-click="select(music)" data-toggle="modal" data-target="#myModalAdicionar"></i>
             </td>
         </tr>
         </tbody>
@@ -41,10 +41,11 @@
                 <h4 class="modal-title">Infor</h4>
                 </div>
                 <div class="modal-body">
-                <p>Solicitado com sucesso!.</p>
+                <p>Deseja solicitar está musica?</p>
                 </div>
                 <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button ng-click="solicitar()" type="button" class="btn btn-default" data-dismiss="modal">Solicitar</button>
                 </div>
             </div>
         </div>

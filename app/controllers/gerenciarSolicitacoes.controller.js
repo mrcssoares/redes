@@ -27,6 +27,23 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             })
         });
     };
+    $scope.aceitarSolicitacao = function(solicitacao) {
+        console.log('Id da solicitacao(put): '+solicitacao.id);
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://localhost:3000/api/solicitations/status/" + solicitacao.id,
+            "method": "PUT",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded"
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.listarSolicitacoes();
+        });
+    };
 
     $scope.listarSolicitacoes();
 

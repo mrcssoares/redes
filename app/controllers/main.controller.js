@@ -17,8 +17,14 @@ angular.module("song").controller('mainController', function ($scope, objectUser
                 location.reload();
             },100);
         }
+        if(data === 'solicitacao' || data == 'solicitacao' || data.includes('solicitacao')) {
+            $state.go('home');
+            $timeout(function () {
+                location.reload();
+            },100);
+        }
 
-    });
+        });
 
 
     $scope.sair = function () {

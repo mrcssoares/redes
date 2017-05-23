@@ -1,6 +1,11 @@
-<div ng-repeat="solicitacao in solicitacoes | filter: status" class="container">
+<style>
+	.cantando{
+		background-color: #00bbff;
+	}
+</style>
+<div ng-repeat="solicitacao in solicitacoes" class="container">
 	<div align="center" flex-xs flex-gt-xs="96" layout="column" >
-		<md-card id="scrollPromos" align="center" >
+		<md-card id="scrollPromos" align="center"  ng-class="{'cantando' : $first}">
 			<md-card-header>
 				<md-card-avatar>
 					<img class="md-user-avatar" ng-src="{{solicitacao.photo_user}}" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
@@ -13,9 +18,13 @@
 			<!--<img ng-src="assets/ima/favorite.svg" class="md-card-image">-->
 			<div>
 				<md-card-content>
-					<div align="center">
-						Se preparando para cantar {{solicitacao.name_music}}
+					<div ng-if="!$first" align="center">
+						Se preparando para cantar "{{solicitacao.name_music}}"
 					</div>
+					<div ng-if="$first" align="center">
+						Está cantando "{{solicitacao.name_music}}"
+					</div>
+
 				</md-card-content>
 			</div>
 			<md-card-icon-actions>
