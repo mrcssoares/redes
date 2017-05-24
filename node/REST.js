@@ -271,7 +271,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     //update em status de solicitacao
     router.put("/solicitations/status/:id",function(req,res){
-        var query = "UPDATE ?? SET status = 1 WHERE ?? = ?";
+        var query = "UPDATE ?? SET status = status + 1 WHERE ?? = ?";
         var table = ["solicitation", "id", req.params.id];
         query = mysql.format(query,table);
         connection.query(query,function(err,rows){

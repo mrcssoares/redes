@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="solicitacao in solicitacoes| filter:buscarSolicitacoes">
+            <tr ng-if="solicitacao.status < 2" ng-repeat="solicitacao in solicitacoes| filter:buscarSolicitacoes">
                 <td>{{solicitacao.name_music}}</td>
                 <td>{{solicitacao.name_user}}</td>
                 <!--<td>{{solicitacao.likes}}</td>-->
@@ -26,6 +26,7 @@
                 <td>{{solicitacao.status | statusSolicitation}}</td>
                 <td style="text-align: center;">
                     <i ng-click="aceitarSolicitacao(solicitacao)" style="cursor: pointer;" class="fa fa-check"></i>
+                    <i></i>
                 </td>
             </tr>
         </tbody>

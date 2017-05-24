@@ -1,5 +1,5 @@
 var express = require("express");
-var cors = require('cors')
+var cors = require('cors');
 var mysql   = require("mysql");
 var bodyParser  = require("body-parser");
 var md5 = require('MD5');
