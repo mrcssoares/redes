@@ -3,17 +3,15 @@
     <table class="table">
         <thead>
         <tr>
-            <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
+            <input class="form-control" type="text" ng-model="buscarMusic" placeholder="Busca..."><!--
             <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
-            <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>-->
         </tr>
-        <!--
-        <tr>
-            <th ng-click="ordenarPor('nome')"> Nome </th>
-            <th ng-click="ordenarPor('contato')"> Contato </th>
-            <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
-        </tr>
-        -->
+        <!--<tr>
+                <th ng-click="ordenarPor('nome')"> Nome </th>
+                <th ng-click="ordenarPor('contato')"> Contato </th>
+                <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
+            </tr>-->
         </thead>
         <tbody>
         <tr ng-repeat="music in musics| filter:buscarMusic">

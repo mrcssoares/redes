@@ -4,34 +4,36 @@
 angular.module("song").controller('sugerirController', function ($scope, $timeout, config) {
 
     $scope.sugerir = function (music) {
-        console.log(music);
+        if(confirm('Tem certeza que deseja adicionar esta musica?')){
+            console.log(music);
 
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": config.baseUrl+"/api/musics",
-            "method": "POST",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-                "name": music.nome,
-                "duration": '0',
-                "id_category": music.categoria,
-                "id_singer": music.artista,
-                "status": "0"
-            }
-        };
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": config.baseUrl+"/api/musics",
+                "method": "POST",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded"
+                },
+                "data": {
+                    "name": music.nome,
+                    "duration": '0',
+                    "id_category": music.categoria,
+                    "id_singer": music.artista,
+                    "status": "0"
+                }
+            };
 
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            var nome= document.getElementById('nome');
-            nome.value= "";
-            var artista= document.getElementById('artista');
-            artista.value= "";
-            var categoria= document.getElementById('categoria');
-            categoria.value= "";
-        });
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                var nome= document.getElementById('nome');
+                nome.value= "";
+                var artista= document.getElementById('artista');
+                artista.value= "";
+                var categoria= document.getElementById('categoria');
+                categoria.value= "";
+            });
+        }
     };
 
     $scope.listarCategorias = function() {
@@ -42,9 +44,6 @@ angular.module("song").controller('sugerirController', function ($scope, $timeou
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-
             }
         };
 
@@ -65,9 +64,6 @@ angular.module("song").controller('sugerirController', function ($scope, $timeou
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded"
-            },
-            "data": {
-
             }
         };
 

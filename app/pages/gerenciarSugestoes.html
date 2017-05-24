@@ -3,9 +3,9 @@
     <table class="table">
         <thead>
             <tr>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Nome..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Artista..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Categoria..."></th>
                 <th ></th>
             </tr>
             <!-- 
@@ -22,7 +22,7 @@
                 <td>{{music.singer_name}}</td>
                 <td>{{music.category_name}}</td>
                 <td style="text-align: center;">
-                    <i ng-click="aceitarMusica(music)" style="cursor: pointer;" class="fa fa-check"></i>
+                    <i ng-click="aceitarMusica(music)" style="cursor: pointer;" class="fa fa-check">Aceitar</i>
                 </td>
             </tr>
         </tbody>

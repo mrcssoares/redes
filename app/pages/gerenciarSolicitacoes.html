@@ -5,25 +5,25 @@
             <tr>
                 <th>Música</th>
                 <th>Usuário</th>
-                <th>Likes</th>
+                <!--<th>Likes</th>-->
                 <th>Data</th>
                 <th>Status</th>
             </tr>
             <tr>
-                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_music" placeholder="Música..."></th>
-                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_user" placeholder="Usuário..."></th>
-                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.likes" placeholder="Likes..."></th>
+                <input class="form-control" type="text" ng-model="buscarSolicitacoes.name_music" placeholder="Música...">
+                <!--<th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_user" placeholder="Usuário..."></th>
+                &lt;!&ndash;<th><input class="form-control" type="text" ng-model="buscarSolicitacoes.likes" placeholder="Likes..."></th>&ndash;&gt;
                 <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.created_at" placeholder="Data..."></th>
-                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.status" placeholder="Status..."></th>
+                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.status" placeholder="Status..."></th>-->
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="solicitacao in solicitacoes| filter:buscarSolicitacoes">
                 <td>{{solicitacao.name_music}}</td>
                 <td>{{solicitacao.name_user}}</td>
-                <td>{{solicitacao.likes}}</td>
+                <!--<td>{{solicitacao.likes}}</td>-->
                 <td>{{solicitacao.created_at}}</td>
-                <td>{{solicitacao.status}}</td>
+                <td>{{solicitacao.status | statusSolicitation}}</td>
                 <td style="text-align: center;">
                     <i ng-click="aceitarSolicitacao(solicitacao)" style="cursor: pointer;" class="fa fa-check"></i>
                 </td>

@@ -3,7 +3,7 @@
 		background-color: #00bbff;
 	}
 </style>
-<div ng-repeat="solicitacao in solicitacoes" class="container">
+<div ng-if="solicitacao.status == 0" ng-repeat="solicitacao in solicitacoes" class="container">
 	<div align="center" flex-xs flex-gt-xs="96" layout="column" >
 		<md-card id="scrollPromos" align="center"  ng-class="{'cantando' : $first}">
 			<md-card-header>

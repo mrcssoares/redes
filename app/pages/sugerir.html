@@ -16,6 +16,7 @@
                     <div class="col-md-5">
                         <select ng-model="music.artista" id="artista">
                             <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
+                            <option value="" >Selecione um Artista </option>
                         </select>
                     </div>
                 </div>
@@ -24,6 +25,7 @@
                     <div class="col-md-5">
                         <select ng-model="music.categoria" id="categoria">
                             <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
+                            <option value="" >Selecione uma Categoria</option>
                         </select>
                     </div>
                 </div>
@@ -40,7 +42,6 @@
     <div class="container">
         <!-- Trigger the modal with a button -->
         <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-
         <!-- Modal -->
         <div class="modal fade" id="myModalAdicionar" role="dialog">
         <div class="modal-dialog">
@@ -51,7 +52,7 @@
                 <h4 class="modal-title">Infor</h4>
                 </div>
                 <div class="modal-body">
-                <p>Adicionado com sucesso!.</p>
+                <p>Adicionado com sucesso!</p>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
