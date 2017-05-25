@@ -53,9 +53,9 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-    var porta = 8080;
+    var porta = 80;
       app.listen(porta,function(){
-          console.log("API Rodando na porta"+porta+".");
+          console.log("API Rodando na porta "+porta+".");
       });
 }
 

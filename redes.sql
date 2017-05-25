@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 04/05/2017 às 15:56
+-- Tempo de geração: 25/05/2017 às 09:48
 -- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
--- Versão do PHP: 7.0.18-1+deb.sury.org~xenial+1
+-- Versão do PHP: 7.0.19-1+deb.sury.org~xenial+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,7 +37,12 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `name`) VALUES
 (1, 'Pop'),
-(2, 'Rock');
+(2, 'Rock'),
+(3, 'Soul'),
+(4, 'Funk'),
+(6, 'Sertanejo'),
+(7, 'Pagode'),
+(8, 'MPB');
 
 -- --------------------------------------------------------
 
@@ -59,18 +64,22 @@ CREATE TABLE `music` (
 --
 
 INSERT INTO `music` (`id`, `name`, `duration`, `id_category`, `id_singer`, `status`) VALUES
-(1, 'teste de musica', 420, 1, 1, 0),
-(2, 'uma musica topperson', 500, 2, 2, 0),
-(3, 'teste', 400, 1, 2, 0),
-(4, 'tegfd', 1, 1, 1, 0),
-(5, 'Save me from my self', 365, 2, 1, 0),
-(8, 'Hino Nacional', 420, 2, 4, 0),
-(9, 'Hino do amazonas', 420, 2, 4, 0),
-(10, 'Hino de manacapuru', 420, 2, 4, 0),
-(11, 'Hino de manacapuru', 420, 2, 4, 0),
-(12, 'Hino de manacapuru', 420, 2, 4, 0),
-(13, 'Um menino nasceu', 437, 2, 4, 0),
-(14, 'outro teste de musica', 437, 2, 4, 0);
+(32, 'In the end', 3000, 2, 2, 1),
+(33, 'Esse cara sou eu', 3000, 1, 1, 1),
+(34, 'Amei Te Ver', 0, 2, 8, 0),
+(35, 'Numb', 3000, 2, 2, 1),
+(36, 'Evidências', 3000, 6, 9, 1),
+(37, 'Depois do Prazer', 3000, 3, 10, 1),
+(38, 'A Lenda', 3000, 1, 11, 1),
+(39, 'Sweet Dreams', 3000, 1, 12, 1),
+(40, 'Dormi Na Praça', 3000, 6, 13, 1),
+(41, 'Mineirinho', 3000, 6, 10, 1),
+(42, 'Que Se Chama Amor', 3000, 6, 10, 1),
+(43, 'Eu Me Apaixonei Pela Pessoa Errada', 3000, 7, 14, 1),
+(44, 'Mulher de Fases', 3000, 2, 15, 1),
+(45, 'A Dor Desse Amor', 3000, 1, 16, 1),
+(46, 'Shimbalae', 3000, 8, 17, 1),
+(47, 'Nego Drama', 3000, 7, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -90,8 +99,16 @@ CREATE TABLE `singer` (
 INSERT INTO `singer` (`id`, `name`) VALUES
 (1, 'Roberto Carlos'),
 (2, 'Link Park'),
-(3, ''),
-(4, 'Duivilly Brito');
+(8, 'Duivilly Brito'),
+(9, 'Chitãozinho e Xororó'),
+(10, 'Só Pra Contrariar'),
+(11, 'Sandy & Júnior'),
+(12, 'Eurythmics'),
+(13, 'Bruno e Marrone'),
+(14, 'Exaltasamba'),
+(15, 'Raimundos'),
+(16, 'KLB'),
+(17, 'Maria Gadú');
 
 -- --------------------------------------------------------
 
@@ -113,10 +130,11 @@ CREATE TABLE `solicitation` (
 --
 
 INSERT INTO `solicitation` (`id`, `likes`, `status`, `id_music`, `id_user`, `created_at`) VALUES
-(3, 0, 0, 1, 1, '21-04-2017'),
-(4, 0, 0, 2, 1, '21-04-2017'),
-(5, 0, 0, 2, 1, '30/04/2017'),
-(6, 0, 0, 2, 1, '30/04/2017');
+(18, 0, 3, 32, 9, '24/05/2017'),
+(19, 0, 1, 32, 8, '24/05/2017'),
+(20, 0, 0, 46, 8, '24/05/2017'),
+(21, 0, 0, 32, 8, '24/05/2017'),
+(22, 0, 0, 32, 8, '24/05/2017');
 
 -- --------------------------------------------------------
 
@@ -137,9 +155,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `photo`, `type`) VALUES
-(1, 'Marcos Soares', 'zitosmarcos@gmail.com', 'http://www.coisadeprogramador.com.br/assets/images/avatar.png', 1),
-(2, 'Dara Lira', 'gsl@icomp.ufam.edu.br', 'http://www.coisadeprogramador.com.br/assets/images/avatar.png', 1),
-(3, 'Duivilly', 'db@icomp.ufam.edu.br', 'http://www.coisadeprogramador.com.br/assets/images/avatar.png', 1);
+(7, 'Marcos Soares', 'mss3@icomp.ufam.edu.br', 'https://graph.facebook.com/1198317190280878/picture', 2),
+(8, 'Jonas Broder', 'zitosmarcos@gmail.com', 'https://lh6.googleusercontent.com/-RI3n8ma914o/AAAAAAAAAAI/AAAAAAAAUSE/83wp5nB_5Uo/s500-c/photo.jpg', 1),
+(9, 'Barry', 'teewa.web@gmail.com', 'https://lh5.googleusercontent.com/-1xFRCVPbXK4/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF56E2Wrbj7zviSwzcLjK0eh0M4W-A/s500-c/photo.jpg', 1);
 
 --
 -- Índices de tabelas apagadas
@@ -187,27 +205,27 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de tabela `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT de tabela `singer`
 --
 ALTER TABLE `singer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de tabela `solicitation`
 --
 ALTER TABLE `solicitation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- Restrições para dumps de tabelas
 --

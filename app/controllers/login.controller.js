@@ -147,7 +147,7 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
         gapi.load('auth2', function(){
             // Retrieve the singleton for the GoogleAuth library and set up the client.
             auth2 = gapi.auth2.init({
-                client_id: '493131933192-bm9euicnq6vb7r6m63vjjg323tc6cuem.apps.googleusercontent.com',//'548544741388-oqo7ha3uk7hqjd9o2ur2q62e3n62dmda.apps.googleusercontent.com',
+                client_id: '548544741388-oqo7ha3uk7hqjd9o2ur2q62e3n62dmda.apps.googleusercontent.com',//'548544741388-oqo7ha3uk7hqjd9o2ur2q62e3n62dmda.apps.googleusercontent.com',
                 cookiepolicy: 'single_host_origin'
 
             });
