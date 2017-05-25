@@ -21,7 +21,7 @@ REST.prototype.connectMysql = function() {
         database : 'redes',
         debug    :  false
     });
-    pool.getConnection(function(err,connection){
+    pool.getConnection(function(err,connection){4
         if(err) {
           self.stop(err);
         } else {
@@ -53,7 +53,7 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-      app.listen(3000,function(){
+      app.listen(8000,function(){
           console.log("API Rodando na porta 3000.");
       });
 }
