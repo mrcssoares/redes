@@ -1,11 +1,12 @@
 <style>
 	.cantando{
 		background-color: #00bbff;
+		opacity: 0.7;
 	}
 </style>
 <div ng-if="solicitacao.status < 2" ng-repeat="solicitacao in solicitacoes" class="container">
 	<div align="center" flex-xs flex-gt-xs="96" layout="column" >
-		<md-card id="scrollPromos" align="center"  ng-class="{'cantando' : solicitacao.status == 1}">
+		<md-card id="scrollPromos" align="center" style="opacity: 0.8;"  ng-class="{'cantando' : solicitacao.status == 1}">
 			<md-card-header>
 				<md-card-avatar>
 					<img class="md-user-avatar" ng-src="{{solicitacao.photo_user}}" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
@@ -18,10 +19,10 @@
 			<!--<img ng-src="assets/ima/favorite.svg" class="md-card-image">-->
 			<div>
 				<md-card-content>
-					<div ng-if="!$first" align="center">
+					<div ng-if="solicitacao.status == 0" align="center">
 						Se preparando para cantar "{{solicitacao.name_music}}"
 					</div>
-					<div ng-if="$first" align="center">
+					<div ng-if="solicitacao.status == 1" align="center">
 						Está cantando "{{solicitacao.name_music}}"
 					</div>
 
