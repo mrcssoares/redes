@@ -6,6 +6,14 @@ var md5 = require('MD5');
 var rest = require("./REST.js");
 var app  = express();
 
+var https = require('https');
+var fs = require('fs');
+
+var options = {
+    key: fs.readFileSync('letsencrypt/live/api.upawa.com.br/privkey.pem'),
+    cert: fs.readFileSync('letsencrypt/live/api.upawa.com.br/cert.pem')
+};
+
 function REST(){
     var self = this;
     self.connectMysql();
@@ -32,8 +40,8 @@ REST.prototype.connectMysql = function() {
 
 REST.prototype.configureExpress = function(connection) {
       var self = this;
-    app.use(cors());
-    app.use(bodyParser.urlencoded({ extended: true }));
+      app.use(cors());
+      app.use(bodyParser.urlencoded({ extended: true }));
       app.use(bodyParser.json());
       app.use(function(req, res, next) {
           res.header("Access-Control-Allow-Origin", "*");
@@ -53,9 +61,14 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-    var porta = 3000;
-      app.listen(porta,function(){
-          console.log("API Rodando na porta "+porta+".");
+   // var porta = 8080;
+     // app.listen(porta, options, function(){
+       //   console.log("API Rodando na porta "+porta+".");
+      //});
+      var server = https.createServer(options, app);
+      var porta = 8080;
+      server.listen(porta, function(){
+          console.log("API Rodando na porta: "+porta+".")
       });
 }
 
