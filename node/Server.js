@@ -4,6 +4,7 @@ var mysql   = require("mysql");
 var bodyParser  = require("body-parser");
 var md5 = require('MD5');
 var rest = require("./REST.js");
+
 var app  = express();
 
 var https = require('https');
@@ -17,11 +18,11 @@ var options = {
 function REST(){
     var self = this;
     self.connectMysql();
-};
+}
 
 REST.prototype.connectMysql = function() {
     var self = this;
-    var pool      =    mysql.createPool({
+    var pool = mysql.createPool({
         connectionLimit : 100,
         host     : 'localhost',
         user     : 'root',
@@ -29,7 +30,7 @@ REST.prototype.connectMysql = function() {
         database : 'redes',
         debug    :  false
     });
-    pool.getConnection(function(err,connection){4
+    pool.getConnection(function(err,connection){
         if(err) {
           self.stop(err);
         } else {
@@ -61,15 +62,16 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-   // var porta = 8080;
-     // app.listen(porta, options, function(){
-       //   console.log("API Rodando na porta "+porta+".");
-      //});
-      var server = https.createServer(options, app);
-      var porta = 8080;
-      server.listen(porta, function(){
-          console.log("API Rodando na porta: "+porta+".")
-      });
+
+    var server = https.createServer(options, app);
+    var porta = 8080;
+    server.listen(porta, function(){
+        console.log("API Rodando na porta: "+porta+".")
+    });
+    // var porta = 8080;
+    //   app.listen(porta, function(){
+    //       console.log("API Rodando na porta "+porta+".");
+    //   });
 }
 
 REST.prototype.stop = function(err) {
