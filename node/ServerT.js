@@ -8,8 +8,8 @@ var fs = require('fs');
 var app = express();
 
 var options = {
-    cert: fs.readFileSync('/etc/letsencrypt/csr/0000_csr-certbot.pem'),
-    key: fs.readFileSync('/etc/letsencrypt/keys/0000_key-certbot.pem')
+    cert: fs.readFileSync('http://api.upawa.com.br/letsencrypt/csr/0000_csr-certbot.pem'),
+    key: fs.readFileSync('http://api.upawa.com.br/letsencrypt/keys/0000_key-certbot.pem')
 };
 
 http.createServer(app).listen(8080);
