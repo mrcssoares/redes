@@ -1,16 +1,12 @@
-/**
- * Created by marcos on 26/05/17.
- */
-var express = require('express');
 var https = require('https');
-var http = require('http');
 var fs = require('fs');
-var app = express();
 
 var options = {
-    cert: fs.readFileSync('http://api.upawa.com.br/letsencrypt/csr/0000_csr-certbot.pem'),
-    key: fs.readFileSync('http://api.upawa.com.br/letsencrypt/keys/0000_key-certbot.pem')
+    key: fs.readFileSync('test/fixtures/keys/agent2-key.pem'),
+    cert: fs.readFileSync('test/fixtures/keys/agent2-cert.pem')
 };
 
-http.createServer(app).listen(8080);
-https.createServer(options, app).listen(443);
+https.createServer(options, function (req, res) {
+    res.writeHead(200);
+    res.end("hello world\n");
+}).listen(8000);
