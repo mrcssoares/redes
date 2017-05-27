@@ -1,7 +1,11 @@
 /**
  * Created by duivilly on 04/05/17.
  */
-angular.module("song").controller('musicController', function ($scope, $timeout, $http, config) {
+angular.module("song").controller('musicController', function ($scope, $timeout, $state, objectUser, $http, config) {
+
+    if(!objectUser){
+        $state.go("login.index")
+    }
 
 	$scope.nome= '';
 	$scope.duracao= '';
@@ -21,7 +25,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                 "url": config.baseUrl + "/api/musics",
                 "method": "POST",
                 "headers": {
-                    "content-type": "application/x-www-form-urlencoded"
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
                 },
                 "data": {
                     "name": music.nome,
@@ -54,7 +59,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             "url": config.baseUrl+"/api/singers",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
 
@@ -77,7 +83,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             "url": config.baseUrl+"/api/category",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
 
@@ -100,7 +107,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             "url": config.baseUrl+"/api/singers",
             "method": "POST",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 'name': artista.nome
@@ -122,7 +130,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             "url": config.baseUrl+"/api/category",
             "method": "POST",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 'name': categoria.nome
@@ -144,7 +153,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             "url": config.baseUrl+"/api/musics",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 
@@ -169,7 +179,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                 "url": config.baseUrl + "/api/musics/delete",
                 "method": "POST",
                 "headers": {
-                    "content-type": "application/x-www-form-urlencoded"
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
                 },
                 "data": {
                     id: music.music_id

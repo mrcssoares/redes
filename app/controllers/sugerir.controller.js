@@ -1,7 +1,11 @@
 /**
     * Created by dara on 25/04/17.
     */
-angular.module("song").controller('sugerirController', function ($scope, $timeout, config) {
+angular.module("song").controller('sugerirController', function ($scope, $state, objectUser, $timeout, config) {
+    console.log(objectUser);
+    if(!objectUser){
+        $state.go("login.index")
+    }
 
     $scope.sugerir = function (music) {
         if(confirm('Tem certeza que deseja adicionar esta musica?')){
@@ -13,7 +17,8 @@ angular.module("song").controller('sugerirController', function ($scope, $timeou
                 "url": config.baseUrl+"/api/musics",
                 "method": "POST",
                 "headers": {
-                    "content-type": "application/x-www-form-urlencoded"
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
                 },
                 "data": {
                     "name": music.nome,
@@ -43,7 +48,8 @@ angular.module("song").controller('sugerirController', function ($scope, $timeou
             "url": config.baseUrl+"/api/category",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             }
         };
 
@@ -63,7 +69,8 @@ angular.module("song").controller('sugerirController', function ($scope, $timeou
             "url": config.baseUrl+"/api/singers",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             }
         };
 

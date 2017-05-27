@@ -1,7 +1,11 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('homeController', function ($scope, objectUser, config, $timeout){
+angular.module("song").controller('homeController', function ($scope, objectUser, $state, config, $timeout){
+
+    if(!objectUser){
+        $state.go("login.index")
+    }
 
     $scope.listarSolicitacoes = function() {
         var settings = {
@@ -10,7 +14,8 @@ angular.module("song").controller('homeController', function ($scope, objectUser
             "url": config.baseUrl+"/api/solicitations",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             }
         };
 

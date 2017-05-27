@@ -1,10 +1,13 @@
 /**
  * Created by duivilly on 06/05/17.
  */
-angular.module("song").controller('gerenciarSugestoesController', function ($scope, $timeout, config){
-    
-	$scope.musics= [];
+angular.module("song").controller('gerenciarSugestoesController', function ($scope, $state, objectUser, $timeout, config){
 
+    if(!objectUser){
+        $state.go("login.index")
+    }
+
+	$scope.musics= [];
 	$scope.listarMusicas = function() {
         var settings = {
             "async": true,
@@ -12,7 +15,8 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
             "url": config.baseUrl+"/api/musics/sugestions",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 
@@ -36,7 +40,8 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
             "url": "http://localhost:3000/api/musics/status/" + music.music_id,
             "method": "PUT",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             }
         };
 

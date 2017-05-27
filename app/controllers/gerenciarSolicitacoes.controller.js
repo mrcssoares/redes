@@ -1,8 +1,11 @@
 /**
  * Created by duivilly on 06/05/17.
  */
-angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, $timeout, config, objectUser){
+angular.module("song").controller('gerenciarSolicitacoesController', function ($scope, $state,  $timeout, config, objectUser){
     console.log(objectUser);
+    if(!objectUser){
+        $state.go("login.index")
+    }
     $scope.solicitacoes= [];
 
 	$scope.listarSolicitacoes = function() {
@@ -12,7 +15,8 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             "url": config.baseUrl+"/api/solicitations",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 
@@ -35,7 +39,8 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             "url": "http://localhost:3000/api/solicitations/status/" + solicitacao.id,
             "method": "PUT",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             }
         };
 
@@ -52,7 +57,8 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             "url": "http://localhost:3000/api/solicitations/status/" + solicitacao.id,
             "method": "PUT",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             }
         };
 

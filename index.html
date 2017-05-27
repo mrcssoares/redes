@@ -19,7 +19,7 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
-    <script src="https://apis.google.com/js/api:client.js"></script>
+    <!--<script src="https://apis.google.com/js/api:client.js"></script>-->
 
     <!--<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>-->
     <!--<script>-->
@@ -34,7 +34,18 @@
     <!--};-->
     <!--firebase.initializeApp(config);-->
     <!--</script>-->
+    <style>
+        #back{
+            background-image: url('app/assets/images/matt-botsford-197870.jpg');
+        }
+        @media screen and (max-width: 1024px) {
+            /*estilos*/
+            #back {
+                background-image: url('app/assets/images/oscar-keys-58399.jpg');
+            }
+        }
 
+    </style>
 </head>
 
 <body ng-app="song" ng-controller="mainController">
@@ -60,7 +71,7 @@
     <!--  -->
     <!-- #696969
     #66CDAA -->
-    <div class="main" style="background-image: url('app/assets/images/Live-Music.jpg')">
+    <div class="main" id="back" >
         <div class="container">
             <h1 class="logo cursive">
             </h1>

@@ -3,7 +3,6 @@
  */
 angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout) {
 
-
     $scope.objectUser = objectUser;
     if(objectUser) $scope.login = $scope.objectUser.type;
     else $scope.login = 0;
@@ -25,8 +24,7 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             });
         }
 
-        });
-
+    });
 
     $scope.sair = function () {
         localStorage.clear();

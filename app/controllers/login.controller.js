@@ -1,7 +1,11 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('loginController', function ($scope, $rootScope, $state, $timeout, config) {
+angular.module("song").controller('loginController', function ($scope, objectUser, $rootScope, $state, $timeout, config) {
+
+    if(objectUser){
+        $state.go("home.index")
+    }
 
     // Load the SDK asynchronously
     (function(d, s, id) {
@@ -76,7 +80,8 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
             "url": config.baseUrl+"/api/users/empty",
             "method": "POST",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 "email": email
@@ -93,7 +98,8 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
                         "url": config.baseUrl+"/api/users",
                         "method": "POST",
                         "headers": {
-                            "content-type": "application/x-www-form-urlencoded"
+                            "content-type": "application/x-www-form-urlencoded",
+                            "x-access-token": config.apikey
                         },
                         "data": {
                             'name': nome,
@@ -111,7 +117,8 @@ angular.module("song").controller('loginController', function ($scope, $rootScop
                             "url": config.baseUrl+"/api/users/empty",
                             "method": "POST",
                             "headers": {
-                                "content-type": "application/x-www-form-urlencoded"
+                                "content-type": "application/x-www-form-urlencoded",
+                                "x-access-token": config.apikey
                             },
                             "data": {
                                 "email": email

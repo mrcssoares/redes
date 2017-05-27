@@ -3,6 +3,10 @@
  */
 angular.module("song").controller('solicitarController', function ($scope, $state, config, objectUser, $timeout) {
     console.log(objectUser);
+    if(!objectUser){
+        $state.go("login.index")
+    }
+
     $scope.listarMusicas = function() {
         var settings = {
             "async": true,
@@ -10,7 +14,8 @@ angular.module("song").controller('solicitarController', function ($scope, $stat
             "url": config.baseUrl+"/api/musics",
             "method": "GET",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": {
                 
@@ -62,7 +67,8 @@ angular.module("song").controller('solicitarController', function ($scope, $stat
             "url": config.baseUrl+"/api/solicitations",
             "method": "POST",
             "headers": {
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
             },
             "data": { 
                 "likes": "0",
