@@ -3,6 +3,7 @@
  */
 angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout) {
 
+
     $scope.objectUser = objectUser;
     if(objectUser) $scope.login = $scope.objectUser.type;
     else $scope.login = 0;
@@ -15,13 +16,13 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             $state.go('home');
             $timeout(function () {
                 location.reload();
-            },100);
+            });
         }
         if(data === 'solicitacao' || data == 'solicitacao' || data.includes('solicitacao')) {
             $state.go('home');
             $timeout(function () {
                 location.reload();
-            },100);
+            });
         }
 
         });
@@ -34,7 +35,7 @@ angular.module("song").controller('mainController', function ($scope, objectUser
         });
         $timeout(function () {
             location.reload();
-        },100);
+        });
 
     }
 });
