@@ -65,15 +65,15 @@ REST.prototype.configureExpress = function(connection) {
 
 REST.prototype.startServer = function() {
 
-    // var server = https.createServer(options, app);
-    // var porta = 8080;
-    // server.listen(porta, function(){
-    //     console.log("API Rodando na porta: "+porta+".")
-    // });
-    var porta = 3000;
-    app.listen(porta, function(){
-      console.log("API Rodando na porta "+porta+".");
-    });
+     var server = https.createServer(options, app);
+     var porta = 8080;
+     server.listen(porta, function(){
+         console.log("API Rodando na porta: "+porta+".")
+     });
+   // var porta = 3000;
+    //app.listen(porta, function(){
+     // console.log("API Rodando na porta "+porta+".");
+    //});
 }
 
 REST.prototype.stop = function(err) {
