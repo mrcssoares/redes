@@ -37,7 +37,7 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/musics/status/" + music.music_id,
+            "url": config.baseUrl+"/api/musics/status/" + music.music_id,
             "method": "PUT",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
