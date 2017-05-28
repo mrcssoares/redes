@@ -17,9 +17,6 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
                 "x-access-token": config.apikey
-            },
-            "data": {
-                
             }
         };
 
@@ -36,25 +33,7 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "http://localhost:3000/api/solicitations/status/" + solicitacao.id,
-            "method": "PUT",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded",
-                "x-access-token": config.apikey
-            }
-        };
-
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            $scope.listarSolicitacoes();
-        });
-    };
-    $scope.cantou = function(solicitacao) {
-        console.log('Id da solicitacao(put): '+solicitacao.id);
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "http://localhost:3000/api/solicitations/status/" + solicitacao.id,
+            "url": config.baseUrl +"/api/solicitations/status/" + solicitacao.id,
             "method": "PUT",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
