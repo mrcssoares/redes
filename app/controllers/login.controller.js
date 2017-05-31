@@ -61,16 +61,26 @@ angular.module("song").controller('loginController', function ($scope, objectUse
             console.log('error');
         }
     }
+    
     $scope.loginFacebook = function () {
         FB.api('/me', {fields: 'name, email'}, function (response) {
             //aqui tem os dados do facebook, depois é so passar pra sessão e pra rota em caso de cadastro
             console.log('Facebook:');
             console.log(response);
-            var photo = "https://graph.facebook.com/"+response.id+"/picture";
-            $scope.loginCliente(response.name, response.email, photo);
+            $scope.photo = "https://graph.facebook.com/"+response.id+"/picture";
+            if(response.email){
+                $scope.loginCliente(response.name, response.email, $scope.photo);
+            }else{
+                $('#semEmail').trigger('click');
+                $scope.responseTemp= response;
+            }
 
         });
     };
+
+    $scope.sendEmail= function(email){
+        $scope.loginCliente($scope.responseTemp.name, email, $scope.photo);
+    }
 
     $scope.loginCliente = function (nome, email, photo) {
         localStorage.setItem('type', '1');
