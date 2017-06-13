@@ -26,7 +26,46 @@ angular.module("song").controller('mainController', function ($scope, objectUser
 
     });
 
-    $scope.sair = function () {
+    //================================ INICIALIZANDO FIREBASE ===============================================//
+
+
+    var config = {
+        apiKey: "AIzaSyATZX2Qbec5fNlEMtmTd-8wDfwr-fVwtcw",
+        authDomain: "meu-projeto-8d9fb.firebaseapp.com",
+        databaseURL: "https://meu-projeto-8d9fb.firebaseio.com",
+        projectId: "meu-projeto-8d9fb",
+        storageBucket: "meu-projeto-8d9fb.appspot.com",
+        messagingSenderId: "493131933192"
+    };
+
+    firebase.initializeApp(config);
+    const messaging = firebase.messaging();
+
+    //----------------------------pedindo permissão para notificação----------------------------------------//
+    messaging.requestPermission()
+    //se há permissão
+        .then(function(){
+            console.log('Permissão de notificação concedida! :)');
+            //console.log(messaging.getToken());
+            return messaging.getToken();
+        })
+        //emitindo token para sessão
+        .then(function(token){
+            console.log(token);
+        })
+        // se não houver permissão
+    .catch(function(err){
+        console.log('Erro ao obter permissão: '+ err);
+    });
+
+    //escuta novas notificações
+    messaging.onMessage(function(payload) {
+        console.log("Message received. ", payload);
+
+    });
+
+
+        $scope.sair = function () {
         localStorage.clear();
         $state.go('login.index', {}, {
             location: 'replace'
