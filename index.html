@@ -9,8 +9,16 @@
     <meta property="og:url"           content="https://api.upawa.com.br/redes/" />
     <meta property="og:type"          content="article" />
     <meta property="og:title"         content="songuke" />
-    <meta property="og:description"   content="Compartilhando música..." />
-    <meta property="og:image"         content="https://api.upawa.com.br/redes/app/assets/images/logo.png" />
+    <meta property="og:image"         content="https://api.upawa.com.br/redes/app/assets/images/touch-music-karaoke.jpg" />
+
+    <div ng-if="solicitacao.id_user == objectUser.id" ng-repeat="solicitacao in solicitacoes">
+        <div ng-if="solicitacao.status == 0">
+            <meta property="og:description"   content="Se preparando para cantar '{{solicitacao.name_music}}'" />
+        </div>
+        <div ng-if="solicitacao.status == 1">
+            <meta property="og:description"   content="Está cantando '{{solicitacao.name_music}}'" />
+        </div>
+    </div>
 
     <title>SongUkê</title>
 
@@ -66,6 +74,7 @@
         <div class="container">
             <h1 class="logo cursive">
             </h1>
+            <label>#Em teste#</label>
             <div ng-if="objectUser.name" style="color: #fff">Bem vindo, {{objectUser.name}}</div>
             <ui-view></ui-view>
             <!--  H1 can have 2 designs: "logo" and "logo cursive"-->

@@ -1,12 +1,36 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout, fcmRegister) {
+angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout, fcmRegister, config) {
 
     $scope.objectUser = objectUser;
     if(objectUser) $scope.login = $scope.objectUser.type;
     else $scope.login = 0;
     console.log('login '+$scope.login);
+
+    //para compartilhar dados no facebook
+    $scope.listarSolicitacoes = function() {
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": config.baseUrl+"/api/solicitations",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
+            }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            $scope.solicitacoes= response.solicitations;
+            $timeout(function(){
+                $scope.$apply($scope.solicitacoes= response.solicitations)
+            }, 1000)
+        });
+    };
+    $scope.listarSolicitacoes();
+    //
 
     //escuta eventos vindos de outros controllers
     $scope.$on('someEvent', function(event, data) {
