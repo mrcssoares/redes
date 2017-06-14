@@ -10,14 +10,13 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     var auth = "redesEtop";
     var tokenInvalido = {
         success: false,
-        message: 'token inválido.'
+        message: 'Acesso negado!'
     };
 
     router.get("/",function(req,res){
        res.json({"Message": "Bem vindo a api songUkê !"});
     });
 
-    //npm install -g nodemon
     //=================================== START CRUD USERS =======================================//
 
     router.get("/users",function(req,res){
@@ -314,7 +313,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     router.get("/solicitations",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.photo as photo_user,  solicitation.likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
+            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user,  solicitation.likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
             var table = ["solicitation"];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
@@ -373,6 +372,67 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     });
 
     //=================================== END CRUD SOLICITAÇÕES ==============================//
+
+    //=================================== START CRUD FCM ===================================//
+
+    router.get("/fcm/:id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "SELECT * FROM ?? WHERE ?? = ?";
+            var table = ["fcm", "id_user", req.params.id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /fcm 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /fcm 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.post("/fcm",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "INSERT INTO ??(??, ??) VALUES (?, ?)";
+            var table = ["fcm", "id_user", "fcm_id", req.body.id, req.body.fcm_id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('post /fcm 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('post /fcm 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.put("/fcm",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "UPDATE ?? SET fcm_id = '"+req.body.fcm_id+"' WHERE ?? = ?";
+            var table = ["fcm", "id_user", req.body.id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /fcm 400 ERROR');
+                    console.log(err);
+                    res.json({"Error" : true, "Message" : err});
+                } else {
+                    console.log('get /fcm 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+    //=================================== END CRUD FCM ===================================//
 
 };
 

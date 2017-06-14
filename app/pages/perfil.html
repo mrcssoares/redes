@@ -1,0 +1,47 @@
+<style>
+    .cantando{
+        background-color: #00bbff;
+        opacity: 0.7;
+    }
+</style>
+Suas solicitações
+<div ng-if="solicitacao.status >= 2 && solicitacao.id_user == objectUser.id" ng-repeat="solicitacao in solicitacoes" class="container">
+    <div align="center" flex-xs flex-gt-xs="96" layout="column" >
+        <md-card id="scrollPromos" align="center" style="opacity: 0.8;"  ng-class="{'cantando' : solicitacao.status == 1}">
+            <md-card-header>
+                <md-card-avatar>
+                    <img class="md-user-avatar" ng-src="{{solicitacao.photo_user}}" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
+                </md-card-avatar>
+                <md-card-header-text>
+                    <span class="md-title">{{solicitacao.name_user}}</span>
+                    <span class="md-subhead">Cantor</span>
+                </md-card-header-text>
+            </md-card-header>
+            <!--<img ng-src="assets/ima/favorite.svg" class="md-card-image">-->
+            <div>
+                <md-card-content>
+                    <div ng-if="solicitacao.status == 0" align="center">
+                        Se preparando para cantar "{{solicitacao.name_music}}"
+                    </div>
+                    <div ng-if="solicitacao.status == 1" align="center">
+                        Está cantando "{{solicitacao.name_music}}"
+                    </div>
+                    <div ng-if="solicitacao.status >= 2" align="center">
+                        Você cantou "{{solicitacao.name_music}}" em "{{solicitacao.created_at}}".
+                    </div>
+
+                </md-card-content>
+            </div>
+            <md-card-icon-actions>
+                <md-button class="md-icon-button" aria-label="Favorite">
+                    <md-icon md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+                </md-button>
+                <spam>{{solicitacao.likes}}</spam>
+                <md-button class="md-icon-button" aria-label="Share">
+                    <md-icon md-svg-icon="app/assets/images/share-arrow.svg"></md-icon>
+                </md-button>
+            </md-card-icon-actions>
+
+        </md-card>
+    </div>
+</div>

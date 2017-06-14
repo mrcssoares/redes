@@ -6,6 +6,11 @@
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
+    <meta property="og:url"           content="https://api.upawa.com.br/redes/" />
+    <meta property="og:type"          content="article" />
+    <meta property="og:title"         content="songuke" />
+    <meta property="og:description"   content="Compartilhando música..." />
+    <meta property="og:image"         content="https://api.upawa.com.br/redes/app/assets/images/logo.png" />
 
     <title>SongUkê</title>
 
@@ -14,47 +19,17 @@
     <link rel="stylesheet" href="lib/angular_material/angular-material.min.css">
     <link rel="icon" href="app/assets/images/icone_logo.png" type="image/x-icon" />
 
-
     <!--     Fonts     -->
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
-    <!--<script src="node/node_modules/socket.io-client/dist/socket.io.js"></script>-->
-    <!--<script>-->
-        <!--$(document).ready(function(){-->
-            <!--var socket = io.connect("http://localhost:3000");-->
-            <!--var ready = false;-->
-        <!--});-->
-        <!--function teste() {-->
-            <!--var name = "marcos";-->
-            <!--ready = true;-->
-            <!--socket.emit("join", name);-->
-        <!--}-->
-        <!--socket.on("update", function(msg) {-->
-            <!--if (ready) {-->
-                <!--alert('teste');-->
-            <!--}-->
-        <!--});-->
-    <!--script src="https://apis.google.com/js/api:client.js"></script>-->
 
-    <!--<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>-->
-    <!--<script>-->
-    <!--// Initialize Firebase-->
-    <!--var config = {-->
-        <!--apiKey: "AIzaSyATZX2Qbec5fNlEMtmTd-8wDfwr-fVwtcw",-->
-        <!--authDomain: "meu-projeto-8d9fb.firebaseapp.com",-->
-        <!--databaseURL: "https://meu-projeto-8d9fb.firebaseio.com",-->
-        <!--projectId: "meu-projeto-8d9fb",-->
-        <!--storageBucket: "meu-projeto-8d9fb.appspot.com",-->
-        <!--messagingSenderId: "493131933192"-->
-    <!--};-->
-    <!--firebase.initializeApp(config);-->
-    <!--</script>-->
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
     <style>
         #back{
             background-image: url('app/assets/images/matt-botsford-197870.jpg');
         }
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 800px) {
             /*estilos*/
             #back {
                 background-image: url('app/assets/images/oscar-keys-58399.jpg');
@@ -102,8 +77,8 @@
         <!--Angular da vida-->
         <script src="lib/angular/angular.js" ></script>
         <script src="lib/angular/angular.min.js" ></script>
-        <script src="lib/angular-route/angular-route.js" ></script>
-        <script src="lib/angular-route/angular-route.min.js" ></script>
+        <!--<script src="lib/angular-route/angular-route.js" ></script>-->
+        <!--<script src="lib/angular-route/angular-route.min.js" ></script>-->
         <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
@@ -123,6 +98,7 @@
         <script src="app/value/config.js"></script>
         <script src="app/value/object-user.js"></script>
         <script src="app/controllers/filters/status-solicitation.filter.js"></script>
+        <script src="app/controllers/services/fcm_register.service.js"></script>
 
         <script src="app/controllers/main.controller.js"></script>
         <script src="app/controllers/home.controller.js"></script>
@@ -132,6 +108,7 @@
         <script src="app/controllers/music.controller.js"></script>
         <script src="app/controllers/gerenciarSolicitacoes.controller.js"></script>
         <script src="app/controllers/gerenciarSugestoes.controller.js"></script>
+        <script src="app/controllers/perfil.controller.js"></script>
 
         <script type="text/javascript">
         /**

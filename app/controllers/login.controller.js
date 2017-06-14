@@ -80,7 +80,7 @@ angular.module("song").controller('loginController', function ($scope, objectUse
 
     $scope.sendEmail= function(email){
         $scope.loginCliente($scope.responseTemp.name, email, $scope.photo);
-    }
+    };
 
     $scope.loginCliente = function (nome, email, photo) {
         localStorage.setItem('type', '1');

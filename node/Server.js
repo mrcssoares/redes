@@ -24,11 +24,11 @@ function REST(){
 REST.prototype.connectMysql = function() {
     var self = this;
     var pool = mysql.createPool({
-        connectionLimit : 999,
+        connectionLimit : 100,
         host     : 'localhost',
         user     : 'root',
-        password : '#boot#',
-        database : 'songuke',
+        password : 'root',
+        database : 'redes',
         debug    :  false
     });
     pool.getConnection(function(err,connection){
@@ -63,16 +63,16 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-
-     var server = https.createServer(options, app);
+     /*var server = https.createServer(options, app);
      var porta = 8080;
      server.listen(porta, function(){
          console.log("API Rodando na porta: "+porta+".")
-     });
+     });*/
    
-     // var porta = 3000;
-     //app.listen(porta, function(){
-     // console.log("API Rodando na porta "+porta+".");
+     var porta = 3000;
+     app.listen(porta, function() {
+         console.log("API Rodando na porta " + porta + ".");
+     });
 }
 
 REST.prototype.stop = function(err) {

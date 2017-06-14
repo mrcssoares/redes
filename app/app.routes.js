@@ -27,6 +27,15 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
         templateUrl: 'app/pages/home.html',
         controller: 'homeController'
     }).
+        //PERFIL
+    state('perfil', {
+        url: '/perfil',
+        template: '<ui-view></ui-view>'
+    }).state('perfil.index', {
+        url:'/index',
+        templateUrl: 'app/pages/perfil.html',
+        controller: 'perfilController'
+    }).
     //SOLICITAR
     state('solicitar', {
         url: '/solicitar',
