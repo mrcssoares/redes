@@ -386,7 +386,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                     res.json({"Error" : true, "Message" : "Error executing MySQL query"});
                 } else {
                     console.log('get /fcm 200 OK');
-                    res.json({"Error" : false, "Message" : "Success", "category" : rows});
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
                 }
             });
         }else{
@@ -396,8 +396,8 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     router.post("/fcm",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "INSERT INTO ??(??) VALUES (?)";
-            var table = ["fcm", "user_id", "fcm_id", req.body.id, rec.body.fcm_id];
+            var query = "INSERT INTO ??(??, ??) VALUES (?, ?)";
+            var table = ["fcm", "id_user", "fcm_id", req.body.id, req.body.fcm_id];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
                 if(err) {
@@ -405,7 +405,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                     res.json({"Error" : true, "Message" : "Error executing MySQL query"});
                 } else {
                     console.log('post /fcm 200 OK');
-                    res.json({"Error" : false, "Message" : "Success", "category" : rows});
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
                 }
             });
         }else{
@@ -413,6 +413,25 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
 
+    router.put("/fcm",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "UPDATE ?? SET fcm_id = '"+req.body.fcm_id+"' WHERE ?? = ?";
+            var table = ["fcm", "id_user", req.body.id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /fcm 400 ERROR');
+                    console.log(err);
+                    res.json({"Error" : true, "Message" : err});
+                } else {
+                    console.log('get /fcm 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
     //=================================== END CRUD FCM ===================================//
 
 };

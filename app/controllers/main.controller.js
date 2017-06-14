@@ -1,7 +1,7 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout) {
+angular.module("song").controller('mainController', function ($scope, objectUser, $rootScope, $state, $timeout, fcmRegister) {
 
     $scope.objectUser = objectUser;
     if(objectUser) $scope.login = $scope.objectUser.type;
@@ -42,25 +42,48 @@ angular.module("song").controller('mainController', function ($scope, objectUser
     const messaging = firebase.messaging();
 
     //----------------------------pedindo permissão para notificação----------------------------------------//
-    messaging.requestPermission()
-    //se há permissão
-        .then(function(){
-            console.log('Permissão de notificação concedida! :)');
-            //console.log(messaging.getToken());
-            return messaging.getToken();
-        })
-        //emitindo token para sessão
-        .then(function(token){
-            console.log(token);
-        })
-        // se não houver permissão
-    .catch(function(err){
-        console.log('Erro ao obter permissão: '+ err);
-    });
+    if(objectUser) {
+        messaging.requestPermission()
+        //se há permissão
+            .then(function () {
+                console.log('Permissão de notificação concedida! :)');
+                //console.log(messaging.getToken());
+                return messaging.getToken();
+            })
+            //emitindo token para sessão
+            .then(function (token) {
+                console.log(token);
+
+                var settings = fcmRegister.verifyFCM($scope.objectUser.id);
+                $.ajax(settings).done(function (response) {
+                    console.log(response.fcm);
+                    if (response.fcm.length == 0) {
+                        //registra fcm para usuario
+                        var settings = fcmRegister.createFCM($scope.objectUser.id, token);
+                        $.ajax(settings).done(function (response) {
+                            console.log({'criou': response});
+                        });
+                    } else {
+                        //atualiza fcm para usuario
+                        var settings = fcmRegister.updateFCM($scope.objectUser.id, token);
+                        $.ajax(settings).done(function (response) {
+                            console.log({'updetou': response});
+                        });
+                    }
+                });
+
+            })
+            // se não houver permissão
+            .catch(function (err) {
+                console.log('Erro ao obter permissão: ' + err);
+            });
+    }
 
     //escuta novas notificações
     messaging.onMessage(function(payload) {
         console.log("Message received. ", payload);
+        alert('voce tem notificações');
+        alert(payload.notification);
 
     });
 
