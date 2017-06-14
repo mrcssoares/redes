@@ -63,7 +63,6 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-
      /*var server = https.createServer(options, app);
      var porta = 8080;
      server.listen(porta, function(){
