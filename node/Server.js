@@ -27,8 +27,8 @@ REST.prototype.connectMysql = function() {
         connectionLimit : 100,
         host     : 'localhost',
         user     : 'root',
-        password : 'root',
-        database : 'redes',
+        password : '#boot#',
+        database : 'songuke',
         debug    :  false
     });
     pool.getConnection(function(err,connection){
@@ -63,16 +63,17 @@ REST.prototype.configureExpress = function(connection) {
 }
 
 REST.prototype.startServer = function() {
-     var server = https.createServer(options, app);
-     var porta = 8080;
-     server.listen(porta, function(){
-         console.log("API Rodando na porta: "+porta+".")
-     });
-   
-     // var porta = 3000;
-     // app.listen(porta, function() {
-     //     console.log("API Rodando na porta " + porta + ".");
-     // });
+    /*
+    var server = https.createServer(options, app);
+    var porta = 8080;
+    server.listen(porta, function(){
+      console.log("API Rodando na porta: "+porta+".")
+    });
+    */
+    var porta = 3000;
+    app.listen(porta, function() {
+      console.log("API Rodando na porta " + porta + ".");
+    });
 }
 
 REST.prototype.stop = function(err) {
