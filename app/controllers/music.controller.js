@@ -220,8 +220,12 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         }
     };
 
+    $scope.goNovaMusica = function () {
+        // body...
+        $state.go('music.adicionar');
+    };
+
     $scope.listarArtista();
     $scope.listarCategorias();
     $scope.listarMusicas();
-
 });

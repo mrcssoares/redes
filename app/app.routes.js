@@ -63,6 +63,11 @@ angular.module('song').config(function ($stateProvider, $urlRouterProvider){
         templateUrl: 'app/pages/music.html',
         controller: 'musicController'
     }).
+    state('music.adicionar', {
+        url:'/adicionar',
+        templateUrl: 'app/pages/musicNew.html',
+        controller: 'musicController'
+    }).
     // ADMIN SOLICITACAO
     state('gerenciarSolicitacoes', {
         url: '/gerenciarSolicitacoes',

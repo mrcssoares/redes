@@ -1,45 +1,9 @@
 <div class="panel panel-default">
-    <div class="panel-heading">Gestão de Músicas</div>
-    <br>
-    <div class="form-group">
-        <button class="btn btn-default" ng-click="callAddArtist()">Adicionar Novo Artista</button>
-        <button ng-show="false" id="dialogAdicionarArtista" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalAdicionarArtista"></button>
-
-        <button class="btn btn-default" ng-click="callAddCategory()">Adicionar Nova Categoria</button>
-        <button ng-show="false" id="dialogAdicionarCategoria" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalAdicionarCategoria"></button>
+ <div class="panel-heading">Buscar Músicas</div>
+     <div style="margin-right: 20px; float: right;">
+        <span  ng-click="goNovaMusica()" class="btn btn-info"> Nova Música </span>     
     </div>
-    <br>
-    <form>
-        <label class="col-md-2 control-label">Nome</label>
-        <input type="text" id="nome" width="100" ng-model="music.nome" required="true">
-        <br><br>
-        <!--<label class="col-md-2 control-label">Duração</label>
-        <input type="number" id="duracao" step="1" ng-model="music.duracao" required="false">
-        <br><br>-->
-        <label class="col-md-2 control-label">Artista</label>
-        <select ng-model="music.artista" id="artista" required>
-            <option value="">Selecione um Artista</option>
-            <option ng-repeat="artista in artistas" value="{{artista.id}}">{{artista.name}}</option>
-        </select>
-        <br><br>
-        <label class="col-md-2 control-label">Categoria</label>
-        <select ng-model="music.categoria" id="categoria" required>
-            <option value="">Selecione uma Categoria</option>
-            <option ng-repeat="categoria in categorias" value="{{categoria.id}}">{{categoria.name}}</option>
-
-        </select>
-        <br><br>
-        <label class="col-md-2 control-label"></label>
-        <div class="form-group">
-            <div class="col-md-offset-2">
-                <button class="btn btn-default" ng-click="adicionarMusica(music)" >Adicionar Música</button><!--data-toggle="modal" data-target="#myModalAdicionar"-->
-                <button ng-show="false" id="dialogAdicionarMusic" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalAdicionarMusic"></button>
-            </div>
-        </div>    
-    </form>
-    
-    <div class="panel-heading">Buscar Músicas</div>
-    <table class="table">
+        <table class="table">
         <thead>
             <tr>
                 <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Nome..."></th>
@@ -65,151 +29,30 @@
             </tr>
         </tbody>
     </table>
-
-    <div class="container">
-        <!-- Trigger the modal with a button -->
-        <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModalAdicionarMusic" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Infor</h4>
-                </div>
-                <div class="modal-body">
-                <p>Adicionado com sucesso!.</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <!-- Trigger the modal with a button -->
-        <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModalApagar" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Infor</h4>
-                </div>
-                <div class="modal-body">
-                <p>Apagado com sucesso!.</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-
+</div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="myModalAdicionarArtista" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="container">
+    <!-- Trigger the modal with a button -->
+    <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModalApagar" role="dialog">
     <div class="modal-dialog">
+        <!-- Modal content-->
         <div class="modal-content">
-            <!-- Modal Header -->
             <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Artista
-                </h4>
-                <h5 class="modal-title">
-                    Insira o nome de um novo artista.
-                </h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Infor</h4>
             </div>
-            
-            <!-- Modal Body -->
             <div class="modal-body">
-                <form role="form">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nome Artista </label>
-                      <input type="text" class="form-contrl"
-                      ng-model="artista.nome" placeholder="nome..."/>
-                  </div>
-                </form>
+            <p>Apagado com sucesso!.</p>
             </div>
-            
-            <!-- Modal Footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Fechar
-                </button>
-                <button type="button" ng-click="adicionarArtista(artista)" class="btn btn-primary">Salvar</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="myModalAdicionarCategoria" tabindex="-1" role="dialog" 
-     aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- Modal Header -->
-            <div class="modal-header">
-                <button type="button" class="close" 
-                   data-dismiss="modal">
-                       <span aria-hidden="true">&times;</span>
-                       <span class="sr-only">Close</span>
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    Categoria
-                </h4>
-                <h5 class="modal-title">
-                    Insira o nome de uma nova categoria.
-                </h5>
-            </div>
-            
-            <!-- Modal Body -->
-            <div class="modal-body">
-                <form role="form">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Nome Categoria </label>
-                      <input type="text" class="form-contrl"
-                      ng-model="categoria.nome" placeholder="nome..."/>
-                  </div>
-                </form>
-            </div>
-            
-            <!-- Modal Footer -->
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Fechar
-                </button>
-                <button type="button" ng-click="adicionarCategoria(categoria)" class="btn btn-primary">Salvar</button>
-            </div>
-        </div>
     </div>
 </div>
 
-
-<style type="text/css">
-    .modal-body .form-horizontal .col-sm-2,
-    .modal-body .form-horizontal .col-sm-10 {
-        width: 100%
-    }
-    .modal-body .form-horizontal .control-label {
-        text-align: left;
-    }
-    .modal-body .form-horizontal .col-sm-offset-2 {
-        margin-left: 15px;
-    }
-</style>
