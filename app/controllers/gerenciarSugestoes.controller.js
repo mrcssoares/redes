@@ -7,8 +7,8 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
         $state.go("login.index")
     }
 
-	$scope.musics= [];
-	$scope.listarMusicas = function() {
+    $scope.musics= [];
+    $scope.listarMusicas = function() {
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -19,7 +19,7 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
                 "x-access-token": config.apikey
             },
             "data": {
-                
+
             }
         };
 
@@ -33,25 +33,48 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
     };
 
     $scope.aceitarMusica = function(music) {
-        console.log('Id da música(put): '+music.music_id);
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": config.baseUrl+"/api/musics/status/" + music.music_id,
-            "method": "PUT",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded",
-                "x-access-token": config.apikey
-            }
-        };
+        if(confirm("Deseja adicionar essa musica?")){
+            console.log('Id da música(put): '+music.music_id);
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": config.baseUrl+"/api/musics/status/" + music.music_id,
+                "method": "PUT",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
+                }
+            };
 
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            $scope.listarMusicas();
-            $('#dialogAdicionarSugestaoAdmin').trigger('click');
-        });
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $scope.listarMusicas();
+                $('#dialogAdicionarSugestaoAdmin').trigger('click');
+            });
+        }
+    };
+    $scope.recusarMusica = function(music) {
+        if(confirm("Deseja recusar essa musica?")){
+            console.log('Id da música(put): '+music.music_id);
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": config.baseUrl+"/api/musics/recusar/" + music.music_id,
+                "method": "PUT",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $scope.listarMusicas();
+                //$('#dialogAdicionarSugestaoAdmin').trigger('click');
+            });
+        }
     };
 
-	$scope.listarMusicas();    
+    $scope.listarMusicas();
 
 });

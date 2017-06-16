@@ -2,32 +2,34 @@
     <div class="panel-heading">Músicas Sugeridas</div>
     <table class="table">
         <thead>
-            <tr>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Nome..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Artista..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Categoria..."></th>
-                <th ></th>
-            </tr>
-            <!-- 
-            <tr>
-                <th ng-click="ordenarPor('nome')"> Nome </th>
-                <th ng-click="ordenarPor('contato')"> Contato </th>
-                <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
-            </tr>
-            -->
+        <tr>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Nome..."></th>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Artista..."></th>
+            <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Categoria..."></th>
+            <th ></th>
+        </tr>
+        <!--
+        <tr>
+            <th ng-click="ordenarPor('nome')"> Nome </th>
+            <th ng-click="ordenarPor('contato')"> Contato </th>
+            <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
+        </tr>
+        -->
         </thead>
         <tbody>
-            <tr ng-repeat="music in musics| filter:buscarMusic">
-                <td>{{music.music_name}}</td>
-                <td>{{music.singer_name}}</td>
-                <td>{{music.category_name}}</td>
-                <td style="text-align: center;">
-                    <i ng-click="aceitarMusica(music)" style="cursor: pointer;" class="fa fa-check">Aceitar</i>
-                </td>
-            </tr>
+        <tr ng-repeat="music in musics| filter:buscarMusic">
+            <td>{{music.music_name}}</td>
+            <td>{{music.singer_name}}</td>
+            <td>{{music.category_name}}</td>
+            <td style="text-align: center;">
+                <button  ng-click="aceitarMusica(music)" style="cursor: pointer;border-color: purple;" class="btn btn-info">Aceitar</button>
+                <button  ng-click="recusarMusica(music)" style="cursor: pointer;border-color: purple;" class="btn btn-info">Recusar</button>
+
+            </td>
+        </tr>
         </tbody>
     </table>
-    
+
     <button ng-show="false" id="dialogAdicionarSugestaoAdmin" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalAdicionar"></button>
 
     <div class="container">
@@ -35,21 +37,21 @@
         <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
         <!-- Modal -->
         <div class="modal fade" id="myModalAdicionar" role="dialog">
-        <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Infor</h4>
-                </div>
-                <div class="modal-body">
-                <p>Adicionado com sucesso!</p>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Infor</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Adicionado com sucesso!</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </div>
 </div>
