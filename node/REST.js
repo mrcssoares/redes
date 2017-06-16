@@ -266,6 +266,25 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             res.status(403).send(tokenInvalido);
         }
     });
+    //update em status de musica
+    router.put("/musics/recusar/:id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "UPDATE ?? SET status = 2 WHERE ?? = ?";
+            var table = ["music", "id", req.params.id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('put /musics 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('put /musics 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "musics" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
     //deletar musica
     router.post("/musics/delete",function(req,res){
         if(req.headers['x-access-token'] == auth) {
