@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 25/05/2017 às 09:48
+-- Tempo de geração: 16/06/2017 às 17:00
 -- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
 -- Versão do PHP: 7.0.19-1+deb.sury.org~xenial+1
 
@@ -66,7 +66,7 @@ CREATE TABLE `music` (
 INSERT INTO `music` (`id`, `name`, `duration`, `id_category`, `id_singer`, `status`) VALUES
 (32, 'In the end', 3000, 2, 2, 1),
 (33, 'Esse cara sou eu', 3000, 1, 1, 1),
-(34, 'Amei Te Ver', 0, 2, 8, 0),
+(34, 'Amei Te Ver', 0, 2, 8, 1),
 (35, 'Numb', 3000, 2, 2, 1),
 (36, 'Evidências', 3000, 6, 9, 1),
 (37, 'Depois do Prazer', 3000, 3, 10, 1),
@@ -79,7 +79,12 @@ INSERT INTO `music` (`id`, `name`, `duration`, `id_category`, `id_singer`, `stat
 (44, 'Mulher de Fases', 3000, 2, 15, 1),
 (45, 'A Dor Desse Amor', 3000, 1, 16, 1),
 (46, 'Shimbalae', 3000, 8, 17, 1),
-(47, 'Nego Drama', 3000, 7, 1, 1);
+(47, 'Nego Drama', 3000, 7, 1, 1),
+(48, 'Despacito', 0, 2, 8, 1),
+(49, 'so vai', 3000, 8, 18, 1),
+(50, 'Musica da arara', 0, 8, 15, 1),
+(51, 'Musica do boi bumba', 0, 4, 8, 0),
+(52, 'lasjfukajyhdgfbs', 0, 2, 8, 0);
 
 -- --------------------------------------------------------
 
@@ -108,7 +113,8 @@ INSERT INTO `singer` (`id`, `name`) VALUES
 (14, 'Exaltasamba'),
 (15, 'Raimundos'),
 (16, 'KLB'),
-(17, 'Maria Gadú');
+(17, 'Maria Gadú'),
+(18, 'josé');
 
 -- --------------------------------------------------------
 
@@ -131,10 +137,20 @@ CREATE TABLE `solicitation` (
 
 INSERT INTO `solicitation` (`id`, `likes`, `status`, `id_music`, `id_user`, `created_at`) VALUES
 (18, 0, 3, 32, 9, '24/05/2017'),
-(19, 0, 1, 32, 8, '24/05/2017'),
-(20, 0, 0, 46, 8, '24/05/2017'),
-(21, 0, 0, 32, 8, '24/05/2017'),
-(22, 0, 0, 32, 8, '24/05/2017');
+(19, 0, 3, 32, 8, '24/05/2017'),
+(20, 0, 2, 46, 8, '24/05/2017'),
+(21, 0, 2, 32, 8, '24/05/2017'),
+(22, 0, 2, 32, 8, '24/05/2017'),
+(23, 0, 2, 33, 8, '27/05/2017'),
+(24, 0, 2, 32, 8, '30/05/2017'),
+(25, 0, 2, 36, 8, '31/05/2017'),
+(26, 0, 2, 40, 10, '31/05/2017'),
+(27, 0, 1, 36, 10, '31/05/2017'),
+(28, 0, 0, 32, 8, '13/06/2017'),
+(29, 0, 0, 33, 8, '13/06/2017'),
+(30, 0, 0, 37, 8, '13/06/2017'),
+(31, 0, 0, 32, 8, '13/06/2017'),
+(32, 0, 0, 34, 10, '13/06/2017');
 
 -- --------------------------------------------------------
 
@@ -157,7 +173,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `name`, `email`, `photo`, `type`) VALUES
 (7, 'Marcos Soares', 'mss3@icomp.ufam.edu.br', 'https://graph.facebook.com/1198317190280878/picture', 2),
 (8, 'Jonas Broder', 'zitosmarcos@gmail.com', 'https://lh6.googleusercontent.com/-RI3n8ma914o/AAAAAAAAAAI/AAAAAAAAUSE/83wp5nB_5Uo/s500-c/photo.jpg', 1),
-(9, 'Barry', 'teewa.web@gmail.com', 'https://lh5.googleusercontent.com/-1xFRCVPbXK4/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF56E2Wrbj7zviSwzcLjK0eh0M4W-A/s500-c/photo.jpg', 1);
+(9, 'Barry', 'teewa.web@gmail.com', 'https://lh5.googleusercontent.com/-1xFRCVPbXK4/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF56E2Wrbj7zviSwzcLjK0eh0M4W-A/s500-c/photo.jpg', 1),
+(10, 'DUIVILLY BRITO', 'db@icomp.ufam.edu.br', 'https://lh3.googleusercontent.com/-VlQk5j4mj4U/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF7pyot3-HGWFpNXEuyyKP26N7fCDw/s500-c/photo.jpg', 1),
+(11, 'GERCIDARA SILVA LIRA', 'gsl@icomp.ufam.edu.br', 'https://lh5.googleusercontent.com/-87ulS8tLFoA/AAAAAAAAAAI/AAAAAAAAAL4/y6h641N85K0/s500-c/photo.jpg', 2);
 
 --
 -- Índices de tabelas apagadas
@@ -210,22 +228,22 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT de tabela `singer`
 --
 ALTER TABLE `singer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de tabela `solicitation`
 --
 ALTER TABLE `solicitation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- Restrições para dumps de tabelas
 --

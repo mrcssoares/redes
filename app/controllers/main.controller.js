@@ -108,11 +108,10 @@ angular.module("song").controller('mainController', function ($scope, objectUser
         console.log("Message received. ", payload);
         alert('voce tem notificações');
         alert(payload.notification);
-
     });
 
 
-        $scope.sair = function () {
+    $scope.sair = function () {
         localStorage.clear();
         $state.go('login.index', {}, {
             location: 'replace'
