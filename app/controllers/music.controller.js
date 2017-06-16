@@ -36,20 +36,24 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                     "status": "1"
                 }
             };
-
+            //FAZER UNS AJUSTES AQUI
             $.ajax(settings).success(function (music, response) {
                 console.log(response);
                 $scope.$apply($scope.listarMusicas());
-                var nome = document.getElementById('nome');
-                nome.value = "";
+                var nome= document.getElementById('nome');
+                var artista= document.getElementById('artista');
+                var categoria = document.getElementById('categoria');
                 //var duracao = document.getElementById('duracao');
                 //duracao.value = "";
-                var artista = document.getElementById('artista');
+                console.log('artista:'+music.artista);
+                if(nome == null || artista == undefined || categoria == ""){
+                    alert('Informe todos os campos!')
+                }else{
+                    $('#dialogAdicionarMusic').trigger('click');
+                }
+                nome.value = "";
                 artista.value = "";
-                var categoria = document.getElementById('categoria');
                 categoria.value = "";
-
-                $('#dialogAdicionarMusic').trigger('click');
             });
         }
     };
@@ -126,6 +130,11 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             $scope.listarArtista();
             //var inputArtista= document.getElementById('inputArtista');
             //inputArtista.value= "";
+
+            $state.go('music');
+            $timeout(function () {
+                location.reload();
+            });
         });
     };
 
@@ -151,7 +160,13 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.listarCategorias();
-            $scope.$emit('someEvent', 'categoria');
+            //$scope.$emit('someEvent', 'categoria');
+
+            $state.go('music');
+            $timeout(function () {
+                location.reload();
+            });
+
             //var inputCategoria= document.getElementById('inputCategoria');
             //inputCategoria.value= "";
         });
