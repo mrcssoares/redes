@@ -68,7 +68,7 @@ REST.prototype.startServer = function() {
      // server.listen(porta, function(){
      //     console.log("API Rodando na porta: "+porta+".")
      // });
-   
+
      var porta = 3000;
      app.listen(porta, function() {
          console.log("API Rodando na porta " + porta + ".");

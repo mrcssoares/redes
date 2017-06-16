@@ -18,7 +18,7 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
 
     $scope.adicionarMusica = function (music) {
         console.log(music);
-        if(confirm('Tem certeza que deseja adicionar está musica?')) {
+        if(confirm('Tem certeza que deseja adicionar esta música?')) {
             var settings = {
                 "async": true,
                 "crossDomain": true,
@@ -36,17 +36,23 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                     "status": "1"
                 }
             };
-
+            //FAZER UNS AJUSTES AQUI
             $.ajax(settings).success(function (music, response) {
                 console.log(response);
                 $scope.$apply($scope.listarMusicas());
-                var nome = document.getElementById('nome');
-                nome.value = "";
-                var duracao = document.getElementById('duracao');
-                duracao.value = "";
-                var artista = document.getElementById('artista');
-                artista.value = "";
+                var nome= document.getElementById('nome');
+                var artista= document.getElementById('artista');
                 var categoria = document.getElementById('categoria');
+                //var duracao = document.getElementById('duracao');
+                //duracao.value = "";
+                console.log('artista:'+music.artista);
+                if(nome == null || artista == undefined || categoria == ""){
+                    alert('Informe todos os campos!')
+                }else{
+                    $('#dialogAdicionarMusic').trigger('click');
+                }
+                nome.value = "";
+                artista.value = "";
                 categoria.value = "";
             });
         }
@@ -100,6 +106,10 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         });
     };
 
+    $scope.callAddArtist = function(){
+        $('#dialogAdicionarArtista').trigger('click');
+    }
+
     $scope.adicionarArtista = function(artista) {
         var settings = {
             "async": true,
@@ -118,10 +128,19 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.listarArtista();
-            var inputArtista= document.getElementById('inputArtista');
-            inputArtista.value= "";
+            //var inputArtista= document.getElementById('inputArtista');
+            //inputArtista.value= "";
+
+            $state.go('music');
+            $timeout(function () {
+                location.reload();
+            });
         });
     };
+
+    $scope.callAddCategory = function(){
+        $('#dialogAdicionarCategoria').trigger('click');
+    }
 
     $scope.adicionarCategoria = function(categoria) {
         var settings = {
@@ -141,8 +160,15 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         $.ajax(settings).done(function (response) {
             console.log(response);
             $scope.listarCategorias();
-            var inputCategoria= document.getElementById('inputCategoria');
-            inputCategoria.value= "";
+            //$scope.$emit('someEvent', 'categoria');
+
+            $state.go('music');
+            $timeout(function () {
+                location.reload();
+            });
+
+            //var inputCategoria= document.getElementById('inputCategoria');
+            //inputCategoria.value= "";
         });
     };
 
@@ -171,7 +197,7 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
     };
 
     $scope.apagarMusica = function(music) {
-        if(confirm('Tem certeza que deseja apagar essa musica?')) {
+        if(confirm('Tem certeza que deseja apagar esta música?')) {
             console.log('Id da música(delete): ' + music.music_id);
             var settings = {
                 "async": true,

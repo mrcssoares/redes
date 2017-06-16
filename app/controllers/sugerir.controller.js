@@ -8,7 +8,8 @@ angular.module("song").controller('sugerirController', function ($scope, $state,
     }
 
     $scope.sugerir = function (music) {
-        if(confirm('Tem certeza que deseja adicionar esta musica?')){
+        
+        if(confirm('Tem certeza que deseja adicionar esta música?')){
             console.log(music);
 
             var settings = {
@@ -37,6 +38,8 @@ angular.module("song").controller('sugerirController', function ($scope, $state,
                 artista.value= "";
                 var categoria= document.getElementById('categoria');
                 categoria.value= "";
+
+                $('#dialogAdicionarSugestao').trigger('click');
             });
         }
     };
