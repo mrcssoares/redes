@@ -189,9 +189,6 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
                 "x-access-token": config.apikey
-            },
-            "data": {
-                
             }
         };
 
