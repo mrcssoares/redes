@@ -223,7 +223,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
 
-    //deletar categoria
+    //deletar cantor
     router.delete("/singers/:id",function(req,res){
         if(req.headers['x-access-token'] == auth) {
             var query = "DELETE from ?? WHERE ??=?";
@@ -326,10 +326,10 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
     //deletar musica
-    router.post("/musics/delete",function(req,res){
+    router.delete("/musics/delete/:id",function(req,res){
         if(req.headers['x-access-token'] == auth) {
             var query = "DELETE from ?? WHERE ??=?";
-            var table = ["music","id",req.body.id];
+            var table = ["music","id",req.params.id];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
                 if(err) {
@@ -445,6 +445,26 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                     res.json({"Error" : true, "Message" : "Error executing MySQL query"});
                 } else {
                     console.log('get /fcm 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.get("/fcm/get/super",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "SELECT * FROM ?? JOIN user ON user.id = fcm.id_user WHERE user.type = 2";
+            var table = ["fcm"];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /fcm 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /fcm 200 OK');
+                    console.log(rows);
                     res.json({"Error" : false, "Message" : "Success", "fcm" : rows});
                 }
             });

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 16/06/2017 às 17:00
+-- Tempo de geração: 17/06/2017 às 11:14
 -- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
 -- Versão do PHP: 7.0.19-1+deb.sury.org~xenial+1
 
@@ -47,6 +47,26 @@ INSERT INTO `category` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `fcm`
+--
+
+CREATE TABLE `fcm` (
+  `fcm_id` text NOT NULL,
+  `id_user` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Fazendo dump de dados para tabela `fcm`
+--
+
+INSERT INTO `fcm` (`fcm_id`, `id_user`) VALUES
+('fb98j154iHM:APA91bHiYaZxke8YuG7jbYZWBk0F5bIXJp7oPoJ7XuZLrGgdQYT3G_IXDCS59guXXmLmhG5YTtYFsifkO8CikPAJC93Z4CXlNgT38rDoRg_ojyEWh6EwBuuHlaQQ2Lx4zeKVUsEsSQHR', 7),
+('cfWEr2WtpmQ:APA91bFGWkiqL8M3HKoeImYr1ahOHgFgBWICD4KL_QcEjYrPJuPiYYrNvMfoHJZtvzlmIen10RyvUqNFRBx-dW6-vYJMx4ZUsupOpJr_Qt8TvMNq9gjfMbLS4H_sEPimjxl5bw5S0USg', 8),
+('dQkOT1-xPqA:APA91bG_0FQOLTdtWwd_F7dFVWC4Ai31gI1NrBQCmLDmvbSMsnGQHnbkEUKK1b4GJnUr84ULdR2AlmvbKZPL60vGOdGWNzMW8TTy13ZWVhshtJcMuz6a9kRtcsHbQjroKlKLlpSw9BEv', 10);
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `music`
 --
 
@@ -56,35 +76,38 @@ CREATE TABLE `music` (
   `duration` int(11) NOT NULL,
   `id_category` int(11) NOT NULL,
   `id_singer` int(11) NOT NULL,
-  `status` int(1) NOT NULL
+  `status` int(1) NOT NULL,
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Fazendo dump de dados para tabela `music`
 --
 
-INSERT INTO `music` (`id`, `name`, `duration`, `id_category`, `id_singer`, `status`) VALUES
-(32, 'In the end', 3000, 2, 2, 1),
-(33, 'Esse cara sou eu', 3000, 1, 1, 1),
-(34, 'Amei Te Ver', 0, 2, 8, 1),
-(35, 'Numb', 3000, 2, 2, 1),
-(36, 'Evidências', 3000, 6, 9, 1),
-(37, 'Depois do Prazer', 3000, 3, 10, 1),
-(38, 'A Lenda', 3000, 1, 11, 1),
-(39, 'Sweet Dreams', 3000, 1, 12, 1),
-(40, 'Dormi Na Praça', 3000, 6, 13, 1),
-(41, 'Mineirinho', 3000, 6, 10, 1),
-(42, 'Que Se Chama Amor', 3000, 6, 10, 1),
-(43, 'Eu Me Apaixonei Pela Pessoa Errada', 3000, 7, 14, 1),
-(44, 'Mulher de Fases', 3000, 2, 15, 1),
-(45, 'A Dor Desse Amor', 3000, 1, 16, 1),
-(46, 'Shimbalae', 3000, 8, 17, 1),
-(47, 'Nego Drama', 3000, 7, 1, 1),
-(48, 'Despacito', 0, 2, 8, 1),
-(49, 'so vai', 3000, 8, 18, 1),
-(50, 'Musica da arara', 0, 8, 15, 1),
-(51, 'Musica do boi bumba', 0, 4, 8, 0),
-(52, 'lasjfukajyhdgfbs', 0, 2, 8, 0);
+INSERT INTO `music` (`id`, `name`, `duration`, `id_category`, `id_singer`, `status`, `id_user`) VALUES
+(32, 'In the end', 3000, 2, 2, 1, 0),
+(33, 'Esse cara sou eu', 3000, 1, 1, 1, 0),
+(34, 'Amei Te Ver', 0, 2, 8, 1, 0),
+(35, 'Numb', 3000, 2, 2, 1, 0),
+(36, 'Evidências', 3000, 6, 9, 1, 0),
+(37, 'Depois do Prazer', 3000, 3, 10, 1, 0),
+(38, 'A Lenda', 3000, 1, 11, 1, 0),
+(39, 'Sweet Dreams', 3000, 1, 12, 1, 0),
+(40, 'Dormi Na Praça', 3000, 6, 13, 1, 0),
+(41, 'Mineirinho', 3000, 6, 10, 1, 0),
+(42, 'Que Se Chama Amor', 3000, 6, 10, 1, 0),
+(43, 'Eu Me Apaixonei Pela Pessoa Errada', 3000, 7, 14, 1, 0),
+(44, 'Mulher de Fases', 3000, 2, 15, 1, 0),
+(45, 'A Dor Desse Amor', 3000, 1, 16, 1, 0),
+(46, 'Shimbalae', 3000, 8, 17, 1, 0),
+(47, 'Nego Drama', 3000, 7, 1, 1, 0),
+(48, 'Despacito', 0, 2, 8, 1, 0),
+(49, 'so vai', 3000, 8, 18, 1, 0),
+(50, 'Musica da arara', 0, 8, 15, 1, 0),
+(53, 'Quando você passa(Turu turu)', 0, 1, 11, 0, 0),
+(54, 'vou sugerir essa musica aqui', 0, 1, 11, 0, 0),
+(55, 'Aprova ou recusa essas musica aqui que to mandando', 0, 1, 1, 0, 0),
+(57, 'sugestão com id do usuário', 0, 2, 8, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -145,12 +168,18 @@ INSERT INTO `solicitation` (`id`, `likes`, `status`, `id_music`, `id_user`, `cre
 (24, 0, 2, 32, 8, '30/05/2017'),
 (25, 0, 2, 36, 8, '31/05/2017'),
 (26, 0, 2, 40, 10, '31/05/2017'),
-(27, 0, 1, 36, 10, '31/05/2017'),
-(28, 0, 0, 32, 8, '13/06/2017'),
-(29, 0, 0, 33, 8, '13/06/2017'),
-(30, 0, 0, 37, 8, '13/06/2017'),
-(31, 0, 0, 32, 8, '13/06/2017'),
-(32, 0, 0, 34, 10, '13/06/2017');
+(27, 0, 2, 36, 10, '31/05/2017'),
+(28, 0, 2, 32, 8, '13/06/2017'),
+(29, 0, 2, 33, 8, '13/06/2017'),
+(30, 0, 2, 37, 8, '13/06/2017'),
+(31, 0, 2, 32, 8, '13/06/2017'),
+(32, 0, 0, 34, 10, '13/06/2017'),
+(33, 0, 0, 38, 11, '16/06/2017'),
+(34, 0, 2, 34, 8, '17/06/2017'),
+(35, 0, 2, 43, 8, '17/06/2017'),
+(36, 0, 2, 32, 8, '17/06/2017'),
+(37, 0, 2, 47, 8, '17/06/2017'),
+(38, 0, 1, 32, 8, '17/06/2017');
 
 -- --------------------------------------------------------
 
@@ -175,7 +204,7 @@ INSERT INTO `user` (`id`, `name`, `email`, `photo`, `type`) VALUES
 (8, 'Jonas Broder', 'zitosmarcos@gmail.com', 'https://lh6.googleusercontent.com/-RI3n8ma914o/AAAAAAAAAAI/AAAAAAAAUSE/83wp5nB_5Uo/s500-c/photo.jpg', 1),
 (9, 'Barry', 'teewa.web@gmail.com', 'https://lh5.googleusercontent.com/-1xFRCVPbXK4/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF56E2Wrbj7zviSwzcLjK0eh0M4W-A/s500-c/photo.jpg', 1),
 (10, 'DUIVILLY BRITO', 'db@icomp.ufam.edu.br', 'https://lh3.googleusercontent.com/-VlQk5j4mj4U/AAAAAAAAAAI/AAAAAAAAAAA/AAyYBF7pyot3-HGWFpNXEuyyKP26N7fCDw/s500-c/photo.jpg', 1),
-(11, 'GERCIDARA SILVA LIRA', 'gsl@icomp.ufam.edu.br', 'https://lh5.googleusercontent.com/-87ulS8tLFoA/AAAAAAAAAAI/AAAAAAAAAL4/y6h641N85K0/s500-c/photo.jpg', 2);
+(11, 'GERCIDARA SILVA LIRA', 'gsl@icomp.ufam.edu.br', 'https://lh5.googleusercontent.com/-87ulS8tLFoA/AAAAAAAAAAI/AAAAAAAAAL4/y6h641N85K0/s500-c/photo.jpg', 1);
 
 --
 -- Índices de tabelas apagadas
@@ -186,6 +215,12 @@ INSERT INTO `user` (`id`, `name`, `email`, `photo`, `type`) VALUES
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `fcm`
+--
+ALTER TABLE `fcm`
+  ADD UNIQUE KEY `id_user` (`id_user`);
 
 --
 -- Índices de tabela `music`
@@ -228,7 +263,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 --
 -- AUTO_INCREMENT de tabela `singer`
 --
@@ -238,7 +273,7 @@ ALTER TABLE `singer`
 -- AUTO_INCREMENT de tabela `solicitation`
 --
 ALTER TABLE `solicitation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT de tabela `user`
 --
@@ -247,6 +282,12 @@ ALTER TABLE `user`
 --
 -- Restrições para dumps de tabelas
 --
+
+--
+-- Restrições para tabelas `fcm`
+--
+ALTER TABLE `fcm`
+  ADD CONSTRAINT `fk_id_user_fcm` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
 
 --
 -- Restrições para tabelas `music`
