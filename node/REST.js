@@ -105,7 +105,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                     console.log('delete /users 400 ERROR');
                     res.json({"Error" : true, "Message" : "Error executing MySQL query"});
                 } else {
-                    console.log('delete /users 400 ERROR');
+                    console.log('delete /users 200 OK');
                     res.json({"Error" : false, "Message" : "Deleted the user with email "+req.params.id});
                 }
             });
@@ -159,6 +159,26 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
 
+    //deletar categoria
+    router.delete("/category/:id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "DELETE from ?? WHERE ??=?";
+            var table = ["category","id",req.params.id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('delete /category 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('delete /category 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "category" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
     //=================================== END CRUD CATEGORY ===================================//
 
 
@@ -196,6 +216,26 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 } else {
                     console.log('post /singers 200 OK');
                     res.json({"Error" : false, "Message" : "User Added !", "singers" :rows });
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    //deletar categoria
+    router.delete("/singers/:id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "DELETE from ?? WHERE ??=?";
+            var table = ["singer","id",req.params.id];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('delete /singer 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('delete /singer 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "singer" : rows});
                 }
             });
         }else{

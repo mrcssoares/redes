@@ -1,0 +1,109 @@
+<div class="panel panel-default">
+ <div class="panel-heading">Buscar Artista</div>
+    <div class="form-group" style="margin-right: 15px; float: right; position: relative; top: 3px;">
+        <button class="btn btn-default" ng-click="callAddArtist()">Adicionar Novo Artista</button>
+        <button ng-show="false" id="dialogAdicionarArtista" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalAdicionarArtista"></button>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.name" placeholder="Nome..."></th>
+            </tr>
+            <!-- 
+            <tr>
+                <th ng-click="ordenarPor('nome')"> Nome </th>
+                <th ng-click="ordenarPor('contato')"> Contato </th>
+                <th ng-click="ordenarPor('qtde_casos')"> Quantidade de Casos </th>
+            </tr>
+            -->
+        </thead>
+        <tbody>
+            <tr ng-repeat="artista in artistas| filter:buscarMusic">
+                <td>{{artista.name}}</td>
+                <td style="text-align: center;">
+                    <i ng-click="apagarArtista(artista)"  style="cursor: pointer;" class="fa fa-trash-o"> Apagar</i> <!--data-toggle="modal" data-target="#myModalApagar"-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModalApagar" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Infor</h4>
+            </div>
+            <div class="modal-body">
+            <p>Apagado com sucesso!.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModalAdicionarArtista" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Artista
+                </h4>
+                <h5 class="modal-title">
+                    Insira o nome de um novo artista.
+                </h5>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nome Artista </label>
+                      <input type="text" class="form-contrl"
+                      ng-model="artista.nome" placeholder="nome..."/>
+                  </div>
+                </form>
+            </div>
+            
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Fechar
+                </button>
+                <button ng-disabled="artista.nome == '' || artista.nome == null" type="button" ng-click="adicionarArtista(artista)" class="btn btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    .modal-body .form-horizontal .col-sm-2,
+    .modal-body .form-horizontal .col-sm-10 {
+        width: 100%
+    }
+    .modal-body .form-horizontal .control-label {
+        text-align: left;
+    }
+    .modal-body .form-horizontal .col-sm-offset-2 {
+        margin-left: 15px;
+    }
+</style>

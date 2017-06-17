@@ -36,24 +36,31 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                     "status": "1"
                 }
             };
-            //FAZER UNS AJUSTES AQUI
+
             $.ajax(settings).success(function (music, response) {
                 console.log(response);
                 $scope.$apply($scope.listarMusicas());
-                var nome= document.getElementById('nome');
-                var artista= document.getElementById('artista');
-                var categoria = document.getElementById('categoria');
+                //var nome= document.getElementById('nome');
+                //var artista= document.getElementById('artista');
+                //var categoria = document.getElementById('categoria');
                 //var duracao = document.getElementById('duracao');
                 //duracao.value = "";
-                console.log('artista:'+music.artista);
-                if(nome == null || artista == undefined || categoria == ""){
-                    alert('Informe todos os campos!')
-                }else{
-                    $('#dialogAdicionarMusic').trigger('click');
-                }
-                nome.value = "";
-                artista.value = "";
-                categoria.value = "";
+                console.log('add music');
+                //if(nome == null || artista == undefined || categoria == ""){
+                //    alert('Informe todos os campos!')
+                //}else{
+                    //$timeout(function () {
+                    //    $('#dialogAdicionarMusic').trigger('click');
+                    //}, 1000);
+
+                    $state.go('music');
+                    $timeout(function () {
+                        location.reload();
+                    });
+                //}
+                //nome.value = "";
+                //artista.value = "";
+                //categoria.value = "";
             });
         }
     };
@@ -131,7 +138,7 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             //var inputArtista= document.getElementById('inputArtista');
             //inputArtista.value= "";
 
-            $state.go('music');
+            $state.go('music.artista');
             $timeout(function () {
                 location.reload();
             });
@@ -162,7 +169,7 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
             $scope.listarCategorias();
             //$scope.$emit('someEvent', 'categoria');
 
-            $state.go('music');
+            $state.go('music.categoria');
             $timeout(function () {
                 location.reload();
             });
@@ -220,9 +227,67 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
         }
     };
 
+    $scope.apagarCategoria = function(categoria) {
+        if(confirm('Tem certeza que deseja apagar esta categoria?')) {
+            //console.log('Id da música(delete): ' + music.music_id);
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": config.baseUrl + "/api/category/"+categoria.id,
+                "method": "DELETE",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
+                },
+                "data": {
+                    id: categoria.id
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $scope.listarCategorias();
+            });
+        }
+    };
+
+    $scope.apagarArtista = function(artista) {
+        if(confirm('Tem certeza que deseja apagar este artista?')) {
+            //console.log('Id da música(delete): ' + music.music_id);
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": config.baseUrl + "/api/singers/"+artista.id,
+                "method": "DELETE",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": config.apikey
+                },
+                "data": {
+                    id: artista.id
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $scope.listarArtista();
+            });
+        }
+    };
+
     $scope.goNovaMusica = function () {
         // body...
         $state.go('music.adicionar');
+    };
+
+    $scope.goListCategory = function () {
+        // body...
+        $state.go('music.categoria');
+    };
+
+    $scope.goListArtist = function () {
+        // body...
+        $state.go('music.artista');
     };
 
     $scope.listarArtista();

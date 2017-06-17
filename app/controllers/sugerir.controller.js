@@ -33,11 +33,11 @@ angular.module("song").controller('sugerirController', function ($scope, $state,
             $.ajax(settings).done(function (response) {
                 console.log(response);
                 var nome= document.getElementById('nome');
-                nome.value= "";
+                nome.value= '';
                 var artista= document.getElementById('artista');
-                artista.value= "";
+                artista.value= '';
                 var categoria= document.getElementById('categoria');
-                categoria.value= "";
+                categoria.value= '';
 
                 $('#dialogAdicionarSugestao').trigger('click');
             });
