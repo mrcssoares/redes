@@ -35,28 +35,29 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             var settings = fcmRegister.verifyFCM(solicitacao.id_user);
             $.ajax(settings).done(function (response) {
                 console.log(response);
-
-                var key = config.songKey;
-                var to = response.fcm[0].fcm_id;//'cRT1-OSrRHA:APA91bG3EumpJVq3ZhAtA2s17CeaG7bIv2mwD6QvCo9IB85RnPX0d5-30SMTa5saJkkxw72JKxBsStdDZPUlyjPsabL8kYIwvCI5rXAODgrtkIy1Sig3z-IiCSTbGprk-M-VPSpCKavM';
-                var notification = {
-                    'title': 'SUA MUSICA FOI ACEITA Usuario do id = ' +response.fcm[0].id_user,
-                    'body': 'PARABENS!!!'
-                };
-                fetch('https://fcm.googleapis.com/fcm/send', {
-                    'method': 'POST',
-                    'headers': {
-                        'Authorization': 'key=' + key,
-                        'Content-Type': 'application/json'
-                    },
-                    'body': JSON.stringify({
-                        'notification': notification,
-                        'to': to
+                if(status == "aprovar") {
+                    var key = config.songKey;
+                    var to = response.fcm[0].fcm_id;//'cRT1-OSrRHA:APA91bG3EumpJVq3ZhAtA2s17CeaG7bIv2mwD6QvCo9IB85RnPX0d5-30SMTa5saJkkxw72JKxBsStdDZPUlyjPsabL8kYIwvCI5rXAODgrtkIy1Sig3z-IiCSTbGprk-M-VPSpCKavM';
+                    var notification = {
+                        'title': 'Chegou sua vez de cantar!!',
+                        'body': 'De o seu melhor 😍 !!!'
+                    };
+                    fetch('https://fcm.googleapis.com/fcm/send', {
+                        'method': 'POST',
+                        'headers': {
+                            'Authorization': 'key=' + key,
+                            'Content-Type': 'application/json'
+                        },
+                        'body': JSON.stringify({
+                            'notification': notification,
+                            'to': to
+                        })
+                    }).then(function (response) {
+                        console.log(response);
+                    }).catch(function (error) {
+                        console.error(error);
                     })
-                }).then(function(response) {
-                    console.log(response);
-                }).catch(function(error) {
-                    console.error(error);
-                })
+                }
             });
 
 

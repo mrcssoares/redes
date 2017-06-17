@@ -26,7 +26,8 @@ angular.module("song").controller('sugerirController', function ($scope, $state,
                     "duration": '0',
                     "id_category": music.categoria,
                     "id_singer": music.artista,
-                    "status": "0"
+                    "status": "0",
+                    "id_user": objectUser.id
                 }
             };
 

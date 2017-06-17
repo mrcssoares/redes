@@ -33,7 +33,8 @@ angular.module("song").controller('musicController', function ($scope, $timeout,
                     "duration": '3000',
                     "id_category": music.categoria,
                     "id_singer": music.artista,
-                    "status": "1"
+                    "status": "1",
+                    "id_user": objectUser.id
                 }
             };
             //FAZER UNS AJUSTES AQUI

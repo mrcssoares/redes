@@ -137,13 +137,13 @@ angular.module("song").controller('loginController', function ($scope, objectUse
                         //busca ele de novo
                         $.ajax(settings).done(function (response) {
                             console.log(response);
-                            localStorage.setItem('object-user', JSON.stringify(response.users[0]));
+                            localStorage.setItem('object_user_song', JSON.stringify(response.users[0]));
                             $scope.$emit('someEvent', 'login');
 
                         })
                     });
             }else{
-                localStorage.setItem('object-user', JSON.stringify(response.users[0]));
+                localStorage.setItem('object_user_song', JSON.stringify(response.users[0]));
                 $scope.$emit('someEvent', 'login');
             }
         });
