@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 17/06/2017 às 11:14
+-- Tempo de geração: 17/06/2017 às 17:11
 -- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
 -- Versão do PHP: 7.0.19-1+deb.sury.org~xenial+1
 
@@ -107,7 +107,10 @@ INSERT INTO `music` (`id`, `name`, `duration`, `id_category`, `id_singer`, `stat
 (53, 'Quando você passa(Turu turu)', 0, 1, 11, 0, 0),
 (54, 'vou sugerir essa musica aqui', 0, 1, 11, 0, 0),
 (55, 'Aprova ou recusa essas musica aqui que to mandando', 0, 1, 1, 0, 0),
-(57, 'sugestão com id do usuário', 0, 2, 8, 1, 8);
+(57, 'sugestão com id do usuário', 0, 2, 8, 1, 8),
+(64, 'nova sugestão', 0, 2, 8, 0, 8),
+(65, 'adicionando nova sugestão', 0, 2, 8, 2, 8),
+(66, 'Teste de fogo 2', 0, 2, 9, 0, 8);
 
 -- --------------------------------------------------------
 
@@ -263,7 +266,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de tabela `music`
 --
 ALTER TABLE `music`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 --
 -- AUTO_INCREMENT de tabela `singer`
 --

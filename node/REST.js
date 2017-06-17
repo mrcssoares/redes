@@ -159,7 +159,6 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
 
-    //deletar categoria
     router.delete("/category/:id",function(req,res){
         if(req.headers['x-access-token'] == auth) {
             var query = "DELETE from ?? WHERE ??=?";
@@ -223,7 +222,6 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
 
-    //deletar cantor
     router.delete("/singers/:id",function(req,res){
         if(req.headers['x-access-token'] == auth) {
             var query = "DELETE from ?? WHERE ??=?";
@@ -252,7 +250,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     //musics accepts
     router.get("/musics",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category WHERE music.status = 1";
+            var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status, user.id as id_user, user.name as name_user FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category JOIN user ON user.id = music.id_user WHERE music.status = 1";
             var table = ["music"];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
@@ -272,6 +270,25 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     router.get("/musics/sugestions",function(req,res){
         if(req.headers['x-access-token'] == auth) {
             var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status, user.id as id_user, user.name as name_user FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category JOIN user ON user.id = music.id_user WHERE music.status = 0";
+            var table = ["music"];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /musics 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /musics 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "musics" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.get("/musics/sugestions/user/:id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status, user.id as id_user, user.name as name_user FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category JOIN user ON user.id = music.id_user WHERE music.id_user =" + req.params.id;
             var table = ["music"];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
@@ -344,7 +361,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             res.status(403).send(tokenInvalido);
         }
     });
-
+    //adicionar musica
     router.post("/musics",function(req,res){
         if(req.headers['x-access-token'] == auth) {
             var query = "INSERT INTO ?? (name, duration, id_category, id_singer, status, id_user) VALUES ('"+ req.body.name +"', '"+req.body.duration+"', '"+req.body.id_category+"', '"+req.body.id_singer +"', '"+req.body.status+"', '"+req.body.id_user+"')";
@@ -511,7 +528,75 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             res.status(403).send(tokenInvalido);
         }
     });
+
     //=================================== END CRUD FCM ===================================//
+
+
+
+    //=================================== START CRUD LIKES ===================================//
+
+    router.get("/likes/user/:id/solicitation/:s_id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "SELECT * FROM ?? WHERE id_solicitacao = "+req.params.s_id+" and id_usuario ="+req.params.id;
+            var table = ["likes"];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /likes 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /likes 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "likes" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.post("/likes",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "INSERT INTO ??(??, ??, ??) VALUES (?, ?, ?)";
+            var table = ["likes", "id_solicitacao", "id_usuario", "status", req.body.id_solicitacao, req.body.id_usuario, 1];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('post /likes 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('post /likes 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "likes" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.put("/likes",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "UPDATE likes SET status = ? WHERE id_solicitacao = ? AND id_usuario = ?";
+            var table = ["likes", req.body.status, req.body.id_solicitacao, req.body.id_usuario];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('put /likes 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('put /likes 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "likes" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+
+
+
+    //=================================== END CRUD FCM ===================================//
+
 
 };
 

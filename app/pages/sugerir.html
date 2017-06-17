@@ -63,3 +63,34 @@
         </div>
     </div>
 </div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Suas sugestões</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th ng-click="ordenarPor('nome')"> Música </th>
+                <th ng-click="ordenarPor('contato')"> Artista </th>
+                <th ng-click="ordenarPor('qtde_casos')"> Categoria </th>
+                <th ng-click="ordenarPor('qtde_casos')"> status </th>
+            </tr>
+            <tr>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Nome..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Artista..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Categoria..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="status..."></th>
+            </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="music in musics| filter:buscarMusic">
+            <td>{{music.music_name}}</td>
+            <td>{{music.singer_name}}</td>
+            <td>{{music.category_name}}</td>
+            <td>{{music.status | statusSugestao}}</td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+

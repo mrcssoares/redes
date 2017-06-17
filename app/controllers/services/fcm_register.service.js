@@ -53,10 +53,24 @@ angular.module("song").factory("fcmRegister", function ($http, config) {
         }
     };
 
+    var _getAdminFCM = function () {
+        return {
+            "async": true,
+            "crossDomain": true,
+            url: config.baseUrl + "/api/fcm/get/super",
+            "method": "GET",
+            "headers": {
+                "content-type": "application/x-www-form-urlencoded",
+                "x-access-token": config.apikey
+            }
+        }
+    };
+
     return {
         verifyFCM: _verifyFCM,
         createFCM: _createFCM,
-        updateFCM: _updateFCM
+        updateFCM: _updateFCM,
+        getAdminFCM: _getAdminFCM
     };
 
 });
