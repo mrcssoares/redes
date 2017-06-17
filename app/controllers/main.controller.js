@@ -106,8 +106,15 @@ angular.module("song").controller('mainController', function ($scope, objectUser
     //escuta novas notificações
     messaging.onMessage(function(payload) {
         console.log("Message received. ", payload);
-        alert('voce tem notificações');
-        alert(payload.notification);
+        var notification = new Notification(payload.notification.title, {
+            icon: 'app/assets/images/touch-music-karaoke.jpg',
+            body: payload.notification.body
+        });
+        notification.onclick = function () {
+            notification.close();
+            window.focus();
+        };
+
     });
 
 

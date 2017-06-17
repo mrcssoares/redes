@@ -2,33 +2,65 @@
     <div class="panel-heading">Solicitações para Cantar</div>
     <table class="table">
         <thead>
-            <tr>
-                <th>Música</th>
-                <th>Usuário</th>
-                <!--<th>Likes</th>-->
-                <th>Data</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <input class="form-control" type="text" ng-model="buscarSolicitacoes.name_music" placeholder="Música...">
-                <!--<th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_user" placeholder="Usuário..."></th>
-                &lt;!&ndash;<th><input class="form-control" type="text" ng-model="buscarSolicitacoes.likes" placeholder="Likes..."></th>&ndash;&gt;
-                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.created_at" placeholder="Data..."></th>
-                <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.status" placeholder="Status..."></th>-->
-            </tr>
+        <tr>
+            <th>Música</th>
+            <th>Usuário</th>
+            <!--<th>Likes</th>-->
+            <th>Data</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <input class="form-control" type="text" ng-model="buscarSolicitacoes.name_music" placeholder="Buscar...">
+            <!--<th><input class="form-control" type="text" ng-model="buscarSolicitacoes.name_user" placeholder="Usuário..."></th>
+            &lt;!&ndash;<th><input class="form-control" type="text" ng-model="buscarSolicitacoes.likes" placeholder="Likes..."></th>&ndash;&gt;
+            <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.created_at" placeholder="Data..."></th>
+            <th><input class="form-control" type="text" ng-model="buscarSolicitacoes.status" placeholder="Status..."></th>-->
+        </tr>
         </thead>
         <tbody>
-            <tr ng-if="solicitacao.status < 2" ng-repeat="solicitacao in solicitacoes| filter:buscarSolicitacoes">
-                <td>{{solicitacao.name_music}}</td>
-                <td>{{solicitacao.name_user}}</td>
-                <!--<td>{{solicitacao.likes}}</td>-->
-                <td>{{solicitacao.created_at}}</td>
-                <td>{{solicitacao.status | statusSolicitation}}</td>
-                <td style="text-align: center;">
-                    <i ng-click="aceitarSolicitacao(solicitacao)" style="cursor: pointer;" class="fa fa-check"></i>
-                    <i></i>
-                </td>
-            </tr>
+        <tr ng-if="solicitacao.status < 2" ng-repeat="solicitacao in solicitacoes| filter:buscarSolicitacoes">
+            <td>{{solicitacao.name_music}}</td>
+            <td>{{solicitacao.name_user}}</td>
+            <!--<td>{{solicitacao.likes}}</td>-->
+            <td>{{solicitacao.created_at}}</td>
+            <td>{{solicitacao.status | statusSolicitation}}</td>
+            <td style="text-align: center;">
+                <button ng-if="solicitacao.status == 0" ng-click="aceitarSolicitacao(solicitacao, 0)" style="cursor: pointer;border-color: purple;" class="btn btn-info"> Aprovar
+                </button>
+                <button ng-if="solicitacao.status > 0" ng-click="aceitarSolicitacao(solicitacao, 1)" style="cursor: pointer;border-color: purple;" class="btn btn-info"> Remover
+                </button>
+                <i></i>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Cantores</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Música</th>
+            <th>Usuário</th>
+            <!--<th>Likes</th>-->
+            <th>Data</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <input class="form-control" type="text" ng-model="buscarSolicitacoes.name_music" placeholder="Buscar...">
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-if="solicitacao.status >= 2" ng-repeat="solicitacao in solicitacoes| filter:buscarSolicitacoes">
+            <td>{{solicitacao.name_music}}</td>
+            <td>{{solicitacao.name_user}}</td>
+            <!--<td>{{solicitacao.likes}}</td>-->
+            <td>{{solicitacao.created_at}}</td>
+            <td>{{solicitacao.status | statusSolicitation}}</td>
+
+        </tr>
         </tbody>
     </table>
 </div>
