@@ -111,6 +111,7 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             icon: 'app/assets/images/touch-music-karaoke.jpg',
             body: payload.notification.body
         });
+        notification.show();
         notification.onclick = function () {
             notification.close();
             window.focus();
