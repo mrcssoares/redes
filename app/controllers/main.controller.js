@@ -116,6 +116,12 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             notification.close();
             window.focus();
         };
+        const notificationTitle = payload.notificationtitle;
+        const notificationOptions = {
+            body: payload.notification.body,
+            icon: 'app/assets/images/touch-music-karaoke.jpg',
+            vibrate: [200, 100, 200, 100, 200, 100, 400]
+        };
         return self.registration.showNotification(notificationTitle, notificationOptions);
         alert(payload.notification.title);
 
