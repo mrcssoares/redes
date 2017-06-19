@@ -269,7 +269,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
     //musics sugestions
     router.get("/musics/sugestions",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status, user.id as id_user, user.name as name_user FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category JOIN user ON user.id = music.id_user WHERE music.status = 1";
+            var query = "SELECT music.id as music_id, music.name as music_name, singer.name as singer_name, category.name as category_name, music.status, user.id as id_user, user.name as name_user FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category JOIN user ON user.id = music.id_user WHERE music.status = 0";
             var table = ["music"];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
