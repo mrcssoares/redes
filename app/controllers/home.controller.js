@@ -1,7 +1,7 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('homeController', function ($scope, objectUser, $state, config, $timeout){
+angular.module("song").controller('homeController', function ($scope, objectUser, $state, config, $timeout, likeService){
 
     if(!objectUser){
         $state.go("login.index")
@@ -20,14 +20,31 @@ angular.module("song").controller('homeController', function ($scope, objectUser
         };
 
         $.ajax(settings).done(function (response) {
-            console.log(response);
-            $scope.solicitacoes= response.solicitations;
-            $timeout(function(){
-                $scope.$apply($scope.solicitacoes= response.solicitations)
+            $scope.solicitacoes = response.solicitations;
+            $timeout(function () {
+                $scope.$apply($scope.solicitacoes = response.solicitations);
+                console.log($scope.solicitacoes);
+                $scope.addcurtiu();
             }, 1000)
         });
     };
     $scope.listarSolicitacoes();
+
+    $scope.addcurtiu = function () {
+
+        for (solicitacao in $scope.solicitacoes) {
+            var settings = likeService.verifyLike($scope.solicitacoes[solicitacao].id_user, $scope.solicitacoes[solicitacao].id);
+            $.ajax(settings).done(function (data) {
+                if (data.likes.length == 0) {
+                    $scope.solicitacoes[solicitacao].curtiu = false;
+                } else {
+                    $scope.solicitacoes[solicitacao].curtiu = true;
+                }
+                console.log('olar');
+                console.log($scope.solicitacoes);
+            });
+        }
+    };
 
     // Load the SDK asynchronously
     (function(d, s, id) {
@@ -59,6 +76,55 @@ angular.module("song").controller('homeController', function ($scope, objectUser
           description: msn,
         }, function(response){});
         console.log('compartilhando feed...');
-    }
+    };
+
+    $scope.like = function (solicitacao) {
+        //verifica se ja curtiu
+        var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
+        $.ajax(settings).done(function (data) {
+            console.log(data.likes.length);
+            //se nunca curtiu
+            if(data.likes.length == 0){
+                var settings = likeService.addLike(solicitacao.id_user, solicitacao.id, 1);
+                $.ajax(settings).done(function (data) {
+                    console.log(data);
+                    $scope.listarSolicitacoes();
+                });
+            //se já curtiu
+            }else{
+                //verifica o status
+                var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
+                $.ajax(settings).done(function (data) {
+                   console.log(data.likes[0].status);
+                    var status;
+                    //da pra entender sem comentarios
+                    if(data.likes[0].status == 0){
+                        status = 1;
+                    }else{
+                        status = 0;
+                    }
+                    //upa
+                    var settings = likeService.updateLike(solicitacao.id_user, solicitacao.id, status);
+                    $.ajax(settings).done(function (data) {
+                        console.log(data);
+                        $scope.listarSolicitacoes();
+                    });
+                });
+
+            }
+        })
+    };
+
+    $scope.seraqueeucurti = function (solicitacao) {
+        var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
+        $.ajax(settings).done(function (data) {
+            if(data.likes.length == 0){
+                return true;
+            }else{
+                return false;
+            }
+        });
+    };
+
     //
 });

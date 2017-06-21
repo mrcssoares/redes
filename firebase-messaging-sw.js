@@ -37,7 +37,7 @@ messaging.setBackgroundMessageHandler(function(payload) {
 	        if (clients.openWindow) {
 	            return clients.openWindow(directory);
 	        }
-		 	}));
+		}));
     });
 
     //console.log(payload);

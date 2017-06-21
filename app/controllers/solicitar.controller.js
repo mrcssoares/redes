@@ -1,7 +1,7 @@
 /**
  * Created by marcos on 25/04/17.
  */
-angular.module("song").controller('solicitarController', function ($scope, $state, config, objectUser, $timeout) {
+angular.module("song").controller('solicitarController', function ($scope, $state, config, objectUser, $timeout, fcmRegister) {
     console.log(objectUser);
     if(!objectUser){
         $state.go("login.index")
@@ -82,7 +82,35 @@ angular.module("song").controller('solicitarController', function ($scope, $stat
 
         $.ajax(settings).done(function (response) {
             console.log(response);
-            $scope.$emit('someEvent', 'solicitacao');
+
+            var settings = fcmRegister.getAdminFCM();
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                var key = config.songKey;
+                var to = response.fcm[0].fcm_id;//'cRT1-OSrRHA:APA91bG3EumpJVq3ZhAtA2s17CeaG7bIv2mwD6QvCo9IB85RnPX0d5-30SMTa5saJkkxw72JKxBsStdDZPUlyjPsabL8kYIwvCI5rXAODgrtkIy1Sig3z-IiCSTbGprk-M-VPSpCKavM';
+                var notification = {
+                    'title': 'Nova solicitação!',
+                    'body': 'Gerencie suas solicitações! :D'
+                };
+                fetch('https://fcm.googleapis.com/fcm/send', {
+                    'method': 'POST',
+                    'headers': {
+                        'Authorization': 'key=' + key,
+                        'Content-Type': 'application/json'
+                    },
+                    'body': JSON.stringify({
+                        'notification': notification,
+                        'to': to
+                    })
+                }).then(function (response) {
+                    console.log(response);
+                    //$scope.$emit('someEvent', 'solicitacao');
+                }).catch(function (error) {
+                    console.error(error);
+                })
+            });
+
+
 
         });
     };

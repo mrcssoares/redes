@@ -28,8 +28,10 @@
 				</md-card-content>
 			</div>
 			<md-card-icon-actions>
-				<md-button class="md-icon-button" aria-label="Favorite">
-					<md-icon md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+				<md-button class="md-icon-button" aria-label="Favorite" ng >
+					<md-icon ng-show="seraqueeucurti(solicitacao)" ng-click="like(solicitacao)" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+					<md-icon ng-show="!seraqueeucurti(solicitacao)" ng-click="like(solicitacao)" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
+
 				</md-button>
 				<spam>{{solicitacao.likes}}</spam>
 				<md-button class="md-icon-button" aria-label="Share"></md-button>

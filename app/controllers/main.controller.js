@@ -116,8 +116,9 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             notification.close();
             window.focus();
         };
-
-        alert(payload.notification.title);
+        if(objectUser.type == 1) {
+            alert(payload.notification.title);
+        }
 
     });
 

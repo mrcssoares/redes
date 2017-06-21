@@ -13,7 +13,7 @@ angular.module("song").factory("likeService", function ($http, config) {
         return {
             "async": true,
             "crossDomain": true,
-            url: config.baseUrl + "/likes/user/"+id+"/solicitation/"+s_id,
+            url: config.baseUrl + "/api/likes/user/"+id+"/solicitation/"+s_id,
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
@@ -26,7 +26,7 @@ angular.module("song").factory("likeService", function ($http, config) {
         return {
             "async": true,
             "crossDomain": true,
-            url: config.baseUrl + "/likes",
+            url: config.baseUrl + "/api/likes",
             "method": "POST",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
@@ -43,7 +43,7 @@ angular.module("song").factory("likeService", function ($http, config) {
         return {
             "async": true,
             "crossDomain": true,
-            url: config.baseUrl + "/likes",
+            url: config.baseUrl + "/api/likes",
             "method": "PUT",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",

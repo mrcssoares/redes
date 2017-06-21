@@ -389,7 +389,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     router.get("/solicitations",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user,  solicitation.likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
+            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
             var table = ["solicitation"];
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
@@ -531,8 +531,8 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     //=================================== END CRUD FCM ===================================//
 
-
-
+  //SELECT COUNT(*) FROM likes WHERE id_solicitacao = 32 and status = 1
+    //SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user,  (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, solicitation.status, solicitation.created_at FROM solicitation INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user
     //=================================== START CRUD LIKES ===================================//
 
     router.get("/likes/user/:id/solicitation/:s_id",function(req,res){
@@ -575,9 +575,10 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     router.put("/likes",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "UPDATE likes SET status = ? WHERE id_solicitacao = ? AND id_usuario = ?";
+            var query = "UPDATE ?? SET status = ? WHERE id_solicitacao = ? AND id_usuario = ?";
             var table = ["likes", req.body.status, req.body.id_solicitacao, req.body.id_usuario];
             query = mysql.format(query,table);
+            console.log(query);
             connection.query(query,function(err,rows){
                 if(err) {
                     console.log('put /likes 400 ERROR');
