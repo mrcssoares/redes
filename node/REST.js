@@ -387,11 +387,20 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     //=================================== START CRUD SOLICITAÇÕES ==============================//
 
-    router.get("/solicitations",function(req,res){
+    router.get("/solicitations/user/:id",function(req,res){
         if(req.headers['x-access-token'] == auth) {
-            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
-            var table = ["solicitation"];
+            //var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
+            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, " +
+                "(SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, " +
+                "(SELECT COUNT(*) FROM likes WHERE (id_solicitacao = solicitation.id and status = 1) and likes.id_usuario = ?) " +
+                "as likes_me, solicitation.status, solicitation.created_at " +
+                "FROM ?? " +
+                "INNER JOIN music ON music.id = solicitation.id_music " +
+                "INNER JOIN user ON user.id = solicitation.id_user";
+
+            var table = [req.params.id, "solicitation"];
             query = mysql.format(query,table);
+            console.log(query);
             connection.query(query,function(err,rows){
                 if(err) {
                     console.log('get /solicitations 400 ERROR');
@@ -406,6 +415,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
         }
     });
 
+    //SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1 and likes.id_usuario = 10) as likes_me, solicitation.status, solicitation.created_at FROM solicitation INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user
     //update em status de solicitacao
     router.put("/solicitations/status/:id",function(req,res){
         if(req.headers['x-access-token'] == auth) {
@@ -531,7 +541,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
     //=================================== END CRUD FCM ===================================//
 
-  //SELECT COUNT(*) FROM likes WHERE id_solicitacao = 32 and status = 1
+    //SELECT COUNT(*) FROM likes WHERE id_solicitacao = 32 and status = 1
     //SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user,  (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, solicitation.status, solicitation.created_at FROM solicitation INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user
     //=================================== START CRUD LIKES ===================================//
 

@@ -11,7 +11,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": config.baseUrl+"/api/solicitations",
+            "url": config.baseUrl+"/api/solicitations/user/"+ objectUser.id,
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
@@ -31,7 +31,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
     $scope.listarSolicitacoes();
 
     $scope.addcurtiu = function () {
-
+        //percorre as solicitações verificando se há likes
         for (solicitacao in $scope.solicitacoes) {
             var settings = likeService.verifyLike($scope.solicitacoes[solicitacao].id_user, $scope.solicitacoes[solicitacao].id);
             $.ajax(settings).done(function (data) {
@@ -40,6 +40,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
                 } else {
                     $scope.solicitacoes[solicitacao].curtiu = true;
                 }
+                flag = false;
                 console.log('olar');
                 console.log($scope.solicitacoes);
             });
@@ -80,12 +81,12 @@ angular.module("song").controller('homeController', function ($scope, objectUser
 
     $scope.like = function (solicitacao) {
         //verifica se ja curtiu
-        var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
+        var settings = likeService.verifyLike( objectUser.id, solicitacao.id);
         $.ajax(settings).done(function (data) {
             console.log(data.likes.length);
             //se nunca curtiu
             if(data.likes.length == 0){
-                var settings = likeService.addLike(solicitacao.id_user, solicitacao.id, 1);
+                var settings = likeService.addLike( objectUser.id, solicitacao.id, 1);
                 $.ajax(settings).done(function (data) {
                     console.log(data);
                     $scope.listarSolicitacoes();
@@ -93,7 +94,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
             //se já curtiu
             }else{
                 //verifica o status
-                var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
+                var settings = likeService.verifyLike( objectUser.id, solicitacao.id);
                 $.ajax(settings).done(function (data) {
                    console.log(data.likes[0].status);
                     var status;
@@ -104,7 +105,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
                         status = 0;
                     }
                     //upa
-                    var settings = likeService.updateLike(solicitacao.id_user, solicitacao.id, status);
+                    var settings = likeService.updateLike( objectUser.id, solicitacao.id, status);
                     $.ajax(settings).done(function (data) {
                         console.log(data);
                         $scope.listarSolicitacoes();
@@ -115,16 +116,16 @@ angular.module("song").controller('homeController', function ($scope, objectUser
         })
     };
 
-    $scope.seraqueeucurti = function (solicitacao) {
-        var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
-        $.ajax(settings).done(function (data) {
-            if(data.likes.length == 0){
-                return true;
-            }else{
-                return false;
-            }
-        });
-    };
+    // $scope.seraqueeucurti = function (solicitacao) {
+    //     var settings = likeService.verifyLike(solicitacao.id_user, solicitacao.id);
+    //     $.ajax(settings).done(function (data) {
+    //         if(data.likes.length == 0){
+    //             return true;
+    //         }else{
+    //             return false;
+    //         }
+    //     });
+    // };
 
     //
 });
