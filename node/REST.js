@@ -400,7 +400,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
 
             var table = [req.params.id, "solicitation"];
             query = mysql.format(query,table);
-            console.log(query);
+            //console.log(query);
             connection.query(query,function(err,rows){
                 if(err) {
                     console.log('get /solicitations 400 ERROR');
@@ -588,7 +588,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             var query = "UPDATE ?? SET status = ? WHERE id_solicitacao = ? AND id_usuario = ?";
             var table = ["likes", req.body.status, req.body.id_solicitacao, req.body.id_usuario];
             query = mysql.format(query,table);
-            console.log(query);
+            //console.log(query);
             connection.query(query,function(err,rows){
                 if(err) {
                     console.log('put /likes 400 ERROR');

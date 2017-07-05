@@ -7,12 +7,13 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
         $state.go("login.index")
     }
     $scope.solicitacoes= [];
+    $scope.isSinging= false;
 
     $scope.listarSolicitacoes = function() {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": config.baseUrl+"/api/solicitations",
+            "url": config.baseUrl+"/api/solicitations/user/"+objectUser.id,
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",
@@ -24,10 +25,19 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             console.log(response);
             $scope.solicitacoes= response.solicitations;
             $timeout(function(){
-                $scope.$apply($scope.solicitacoes= response.solicitations)
+                $scope.$apply($scope.solicitacoes= response.solicitations);
+                $scope.isSinging= false;
+                for(sol in $scope.solicitacoes){
+                    if($scope.solicitacoes[sol].status == 1){
+                        $scope.isSinging= true;
+                    }
+                }
             })
         });
     };
+
+
+
     $scope.aceitarSolicitacao = function(solicitacao, status) {
         if(status == 0) status = "aprovar";
         else status = "remover";
@@ -41,6 +51,29 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
                     var notification = {
                         'title': 'Chegou sua vez de cantar!!',
                         'body': 'De o seu melhor 😍 !!!'
+                    };
+                    fetch('https://fcm.googleapis.com/fcm/send', {
+                        'method': 'POST',
+                        'headers': {
+                            'Authorization': 'key=' + key,
+                            'Content-Type': 'application/json'
+                        },
+                        'body': JSON.stringify({
+                            'notification': notification,
+                            'to': to
+                        })
+                    }).then(function (response) {
+                        console.log(response);
+                    }).catch(function (error) {
+                        console.error(error);
+                    })
+                }
+                if(status == "remover") {
+                    var key = config.songKey;
+                    var to = response.fcm[0].fcm_id;//'cRT1-OSrRHA:APA91bG3EumpJVq3ZhAtA2s17CeaG7bIv2mwD6QvCo9IB85RnPX0d5-30SMTa5saJkkxw72JKxBsStdDZPUlyjPsabL8kYIwvCI5rXAODgrtkIy1Sig3z-IiCSTbGprk-M-VPSpCKavM';
+                    var notification = {
+                        'title': 'Obrigado por cantar conosco!!',
+                        'body': 'Volte sempre viu 😉 !!!'
                     };
                     fetch('https://fcm.googleapis.com/fcm/send', {
                         'method': 'POST',

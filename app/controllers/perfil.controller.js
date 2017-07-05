@@ -11,7 +11,7 @@ angular.module("song").controller('perfilController', function ($scope, $state, 
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": config.baseUrl+"/api/solicitations",
+            "url": config.baseUrl+"/api/solicitations/user/"+objectUser.id,
             "method": "GET",
             "headers": {
                 "content-type": "application/x-www-form-urlencoded",

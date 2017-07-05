@@ -104,7 +104,7 @@ angular.module("song").controller('solicitarController', function ($scope, $stat
                     })
                 }).then(function (response) {
                     console.log(response);
-                    //$scope.$emit('someEvent', 'solicitacao');
+                    $scope.$emit('someEvent', 'solicitacao');
                 }).catch(function (error) {
                     console.error(error);
                 })

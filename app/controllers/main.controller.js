@@ -9,27 +9,27 @@ angular.module("song").controller('mainController', function ($scope, objectUser
     console.log('login '+$scope.login);
 
     //para compartilhar dados no facebook
-    $scope.listarSolicitacoes = function() {
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": config.baseUrl+"/api/solicitations/user/"+ objectUser.id,
-            "method": "GET",
-            "headers": {
-                "content-type": "application/x-www-form-urlencoded",
-                "x-access-token": config.apikey
-            }
-        };
-
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-            $scope.solicitacoes= response.solicitations;
-            $timeout(function(){
-                $scope.$apply($scope.solicitacoes= response.solicitations)
-            }, 1000)
-        });
-    };
-    $scope.listarSolicitacoes();
+    // $scope.listarSolicitacoes = function() {
+    //     var settings = {
+    //         "async": true,
+    //         "crossDomain": true,
+    //         "url": config.baseUrl+"/api/solicitations/user/"+ objectUser.id,
+    //         "method": "GET",
+    //         "headers": {
+    //             "content-type": "application/x-www-form-urlencoded",
+    //             "x-access-token": config.apikey
+    //         }
+    //     };
+    //
+    //     $.ajax(settings).done(function (response) {
+    //         console.log(response);
+    //         $scope.solicitacoes= response.solicitations;
+    //         $timeout(function(){
+    //             $scope.$apply($scope.solicitacoes= response.solicitations)
+    //         }, 1000)
+    //     });
+    // };
+    // $scope.listarSolicitacoes();
     //
 
     //escuta eventos vindos de outros controllers
@@ -107,18 +107,32 @@ angular.module("song").controller('mainController', function ($scope, objectUser
     //escuta novas notificações
     messaging.onMessage(function(payload) {
         console.log("Message received. ", payload);
-        var notification = new Notification(payload.notification.title, {
-            icon: 'app/assets/images/touch-music-karaoke.jpg',
-            body: payload.notification.body
-        });
+        // if(payload.notification.title == 'Nova solicitação!') {
+        //     var  notification = new Notification(payload.notification.title, {
+        //         icon: 'app/assets/images/touch-music-karaoke.jpg',
+        //         body: payload.notification.body
+        //     });
+        //
+        //     notification.onclick = function () {
+        //         notification.close();
+        //         window.focus();
+        //     };
+        //     location.reload();
+        // }else{
+            var notification = new Notification(payload.notification.title, {
+                icon: 'app/assets/images/touch-music-karaoke.jpg',
+                body: payload.notification.body
+            });
 
-        notification.onclick = function () {
-            notification.close();
-            window.focus();
-        };
-        if(objectUser.type == 1) {
-            alert(payload.notification.title);
-        }
+            notification.onclick = function () {
+                notification.close();
+                window.focus();
+            };
+            if (objectUser.type == 1) {
+                alert(payload.notification.title);
+                location.reload();
+            }
+        // }
 
     });
 

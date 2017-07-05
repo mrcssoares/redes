@@ -24,28 +24,38 @@ angular.module("song").controller('homeController', function ($scope, objectUser
             $timeout(function () {
                 $scope.$apply($scope.solicitacoes = response.solicitations);
                 console.log($scope.solicitacoes);
-                $scope.addcurtiu();
-            }, 1000)
+                //$scope.addcurtiu();
+                   console.log('olar');
+                    twemoji.size = '16x16';
+                    twemoji.parse(document.body);
+
+            }, 1000);
+            // $timeout(function () {
+            //     window.onload = function() {
+            //        twemoji.size = '16x16';
+            //        twemoji.parse(document.body);
+            //     };
+            // });
         });
     };
     $scope.listarSolicitacoes();
 
-    $scope.addcurtiu = function () {
-        //percorre as solicitações verificando se há likes
-        for (solicitacao in $scope.solicitacoes) {
-            var settings = likeService.verifyLike($scope.solicitacoes[solicitacao].id_user, $scope.solicitacoes[solicitacao].id);
-            $.ajax(settings).done(function (data) {
-                if (data.likes.length == 0) {
-                    $scope.solicitacoes[solicitacao].curtiu = false;
-                } else {
-                    $scope.solicitacoes[solicitacao].curtiu = true;
-                }
-                flag = false;
-                console.log('olar');
-                console.log($scope.solicitacoes);
-            });
-        }
-    };
+    // $scope.addcurtiu = function () {
+    //     //percorre as solicitações verificando se há likes
+    //     for (solicitacao in $scope.solicitacoes) {
+    //         var settings = likeService.verifyLike($scope.solicitacoes[solicitacao].id_user, $scope.solicitacoes[solicitacao].id);
+    //         $.ajax(settings).done(function (data) {
+    //             if (data.likes.length == 0) {
+    //                 $scope.solicitacoes[solicitacao].curtiu = false;
+    //             } else {
+    //                 $scope.solicitacoes[solicitacao].curtiu = true;
+    //             }
+    //             flag = false;
+    //             console.log('olar');
+    //             console.log($scope.solicitacoes);
+    //         });
+    //     }
+    // };
 
     // Load the SDK asynchronously
     (function(d, s, id) {
@@ -93,10 +103,10 @@ angular.module("song").controller('homeController', function ($scope, objectUser
                 });
             //se já curtiu
             }else{
-                //verifica o status
-                var settings = likeService.verifyLike( objectUser.id, solicitacao.id);
-                $.ajax(settings).done(function (data) {
-                   console.log(data.likes[0].status);
+                // //verifica o status
+                // var settings = likeService.verifyLike( objectUser.id, solicitacao.id);
+                // $.ajax(settings).done(function (data) {
+                    console.log(data.likes[0].status);
                     var status;
                     //da pra entender sem comentarios
                     if(data.likes[0].status == 0){
@@ -110,7 +120,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
                         console.log(data);
                         $scope.listarSolicitacoes();
                     });
-                });
+                // });
 
             }
         })

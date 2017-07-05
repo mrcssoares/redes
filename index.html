@@ -24,15 +24,18 @@
     <link href='https://fonts.googleapis.com/css?family=Grand+Hotel' rel='stylesheet' type='text/css'>
     <script src = "https://plus.google.com/js/client:platform.js" async defer></script>
     <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script src="https://twemoji.maxcdn.com/twemoji.min.js"></script>
 
     <style>
         #back{
             background-image: url('app/assets/images/matt-botsford-197870.jpg');
+            background-attachment: fixed;
         }
         @media screen and (max-width: 800px) {
             /*estilos*/
             #back {
                 background-image: url('app/assets/images/oscar-keys-58399.jpg');
+                background-attachment: fixed;
             }
         }
     </style>
@@ -103,6 +106,7 @@
         <script src="app/controllers/filters/status-sugestao.filter.js"></script>
         <script src="app/controllers/services/fcm_register.service.js"></script>
         <script src="app/controllers/services/likes.service.js"></script>
+        <script src="app/controllers/services/sharedSolicitations.service.js"></script>
 
         <script src="app/controllers/main.controller.js"></script>
         <script src="app/controllers/home.controller.js"></script>

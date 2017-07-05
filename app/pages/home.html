@@ -1,12 +1,21 @@
 <style>
 	.cantando{
-		background-color: #00bbff;
+		/*background-color: #00bbff;*/
 		opacity: 0.7;
+        background-image: url("app/assets/images/giphy.gif") ;
+        background-position: top;
+        color: #fff;
+        font-weight: bold;
 	}
 </style>
-<div ng-if="solicitacao.status < 2" ng-repeat="solicitacao in solicitacoes" class="container">
+<md-card ng-if="solicitacoes.length == 0" >
+	<md-card-content>
+		Não há pessoas cantando, aproveite e solicite uma música!!😜
+	</md-card-content>
+</md-card>
+<div ng-if="solicitacao.status < 2" ng-repeat="solicitacao in solicitacoes" class="container" >
 	<div align="center" flex-xs flex-gt-xs="96" layout="column" >
-		<md-card id="scrollPromos" align="center" style="opacity: 0.8;"  ng-class="{'cantando' : solicitacao.status == 1}">
+		<md-card id="scrollPromos" align="center" style="opacity: 0.8;"  ng-class="{'cantando' : solicitacao.status == 1} ">
 			<md-card-header>
 				<md-card-avatar>
 					<img class="md-user-avatar" ng-src="{{solicitacao.photo_user}}" onerror="this.src='http://api.teewa.com.br:8081/brands/store_default.png'"/>
@@ -20,10 +29,10 @@
 			<div>
 				<md-card-content>
 					<div ng-if="solicitacao.status == 0" align="center">
-						Se preparando para cantar "{{solicitacao.name_music}}"
+						Se preparando para cantar "{{solicitacao.name_music}}" 🎵
 					</div>
 					<div ng-if="solicitacao.status == 1" align="center">
-						Está cantando "{{solicitacao.name_music}}"
+						Está cantando "{{solicitacao.name_music}}" 🎶🎤
 					</div>
 				</md-card-content>
 			</div>

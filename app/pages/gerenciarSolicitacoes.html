@@ -25,7 +25,7 @@
             <td>{{solicitacao.created_at}}</td>
             <td>{{solicitacao.status | statusSolicitation}}</td>
             <td style="text-align: center;">
-                <button ng-if="solicitacao.status == 0" ng-click="aceitarSolicitacao(solicitacao, 0)" style="cursor: pointer;border-color: purple;" class="btn btn-info"> Aprovar
+                <button ng-disabled="isSinging" ng-if="solicitacao.status == 0" ng-click="aceitarSolicitacao(solicitacao, 0); " style="cursor: pointer;border-color: purple;" class="btn btn-info"> Aprovar
                 </button>
                 <button ng-if="solicitacao.status > 0" ng-click="aceitarSolicitacao(solicitacao, 1)" style="cursor: pointer;border-color: purple;" class="btn btn-info"> Remover
                 </button>
