@@ -37,10 +37,10 @@
 				</md-card-content>
 			</div>
 			<md-card-icon-actions>
-				<md-button class="md-icon-button" aria-label="Favorite">
+				<md-button class="md-icon-button" aria-label="Favorite"></md-button>
 					<md-icon ng-if="solicitacao.likes_me == 0" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes + 1; solicitacao.likes_me = 1" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
 					<md-icon ng-if="solicitacao.likes_me == 1" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes - 1; solicitacao.likes_me = 0" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
-				</md-button>
+
 				<spam>{{solicitacao.likes}}</spam>
 				<md-button class="md-icon-button" aria-label="Share"></md-button>
 				<md-icon md-svg-icon="app/assets/images/share-arrow.svg" ng-click="publicar(solicitacao)"></md-icon>

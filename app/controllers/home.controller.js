@@ -25,7 +25,7 @@ angular.module("song").controller('homeController', function ($scope, objectUser
                 $scope.$apply($scope.solicitacoes = response.solicitations);
                 console.log($scope.solicitacoes);
                 //$scope.addcurtiu();
-                   console.log('olar');
+                   //console.log('olar');
                     twemoji.size = '16x16';
                     twemoji.parse(document.body);
 
@@ -84,13 +84,14 @@ angular.module("song").controller('homeController', function ($scope, objectUser
         FB.ui({
           method: 'feed',
           link: 'https://api.upawa.com.br/redes/',
-          description: msn,
+          description: msn
         }, function(response){});
         console.log('compartilhando feed...');
     };
 
     $scope.like = function (solicitacao) {
         //verifica se ja curtiu
+        console.log('olar');
         var settings = likeService.verifyLike( objectUser.id, solicitacao.id);
         $.ajax(settings).done(function (data) {
             console.log(data.likes.length);
