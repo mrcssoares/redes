@@ -4,7 +4,7 @@
         opacity: 0.7;
     }
 </style>
-Suas solicitações
+<span style="color: #fff;"> Suas solicitações</span>
 <div ng-if="solicitacao.status >= 2 && solicitacao.id_user == objectUser.id" ng-repeat="solicitacao in solicitacoes" class="container">
     <div align="center" flex-xs flex-gt-xs="96" layout="column" >
         <md-card id="scrollPromos" align="center" style="opacity: 0.8;"  ng-class="{'cantando' : solicitacao.status == 1}">
@@ -34,11 +34,11 @@ Suas solicitações
             </div>
             <md-card-icon-actions>
                 <md-button class="md-icon-button" aria-label="Favorite">
-                    <md-icon md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+                    <md-icon onclick="alert('Você não pode mais reagir! isto é apenas um histórico')" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
                 </md-button>
                 <spam>{{solicitacao.likes}}</spam>
                 <md-button class="md-icon-button" aria-label="Share">
-                    <md-icon md-svg-icon="app/assets/images/share-arrow.svg"></md-icon>
+                    <md-icon title="compartilhar com o facebook" md-svg-icon="app/assets/images/share-arrow.svg" ng-click="publicar(solicitacao)"></md-icon>
                 </md-button>
             </md-card-icon-actions>
 

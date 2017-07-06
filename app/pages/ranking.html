@@ -1,0 +1,25 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Melhores da noite :D</div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th title="Posição"> Pº </th>
+            <th> Foto </th>
+            <th> Cantor </th>
+            <th> Musica </th>
+            <th > Curtidas </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="melhor in melhores| filter:buscarMusic">
+            <td style="font-size: 20px">{{$index+1+"#"}}</td>
+            <td><img ng-src="{{melhor.photo_user}}" class="img-circle" height="45px"></td>
+            <td>{{melhor.name_user}}</td>
+            <td>{{melhor.name_music}}</td>
+            <td >{{melhor.likes}}</td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

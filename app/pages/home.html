@@ -7,6 +7,9 @@
         color: #fff;
         font-weight: bold;
 	}
+	.cantor{
+		color: #fff;
+	}
 </style>
 <md-card ng-if="solicitacoes.length == 0" >
 	<md-card-content>
@@ -22,7 +25,7 @@
 				</md-card-avatar>
 				<md-card-header-text>
 					<span class="md-title">{{solicitacao.name_user}}</span>
-					<span class="md-subhead">Cantor</span>
+					<span ng-class="{'cantor' : solicitacao.status == 1}" >Cantor</span>
 				</md-card-header-text>
 			</md-card-header>
 			<!--<img ng-src="assets/ima/favorite.svg" class="md-card-image">-->
@@ -38,12 +41,12 @@
 			</div>
 			<md-card-icon-actions>
 				<md-button class="md-icon-button" aria-label="Favorite"></md-button>
-					<md-icon ng-if="solicitacao.likes_me == 0" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes + 1; solicitacao.likes_me = 1" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
-					<md-icon ng-if="solicitacao.likes_me == 1" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes - 1; solicitacao.likes_me = 0" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
+					<md-icon title="curtir" ng-if="solicitacao.likes_me == 0" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes + 1; solicitacao.likes_me = 1" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+					<md-icon title="descurtir" ng-if="solicitacao.likes_me == 1" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes - 1; solicitacao.likes_me = 0" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
 
 				<spam>{{solicitacao.likes}}</spam>
 				<md-button class="md-icon-button" aria-label="Share"></md-button>
-				<md-icon md-svg-icon="app/assets/images/share-arrow.svg" ng-click="publicar(solicitacao)"></md-icon>
+				<md-icon title="compartilhar com o facebook" md-svg-icon="app/assets/images/share-arrow.svg" ng-click="publicar(solicitacao)"></md-icon>
 			</md-card-icon-actions>
 		</md-card>
 	</div>

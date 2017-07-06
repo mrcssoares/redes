@@ -69,16 +69,22 @@
     <table class="table">
         <thead>
             <tr>
-                <th ng-click="ordenarPor('nome')"> Música </th>
-                <th ng-click="ordenarPor('contato')"> Artista </th>
-                <th ng-click="ordenarPor('qtde_casos')"> Categoria </th>
-                <th ng-click="ordenarPor('qtde_casos')"> status </th>
+                <th ng-click="ordenarPor('music_name')"> Música </th>
+                <th ng-click="ordenarPor('singer_name')"> Artista </th>
+                <th ng-click="ordenarPor('category_name')"> Categoria </th>
+                <th> status </th>
             </tr>
             <tr>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Nome..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Artista..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="Categoria..."></th>
-                <th ><input class="form-control" type="text" ng-model="buscarMusic" placeholder="status..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.music_name" placeholder="Música..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.singer_name" placeholder="Artista..."></th>
+                <th ><input class="form-control" type="text" ng-model="buscarMusic.category_name" placeholder="Categoria..."></th>
+                <th ><select class="form-control" ng-model="buscarMusic.status">
+                    <option value="">Selecione...</option>
+                    <option value="0"> Não avaliado </option>
+                    <option value="1"> Aceito </option>
+                    <option value="2"> Recusado </option>
+                </select>
+                </th>
             </tr>
         </thead>
 

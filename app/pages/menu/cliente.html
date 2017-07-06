@@ -13,12 +13,21 @@
             Acompanhar
         </a>
     </li>
+
     <li>
         <a ui-sref="solicitar.index">
             <i class="fa fa-microphone"></i>
             Solicitar
         </a>
     </li>
+
+    <li>
+        <a ui-sref="melhores.index" >
+            <i  class="fa fa-star"></i>
+            Melhores Cantores
+        </a>
+    </li>
+
     <li>
         <a ui-sref="sugerir.index">
             <i class="fa fa-lightbulb-o"></i>
@@ -27,7 +36,7 @@
     </li>
     <li>
         <a ui-sref="perfil.index" >
-            <i  class="fa fa-user"></i>
+            <img ng-src="{{objectUser.photo}}" class="img-circle" height="45px" >
             Perfil
         </a>
     </li>

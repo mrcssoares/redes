@@ -69,9 +69,7 @@
         <div class="container">
             <h1 class="logo cursive">
             </h1>
-            <label>#Em teste#</label>
-
-            <div ng-if="objectUser.name" style="color: #fff">Bem Vindo, {{objectUser.name}}</div>
+            <div ng-if="objectUser.name" style="color: #fff"><img ng-src="{{objectUser.photo}}" class="img-circle" height="50px"> Bem Vindo, {{objectUser.name}}  </div>
             <ui-view></ui-view>
             <!--  H1 can have 2 designs: "logo" and "logo cursive"-->
         </div>
@@ -117,6 +115,7 @@
         <script src="app/controllers/gerenciarSolicitacoes.controller.js"></script>
         <script src="app/controllers/gerenciarSugestoes.controller.js"></script>
         <script src="app/controllers/perfil.controller.js"></script>
+        <script src="app/controllers/ranking.controller.js"></script>
 
         <script type="text/javascript">
         /**

@@ -104,6 +104,8 @@ angular.module("song").controller('mainController', function ($scope, objectUser
     }
 
 
+
+
     //escuta novas notificações
     messaging.onMessage(function(payload) {
         console.log("Message received. ", payload);
@@ -146,5 +148,9 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             location.reload();
         });
 
-    }
+    };
+
+   //AQUI VOU COLOCAR O CONTROLLER DAS SOLICITAÇÕES
+
+
 });

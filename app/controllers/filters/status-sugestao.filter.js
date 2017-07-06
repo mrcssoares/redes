@@ -6,14 +6,15 @@
  */
 angular.module("song").filter('statusSugestao', function() {
     return function(input) {
-        if (input == '0'){
+        if (input == '0') {
             return "Não avaliado";
-        }else{
-            if(input == '1') {
-                return "Aceito";
-            }else {
-                return "Recusado";
-            }
         }
+        if(input == '1') {
+            return "Aceito";
+        }
+        if(input == '2') {
+            return "Recusado";
+        }
+
     };
 });
