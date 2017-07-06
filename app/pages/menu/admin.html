@@ -1,3 +1,8 @@
+<style>
+    .novas {
+        background-color: #FF3B30;
+    }
+</style>
 <ul class="nav navbar-nav">
 
 </ul>
@@ -20,15 +25,15 @@
         </a>
     </li>
     <li>
-        <a ui-sref="gerenciarSolicitacoes.index" >
-            <i  class="fa fa-microphone"></i>
-            Solicitações
+        <a ng-click="novas = false" ui-sref="gerenciarSolicitacoes.index" >
+            <i   class="fa fa-microphone"></i>
+            Solicitações <span ng-if="aguardando != 0" class="novas" >{{" "+ aguardando+" " }}</span>
         </a>
     </li>
     <li>
         <a ui-sref="gerenciarSugestoes.index" >
             <i  class="fa fa-lightbulb-o"></i>
-             Sugestões
+             Sugestões <span ng-if="aguardando_s != 0" class="novas" >{{" "+ aguardando_s+" " }}</span>
         </a>
     </li>
     <li>

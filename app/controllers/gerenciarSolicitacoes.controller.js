@@ -27,6 +27,7 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
             $timeout(function(){
                 $scope.$apply($scope.solicitacoes= response.solicitations);
                 $scope.isSinging= false;
+                //verifica se alguem star cantanto
                 for(sol in $scope.solicitacoes){
                     if($scope.solicitacoes[sol].status == 1){
                         $scope.isSinging= true;
@@ -64,6 +65,7 @@ angular.module("song").controller('gerenciarSolicitacoesController', function ($
                         })
                     }).then(function (response) {
                         console.log(response);
+                        $scope.$emit('someEvent', 'aprovando');
                     }).catch(function (error) {
                         console.error(error);
                     })

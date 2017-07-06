@@ -8,30 +8,56 @@ angular.module("song").controller('mainController', function ($scope, objectUser
     else $scope.login = 0;
     console.log('login '+$scope.login);
 
-    //para compartilhar dados no facebook
-    // $scope.listarSolicitacoes = function() {
-    //     var settings = {
-    //         "async": true,
-    //         "crossDomain": true,
-    //         "url": config.baseUrl+"/api/solicitations/user/"+ objectUser.id,
-    //         "method": "GET",
-    //         "headers": {
-    //             "content-type": "application/x-www-form-urlencoded",
-    //             "x-access-token": config.apikey
-    //         }
-    //     };
-    //
-    //     $.ajax(settings).done(function (response) {
-    //         console.log(response);
-    //         $scope.solicitacoes= response.solicitations;
-    //         $timeout(function(){
-    //             $scope.$apply($scope.solicitacoes= response.solicitations)
-    //         }, 1000)
-    //     });
-    // };
-    // $scope.listarSolicitacoes();
-    //
+    //$scope.baseUrl = "http://localhost:3000";
+    $scope.baseUrl = "https://api.upawa.com.br:8080";
 
+    if(window.location.hash != '#/login/index'){
+        $scope.novas = true;
+        $scope.listarSolicitacoes = function() {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": $scope.baseUrl +"/api/solicitations/new/count",
+                "method": "GET",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": 'redesEtop'
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $scope.aguardando= response.solicitations[0].novas;
+                $timeout(function() {
+                    $scope.$apply($scope.aguardando = response.solicitations[0].novas);
+                });
+
+            });
+        };
+        $scope.listarSugestoes = function() {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": $scope.baseUrl +"/api/musics/sugestions/new/count",
+                "method": "GET",
+                "headers": {
+                    "content-type": "application/x-www-form-urlencoded",
+                    "x-access-token": 'redesEtop'
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+                $scope.aguardando_s= response.musics[0].novas;
+                $timeout(function() {
+                    $scope.$apply($scope.aguardando_s = response.musics[0].novas);
+                });
+
+            });
+        };
+        $scope.listarSolicitacoes();
+        $scope.listarSugestoes();
+    }
     //escuta eventos vindos de outros controllers
     $scope.$on('someEvent', function(event, data) {
         console.log('data: '+ data);
@@ -45,6 +71,11 @@ angular.module("song").controller('mainController', function ($scope, objectUser
             $state.go('home');
             $timeout(function () {
                 location.reload();
+            });
+        }
+        if(data === 'aprovando' || data == 'aprovando' || data.includes('aprovando')) {
+            $timeout(function () {
+                $scope.listarSolicitacoes();
             });
         }
 
@@ -121,6 +152,8 @@ angular.module("song").controller('mainController', function ($scope, objectUser
         //     };
         //     location.reload();
         // }else{
+            $scope.listarSolicitacoes();
+            $scope.listarSugestoes();
             var notification = new Notification(payload.notification.title, {
                 icon: 'app/assets/images/touch-music-karaoke.jpg',
                 body: payload.notification.body
@@ -134,6 +167,7 @@ angular.module("song").controller('mainController', function ($scope, objectUser
                 alert(payload.notification.title);
                 location.reload();
             }
+        $scope.novas = true;
         // }
 
     });

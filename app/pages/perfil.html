@@ -33,9 +33,8 @@
                 </md-card-content>
             </div>
             <md-card-icon-actions>
-                <md-button class="md-icon-button" aria-label="Favorite">
-                    <md-icon onclick="alert('Você não pode mais reagir! isto é apenas um histórico')" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
-                </md-button>
+                <md-icon ng-if="solicitacao.likes_me == 0" onclick="alert('Você não pode mais reagir! isto é apenas um histórico')" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+                <md-icon ng-if="solicitacao.likes_me == 1" onclick="alert('Você não pode mais reagir! isto é apenas um histórico')" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
                 <spam>{{solicitacao.likes}}</spam>
                 <md-button class="md-icon-button" aria-label="Share">
                     <md-icon title="compartilhar com o facebook" md-svg-icon="app/assets/images/share-arrow.svg" ng-click="publicar(solicitacao)"></md-icon>

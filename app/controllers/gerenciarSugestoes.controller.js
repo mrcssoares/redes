@@ -55,6 +55,8 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
                         'to': to
                     })
                 }).then(function (response) {
+                    $scope.$emit('someEvent', 'aprovando');
+
                     console.log(response);
                 }).catch(function (error) {
                     console.error(error);
@@ -105,6 +107,7 @@ angular.module("song").controller('gerenciarSugestoesController', function ($sco
                     })
                 }).then(function (response) {
                     console.log(response);
+                    $scope.$emit('someEvent', 'aprovando');
                 }).catch(function (error) {
                     console.error(error);
                 })

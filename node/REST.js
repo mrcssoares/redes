@@ -274,10 +274,30 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
             query = mysql.format(query,table);
             connection.query(query,function(err,rows){
                 if(err) {
-                    console.log('get /musics 400 ERROR');
+                    console.log('get /musics/sugestions 400 ERROR');
                     res.json({"Error" : true, "Message" : "Error executing MySQL query"});
                 } else {
-                    console.log('get /musics 200 OK');
+                    console.log('get /musics/sugestions 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "musics" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    //musics sugestions
+    router.get("/musics/sugestions/new/count",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            var query = "SELECT count(music.id) as novas FROM ?? JOIN singer ON singer.id = music.id_singer JOIN category ON category.id = music.id_category JOIN user ON user.id = music.id_user WHERE music.status = 0";
+            var table = ["music"];
+            query = mysql.format(query,table);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /musics/sugestions/new/count 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /musics/sugestions/new/count 200 OK');
                     res.json({"Error" : false, "Message" : "Success", "musics" : rows});
                 }
             });
@@ -396,7 +416,7 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                 "as likes_me, solicitation.status, solicitation.created_at " +
                 "FROM ?? " +
                 "INNER JOIN music ON music.id = solicitation.id_music " +
-                "INNER JOIN user ON user.id = solicitation.id_user";
+                "INNER JOIN user ON user.id = solicitation.id_user WHERE solicitation.status != 2";
 
             var table = [req.params.id, "solicitation"];
             query = mysql.format(query,table);
@@ -407,6 +427,54 @@ REST_ROUTER.prototype.handleRoutes = function(router,connection,md5) {
                     res.json({"Error" : true, "Message" : "Error executing MySQL query"});
                 } else {
                     console.log('get /solicitations 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "solicitations" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+    router.get("/solicitations/user/history/:id",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+            //var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, (SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, solicitation.status, solicitation.created_at FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user";
+            var query = "SELECT solicitation.id as id, music.name as name_music, user.name as name_user, user.id as id_user, user.photo as photo_user, " +
+                "(SELECT COUNT(*) FROM likes WHERE id_solicitacao = solicitation.id and status = 1) as likes, " +
+                "(SELECT COUNT(*) FROM likes WHERE (id_solicitacao = solicitation.id and status = 1) and likes.id_usuario = ?) " +
+                "as likes_me, solicitation.status, solicitation.created_at " +
+                "FROM ?? " +
+                "INNER JOIN music ON music.id = solicitation.id_music " +
+                "INNER JOIN user ON user.id = solicitation.id_user WHERE solicitation.status = 2 and user.id = "+req.params.id;
+
+            var table = [req.params.id, "solicitation"];
+            query = mysql.format(query,table);
+            //console.log(query);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /solicitations 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /solicitations 200 OK');
+                    res.json({"Error" : false, "Message" : "Success", "solicitations" : rows});
+                }
+            });
+        }else{
+            res.status(403).send(tokenInvalido);
+        }
+    });
+
+    router.get("/solicitations/new/count",function(req,res){
+        if(req.headers['x-access-token'] == auth) {
+
+            var query = "SELECT count(solicitation.id) as novas FROM ?? INNER JOIN music ON music.id = solicitation.id_music INNER JOIN user ON user.id = solicitation.id_user WHERE solicitation.status = 0";
+            var table = ["solicitation"];
+            query = mysql.format(query,table);
+            //console.log(query);
+            connection.query(query,function(err,rows){
+                if(err) {
+                    console.log('get /solicitations/new/count 400 ERROR');
+                    res.json({"Error" : true, "Message" : "Error executing MySQL query"});
+                } else {
+                    console.log('get /solicitations/new/count 200 OK');
                     res.json({"Error" : false, "Message" : "Success", "solicitations" : rows});
                 }
             });

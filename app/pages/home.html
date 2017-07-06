@@ -40,9 +40,8 @@
 				</md-card-content>
 			</div>
 			<md-card-icon-actions>
-				<md-button class="md-icon-button" aria-label="Favorite"></md-button>
-					<md-icon title="curtir" ng-if="solicitacao.likes_me == 0" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes + 1; solicitacao.likes_me = 1" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
-					<md-icon title="descurtir" ng-if="solicitacao.likes_me == 1" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes - 1; solicitacao.likes_me = 0" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
+				<md-icon title="curtir" ng-if="solicitacao.likes_me == 0" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes + 1; solicitacao.likes_me = 1" md-svg-icon="app/assets/images/favorite.svg"></md-icon>
+				<md-icon title="descurtir" ng-if="solicitacao.likes_me == 1" ng-click="like(solicitacao); solicitacao.likes = solicitacao.likes - 1; solicitacao.likes_me = 0" md-svg-icon="app/assets/images/vectorpaint.svg"></md-icon>
 
 				<spam>{{solicitacao.likes}}</spam>
 				<md-button class="md-icon-button" aria-label="Share"></md-button>
